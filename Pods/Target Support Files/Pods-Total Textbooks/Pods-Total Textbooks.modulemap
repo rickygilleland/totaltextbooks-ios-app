@@ -1,0 +1,6 @@
+framework module Pods_Total_Textbooks {
+  umbrella header "Pods-Total Textbooks-umbrella.h"
+
+  export *
+  module * { export * }
+}
