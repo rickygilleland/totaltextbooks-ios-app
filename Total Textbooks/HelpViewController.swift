@@ -38,6 +38,7 @@ class HelpViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, 
         webView!.scrollView.showsHorizontalScrollIndicator = false
         
         guard let url =  NSURL(string: "https://ios.totaltextbooks.com/support") else { return }
+        
         let req = NSURLRequest(URL:url)
         self.webView!.loadRequest(req)
         webView!.allowsBackForwardNavigationGestures = true
@@ -49,12 +50,49 @@ class HelpViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, 
         SwiftSpinner.show("Loading").addTapHandler({
             SwiftSpinner.hide()
         })
+        SwiftSpinner.showWithDelay(15.0, title: "Just a little longer...")
+        SwiftSpinner.showWithDelay(60.0, title: "Request failed. Please try again.", animated: false)
+
     }
     
     
     func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         SwiftSpinner.hide()
+    }
+    
+    func webview(webView: WKWebView, didFailNavigation navigation: WKNavigation!, withError error: NSError) {
+        
+        SwiftSpinner.hide()
+        
+        if error.code == -1001 { // TIMED OUT:
+            
+            let alertController = UIAlertController(title: "Total Textbooks", message:
+                "Connect timed out. Please try again.", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+            
+            
+            // CODE to handle TIMEOUT
+            
+        } else if error.code == -1003 { // SERVER CANNOT BE FOUND
+            
+            let alertController = UIAlertController(title: "Total Textbooks", message:
+                "Server could not be found. Please try again in a few minutes.", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+            
+        } else { //Something else happened
+        
+            let alertController = UIAlertController(title: "Total Textbooks", message:
+                "There was a server error. Please try again in a few minutes.", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+            
+        }
     }
     
     func webView(webView: WKWebView, decidePolicyForNavigationAction navigationAction: WKNavigationAction, decisionHandler: ((WKNavigationActionPolicy) -> Void)) {

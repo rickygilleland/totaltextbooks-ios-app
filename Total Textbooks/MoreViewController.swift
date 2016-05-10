@@ -44,6 +44,8 @@ class MoreViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     func webView(webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         SwiftSpinner.show("Loading...")
+        SwiftSpinner.showWithDelay(15.0, title: "Just a little longer...")
+        SwiftSpinner.showWithDelay(60.0, title: "Request failed. Please try again.", animated: false)
     }
     
     

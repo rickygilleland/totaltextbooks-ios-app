@@ -10,6 +10,7 @@
 		0F19220844D5E0153095BA52 /* Pods_Total_TextbooksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9804F489D6F716ED1744A9E /* Pods_Total_TextbooksTests.framework */; };
 		4B40269FCF8500DC0171E213 /* Pods_Total_Textbooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3533133C5D6FB68B1ED90DC /* Pods_Total_Textbooks.framework */; };
 		6495E74F1B58D412547775C0 /* Pods_Total_TextbooksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE500CFDF35CA39AC7F2F61 /* Pods_Total_TextbooksUITests.framework */; };
+		901453301CE2406D00A14EE4 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 9014532F1CE2406D00A14EE4 /* www */; };
 		909EB7C21CDD181500B8157F /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909EB7C11CDD181500B8157F /* HelpViewController.swift */; };
 		90E50E771CDB826500874391 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E50E761CDB826500874391 /* AppDelegate.swift */; };
 		90E50E791CDB826500874391 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E50E781CDB826500874391 /* SearchViewController.swift */; };
@@ -44,6 +45,7 @@
 		1DC484778FD37580192EC347 /* Pods-Total TextbooksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total TextbooksTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Total TextbooksTests/Pods-Total TextbooksTests.release.xcconfig"; sourceTree = "<group>"; };
 		575AF65F1870437F6BE3CD3F /* Pods-Total TextbooksUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total TextbooksUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Total TextbooksUITests/Pods-Total TextbooksUITests.release.xcconfig"; sourceTree = "<group>"; };
 		75ECB30B5C553CFB1216DDBD /* Pods-Total Textbooks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total Textbooks.release.xcconfig"; path = "Pods/Target Support Files/Pods-Total Textbooks/Pods-Total Textbooks.release.xcconfig"; sourceTree = "<group>"; };
+		9014532F1CE2406D00A14EE4 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 		909EB7C11CDD181500B8157F /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		90E50E731CDB826500874391 /* Total Textbooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Total Textbooks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E50E761CDB826500874391 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 		90E50E751CDB826500874391 /* Total Textbooks */ = {
 			isa = PBXGroup;
 			children = (
+				9014532F1CE2406D00A14EE4 /* www */,
 				90E50E761CDB826500874391 /* AppDelegate.swift */,
 				90E50E781CDB826500874391 /* SearchViewController.swift */,
 				90E50E7C1CDB826500874391 /* Main.storyboard */,
@@ -287,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				901453301CE2406D00A14EE4 /* www in Resources */,
 				90E50E831CDB826500874391 /* LaunchScreen.storyboard in Resources */,
 				90E50E801CDB826500874391 /* Assets.xcassets in Resources */,
 				90E50E7E1CDB826500874391 /* Main.storyboard in Resources */,

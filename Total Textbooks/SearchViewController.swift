@@ -39,9 +39,16 @@ class SearchViewController: UIViewController, WKNavigationDelegate, WKUIDelegate
         
         webView!.scrollView.showsHorizontalScrollIndicator = false
         
-        guard let url =  NSURL(string: "https://ios.totaltextbooks.com") else { return }
-        let req = NSURLRequest(URL:url)
+        let url = NSBundle.mainBundle().URLForResource("search", withExtension:"html", subdirectory: "www")
+        
+        let req = NSURLRequest(URL:url!)
         self.webView!.loadRequest(req)
+        
+        //guard let url =  NSURL(string: "https://ios.totaltextbooks.com") else { return }
+        
+        //let req = NSURLRequest(URL:url)
+        //self.webView!.loadRequest(req)
+
         webView!.allowsBackForwardNavigationGestures = true
 
     }
@@ -51,6 +58,8 @@ class SearchViewController: UIViewController, WKNavigationDelegate, WKUIDelegate
         SwiftSpinner.show("Loading").addTapHandler({
             SwiftSpinner.hide()
         })
+        SwiftSpinner.showWithDelay(15.0, title: "Just a little longer...")
+        SwiftSpinner.showWithDelay(60.0, title: "Request failed. Please try again.", animated: false)
     }
     
     
