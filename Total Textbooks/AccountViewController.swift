@@ -12,7 +12,7 @@ import SwiftSpinner
 
 class AccountViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     
-    let baseUrl = NSURL(string: "https://ios.dev.totaltextbooks.com")!
+    let baseUrl = NSURL(string: "https://ios.totaltextbooks.com")!
     
     @IBOutlet var containerView: UIView! = nil
     
@@ -32,7 +32,7 @@ class AccountViewController: UIViewController, WKNavigationDelegate, WKUIDelegat
         accountView!.navigationDelegate = self
         accountView!.UIDelegate = self
         
-        guard let url =  NSURL(string: "https://ios.dev.totaltextbooks.com/account/login") else { return }
+        guard let url =  NSURL(string: "https://ios.totaltextbooks.com/account/login") else { return }
         accountView!.navigationDelegate = self
         //homeView!.loadRequest(NSURLRequest(URL: url))
         //view.addSubview(homeView!)
@@ -54,7 +54,7 @@ class AccountViewController: UIViewController, WKNavigationDelegate, WKUIDelegat
     }
     
     func webView(webView: WKWebView, decidePolicyForNavigationAction navigationAction: WKNavigationAction, decisionHandler: ((WKNavigationActionPolicy) -> Void)) {
-        if (navigationAction.navigationType == WKNavigationType.LinkActivated && !navigationAction.request.URL!.host!.lowercaseString.hasPrefix("ios.dev.totaltextbooks.com")) {
+        if (navigationAction.navigationType == WKNavigationType.LinkActivated && !navigationAction.request.URL!.host!.lowercaseString.hasPrefix("ios.totaltextbooks.com")) {
             UIApplication.sharedApplication().openURL(navigationAction.request.URL!)
             decisionHandler(WKNavigationActionPolicy.Cancel)
         } else {

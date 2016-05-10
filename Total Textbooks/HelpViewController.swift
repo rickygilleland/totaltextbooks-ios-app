@@ -37,7 +37,7 @@ class HelpViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, 
         
         webView!.scrollView.showsHorizontalScrollIndicator = false
         
-        guard let url =  NSURL(string: "https://ios.dev.totaltextbooks.com/support") else { return }
+        guard let url =  NSURL(string: "https://ios.totaltextbooks.com/support") else { return }
         let req = NSURLRequest(URL:url)
         self.webView!.loadRequest(req)
         webView!.allowsBackForwardNavigationGestures = true
@@ -58,7 +58,7 @@ class HelpViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, 
     }
     
     func webView(webView: WKWebView, decidePolicyForNavigationAction navigationAction: WKNavigationAction, decisionHandler: ((WKNavigationActionPolicy) -> Void)) {
-        if (navigationAction.navigationType == WKNavigationType.LinkActivated && !navigationAction.request.URL!.host!.lowercaseString.hasPrefix("ios.dev.totaltextbooks.com")) {
+        if (navigationAction.navigationType == WKNavigationType.LinkActivated && !navigationAction.request.URL!.host!.lowercaseString.hasPrefix("ios.totaltextbooks.com")) {
             UIApplication.sharedApplication().openURL(navigationAction.request.URL!)
             decisionHandler(WKNavigationActionPolicy.Cancel)
         } else {

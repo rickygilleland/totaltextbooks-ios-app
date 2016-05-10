@@ -12,7 +12,7 @@ import SwiftSpinner
 
 class SearchViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, UIScrollViewDelegate {
     
-    let baseUrl = NSURL(string: "https://ios.dev.totaltextbooks.com")!
+    let baseUrl = NSURL(string: "https://ios.totaltextbooks.com")!
     
     @IBOutlet var containerView : UIView! = nil
     var webView: WKWebView?
@@ -39,7 +39,7 @@ class SearchViewController: UIViewController, WKNavigationDelegate, WKUIDelegate
         
         webView!.scrollView.showsHorizontalScrollIndicator = false
         
-        guard let url =  NSURL(string: "https://ios.dev.totaltextbooks.com") else { return }
+        guard let url =  NSURL(string: "https://ios.totaltextbooks.com") else { return }
         let req = NSURLRequest(URL:url)
         self.webView!.loadRequest(req)
         webView!.allowsBackForwardNavigationGestures = true
@@ -60,7 +60,7 @@ class SearchViewController: UIViewController, WKNavigationDelegate, WKUIDelegate
     }
 
     func webView(webView: WKWebView, decidePolicyForNavigationAction navigationAction: WKNavigationAction, decisionHandler: ((WKNavigationActionPolicy) -> Void)) {
-        if (navigationAction.navigationType == WKNavigationType.LinkActivated && !navigationAction.request.URL!.host!.lowercaseString.hasPrefix("ios.dev.totaltextbooks.com")) {
+        if (navigationAction.navigationType == WKNavigationType.LinkActivated && !navigationAction.request.URL!.host!.lowercaseString.hasPrefix("ios.totaltextbooks.com")) {
             UIApplication.sharedApplication().openURL(navigationAction.request.URL!)
             decisionHandler(WKNavigationActionPolicy.Cancel)
         } else {
