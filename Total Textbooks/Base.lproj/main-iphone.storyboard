@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -74,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s25-SQ-nWS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1804" y="951"/>
+            <point key="canvasLocation" x="1767" y="982"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="Sdf-bv-XSb">
@@ -213,10 +213,10 @@
                         <viewControllerLayoutGuide type="bottom" id="nu3-M9-eqP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IFb-KU-kby">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Buy and Sell Virtually Any Book" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="OQ9-OE-F2M">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Buy and Sell Virtually Any Book" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="OQ9-OE-F2M">
                                 <rect key="frame" x="20" y="64" width="280" height="107"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="MAd-0W-Cp7">
@@ -267,7 +267,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wab-uM-ale" customClass="MaterialButton">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wab-uM-ale" customClass="MaterialButton">
                                 <rect key="frame" x="58" y="234" width="203" height="0.0"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="1Ss-2A-2Ik"/>
@@ -343,7 +343,7 @@
                                     <action selector="barcodeButtonTapped:" destination="XgN-UM-Ulp" eventType="touchUpInside" id="8dq-rg-8R2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWX-s2-VXb" customClass="MaterialButton">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWX-s2-VXb" customClass="MaterialButton">
                                 <rect key="frame" x="58" y="208" width="203" height="0.0"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="203" id="5RT-bR-bM7">
@@ -420,8 +420,8 @@
                                     <segue destination="9pv-A4-QxB" kind="show" identifier="searchSegue" id="foH-NM-tbR"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What are you looking for?" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="p06-3f-Smq">
-                                <rect key="frame" x="58" y="256" width="203" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What are you looking for?" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="p06-3f-Smq">
+                                <rect key="frame" x="58" y="256" width="203" height="0.0"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="ECp-45-STP"/>
                                     <constraint firstAttribute="height" constant="30" id="FvD-Ki-UYa"/>
@@ -467,8 +467,8 @@
                                     </mask>
                                 </variation>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enter any Book Title or ISBN Below to Get Started" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvR-ps-DN2">
-                                <rect key="frame" x="59" y="91" width="257" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Enter any Book Title or ISBN Below to Get Started" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvR-ps-DN2">
+                                <rect key="frame" x="59" y="91" width="202" height="0.0"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="58" id="1Dx-5x-tJC"/>
                                     <constraint firstAttribute="height" constant="60" id="FAN-J5-Cfa">
@@ -763,25 +763,6 @@
                                 <exclude reference="iZM-lA-i6w"/>
                                 <exclude reference="oP5-3T-4wB"/>
                                 <exclude reference="vJY-zz-f4S"/>
-                                <exclude reference="0N8-M7-7gt"/>
-                                <exclude reference="2k9-hU-fKf"/>
-                                <exclude reference="3ze-Rm-2wn"/>
-                                <exclude reference="5aN-uB-f4i"/>
-                                <exclude reference="A36-8B-f29"/>
-                                <exclude reference="Aya-Ob-yrb"/>
-                                <exclude reference="BTi-nO-qob"/>
-                                <exclude reference="BfI-A6-pFW"/>
-                                <exclude reference="Jb7-9m-bDn"/>
-                                <exclude reference="KND-I7-dqY"/>
-                                <exclude reference="OC2-SV-Ml4"/>
-                                <exclude reference="UCp-QG-o8s"/>
-                                <exclude reference="b1e-gC-qBi"/>
-                                <exclude reference="cW8-K2-1Cq"/>
-                                <exclude reference="d27-IY-N4V"/>
-                                <exclude reference="gVw-PJ-btq"/>
-                                <exclude reference="nDT-BX-VKs"/>
-                                <exclude reference="pXP-JI-1sP"/>
-                                <exclude reference="pup-Xw-2eW"/>
                                 <exclude reference="2vM-nU-2As"/>
                                 <exclude reference="GDf-oy-bbd"/>
                                 <exclude reference="IGR-m7-KA0"/>
@@ -807,6 +788,25 @@
                                 <exclude reference="QnP-Uo-iZR"/>
                                 <exclude reference="Ydn-Ec-bch"/>
                                 <exclude reference="qW2-2O-gxs"/>
+                                <exclude reference="0N8-M7-7gt"/>
+                                <exclude reference="2k9-hU-fKf"/>
+                                <exclude reference="3ze-Rm-2wn"/>
+                                <exclude reference="5aN-uB-f4i"/>
+                                <exclude reference="A36-8B-f29"/>
+                                <exclude reference="Aya-Ob-yrb"/>
+                                <exclude reference="BTi-nO-qob"/>
+                                <exclude reference="BfI-A6-pFW"/>
+                                <exclude reference="Jb7-9m-bDn"/>
+                                <exclude reference="KND-I7-dqY"/>
+                                <exclude reference="OC2-SV-Ml4"/>
+                                <exclude reference="UCp-QG-o8s"/>
+                                <exclude reference="b1e-gC-qBi"/>
+                                <exclude reference="cW8-K2-1Cq"/>
+                                <exclude reference="d27-IY-N4V"/>
+                                <exclude reference="gVw-PJ-btq"/>
+                                <exclude reference="nDT-BX-VKs"/>
+                                <exclude reference="pXP-JI-1sP"/>
+                                <exclude reference="pup-Xw-2eW"/>
                                 <exclude reference="6P9-Rk-CBc"/>
                                 <exclude reference="Raf-EY-Gcm"/>
                                 <exclude reference="bPG-3I-GS1"/>
@@ -843,13 +843,13 @@
                                 <include reference="ZiA-5B-0A8"/>
                                 <include reference="eFR-Ri-bBX"/>
                                 <include reference="vJY-zz-f4S"/>
-                                <include reference="BfI-A6-pFW"/>
-                                <exclude reference="KND-I7-dqY"/>
-                                <exclude reference="UCp-QG-o8s"/>
                                 <include reference="Rdk-fk-12b"/>
                                 <include reference="o0v-mK-L4w"/>
                                 <include reference="NE4-cn-wH6"/>
                                 <include reference="QnP-Uo-iZR"/>
+                                <include reference="BfI-A6-pFW"/>
+                                <exclude reference="KND-I7-dqY"/>
+                                <exclude reference="UCp-QG-o8s"/>
                                 <include reference="6P9-Rk-CBc"/>
                             </mask>
                         </variation>
@@ -876,14 +876,6 @@
                                 <include reference="oP5-3T-4wB"/>
                                 <exclude reference="qdQ-L9-kE5"/>
                                 <exclude reference="vJY-zz-f4S"/>
-                                <include reference="2k9-hU-fKf"/>
-                                <exclude reference="A36-8B-f29"/>
-                                <include reference="Aya-Ob-yrb"/>
-                                <include reference="BTi-nO-qob"/>
-                                <exclude reference="BfI-A6-pFW"/>
-                                <include reference="OC2-SV-Ml4"/>
-                                <exclude reference="ThN-DW-rVo"/>
-                                <exclude reference="mOG-9O-5Wp"/>
                                 <exclude reference="BB9-Yb-GcN"/>
                                 <include reference="GDf-oy-bbd"/>
                                 <exclude reference="JIc-QE-PCe"/>
@@ -901,6 +893,14 @@
                                 <exclude reference="NE4-cn-wH6"/>
                                 <exclude reference="QnP-Uo-iZR"/>
                                 <exclude reference="ebB-FS-T99"/>
+                                <include reference="2k9-hU-fKf"/>
+                                <exclude reference="A36-8B-f29"/>
+                                <include reference="Aya-Ob-yrb"/>
+                                <include reference="BTi-nO-qob"/>
+                                <exclude reference="BfI-A6-pFW"/>
+                                <include reference="OC2-SV-Ml4"/>
+                                <exclude reference="ThN-DW-rVo"/>
+                                <exclude reference="mOG-9O-5Wp"/>
                                 <exclude reference="6P9-Rk-CBc"/>
                                 <exclude reference="MfG-2C-jRl"/>
                                 <include reference="Raf-EY-Gcm"/>
@@ -936,20 +936,6 @@
                                 <exclude reference="eFR-Ri-bBX"/>
                                 <include reference="iZM-lA-i6w"/>
                                 <exclude reference="vJY-zz-f4S"/>
-                                <exclude reference="0N8-M7-7gt"/>
-                                <exclude reference="3ze-Rm-2wn"/>
-                                <exclude reference="5aN-uB-f4i"/>
-                                <exclude reference="BfI-A6-pFW"/>
-                                <exclude reference="Jb7-9m-bDn"/>
-                                <exclude reference="KND-I7-dqY"/>
-                                <exclude reference="UCp-QG-o8s"/>
-                                <exclude reference="b1e-gC-qBi"/>
-                                <include reference="cW8-K2-1Cq"/>
-                                <exclude reference="d27-IY-N4V"/>
-                                <include reference="gVw-PJ-btq"/>
-                                <exclude reference="nDT-BX-VKs"/>
-                                <exclude reference="pXP-JI-1sP"/>
-                                <exclude reference="pup-Xw-2eW"/>
                                 <exclude reference="2vM-nU-2As"/>
                                 <exclude reference="IGR-m7-KA0"/>
                                 <exclude reference="M7B-RO-GBm"/>
@@ -966,6 +952,20 @@
                                 <exclude reference="QnP-Uo-iZR"/>
                                 <include reference="Ydn-Ec-bch"/>
                                 <include reference="qW2-2O-gxs"/>
+                                <exclude reference="0N8-M7-7gt"/>
+                                <exclude reference="3ze-Rm-2wn"/>
+                                <exclude reference="5aN-uB-f4i"/>
+                                <exclude reference="BfI-A6-pFW"/>
+                                <exclude reference="Jb7-9m-bDn"/>
+                                <exclude reference="KND-I7-dqY"/>
+                                <exclude reference="UCp-QG-o8s"/>
+                                <exclude reference="b1e-gC-qBi"/>
+                                <include reference="cW8-K2-1Cq"/>
+                                <exclude reference="d27-IY-N4V"/>
+                                <include reference="gVw-PJ-btq"/>
+                                <exclude reference="nDT-BX-VKs"/>
+                                <exclude reference="pXP-JI-1sP"/>
+                                <exclude reference="pup-Xw-2eW"/>
                                 <exclude reference="6P9-Rk-CBc"/>
                                 <exclude reference="bPG-3I-GS1"/>
                                 <exclude reference="jgS-bd-HSb"/>
@@ -1010,6 +1010,7 @@
         <!--Help View-->
         <scene sceneID="STn-TM-pHN">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6J5-rv-Zht" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="4KE-FD-X38" userLabel="Help View" customClass="HelpViewController" customModule="Total_Textbooks" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="weR-GU-x3Y"/>
@@ -1019,6 +1020,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUh-rh-G87">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Knowledge Base"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="130" y="245" width="114" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="kbButtonTapped:" destination="4KE-FD-X38" eventType="touchUpInside" id="RIe-2U-Vin"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Help" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aI-bu-cdO">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="153" y="195" width="68" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k43-we-gnY">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Contact us"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="150" y="310" width="75" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="contactButtonTapped:" destination="4KE-FD-X38" eventType="touchUpInside" id="lGb-DF-HyP"/>
+                                </connections>
+                            </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAa-IA-oPw">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
@@ -1031,21 +1061,21 @@
                                     <rect key="frame" x="0.0" y="0.0" width="400" height="44"/>
                                 </variation>
                             </navigationBar>
-                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pDc-Kg-DRV">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
-                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="pDc-Kg-DRV" firstAttribute="bottom" secondItem="Gty-hL-Rc2" secondAttribute="top" id="5rl-0b-JIn"/>
-                            <constraint firstItem="pDc-Kg-DRV" firstAttribute="leading" secondItem="Pgk-s1-IzL" secondAttribute="leading" id="9B2-Gn-QMz"/>
-                            <constraint firstAttribute="trailing" secondItem="pDc-Kg-DRV" secondAttribute="trailing" id="Wby-WB-NEb"/>
-                            <constraint firstItem="pDc-Kg-DRV" firstAttribute="top" secondItem="Pgk-s1-IzL" secondAttribute="top" id="j5Z-bZ-tdL"/>
-                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="oUh-rh-G87"/>
+                                <exclude reference="3aI-bu-cdO"/>
+                                <exclude reference="k43-we-gnY"/>
                                 <exclude reference="GAa-IA-oPw"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="oUh-rh-G87"/>
+                                <include reference="3aI-bu-cdO"/>
+                                <include reference="k43-we-gnY"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -1059,13 +1089,11 @@
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="MoG-YB-xTg"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="containerView" destination="pDc-Kg-DRV" id="Cv2-r8-YSn"/>
-                        <outlet property="menuButton" destination="MoG-YB-xTg" id="MHP-Se-itD"/>
+                        <outlet property="menuButton" destination="MoG-YB-xTg" id="D1k-TU-nO1"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6J5-rv-Zht" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9" y="982"/>
+            <point key="canvasLocation" x="6" y="1011"/>
         </scene>
         <!--Scan a Barcode-->
         <scene sceneID="KWv-EI-bRk">

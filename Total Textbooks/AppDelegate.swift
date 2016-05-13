@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ZendeskSDK
 
 @UIApplicationMain
 
@@ -30,6 +31,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationBarAppearace.tintColor = uicolorFromHex(0xffffff)
         navigationBarAppearace.barTintColor = uicolorFromHex(0x288feb)
         
+        ZDKConfig.instance()
+            .initializeWithAppId(
+                "4a3429d09621725d4db9b28b53ab6852e0725a71f1e2b18c",
+                zendeskUrl: "https://totaltextbooks.zendesk.com",
+                andClientId: "mobile_sdk_client_b3403cb6069b75ce53f8")
+        
+        let identity = ZDKAnonymousIdentity()
+        ZDKConfig.instance().userIdentity = identity
         
         return true
     }
