@@ -1,18 +1,26 @@
 PODS:
   - FlatUIKit (1.6.2)
-  - Material (1.40.1)
+  - Material (1.41.1)
   - SwiftSpinner (0.9.5)
+  - ZendeskSDK (1.6.0.1):
+    - ZendeskSDK/Providers (= 1.6.0.1)
+    - ZendeskSDK/UI (= 1.6.0.1)
+  - ZendeskSDK/Providers (1.6.0.1)
+  - ZendeskSDK/UI (1.6.0.1):
+    - ZendeskSDK/Providers
 
 DEPENDENCIES:
   - FlatUIKit
   - Material
   - SwiftSpinner
+  - ZendeskSDK
 
 SPEC CHECKSUMS:
   FlatUIKit: 1b41f0d4952ce8d970d8479ce79df54a960242c4
-  Material: 3b5fead4a1e70fc925e163aeeb694c784256d0c8
+  Material: 441818e40ca8d30a4b83f9795e75a0d8c88ccf97
   SwiftSpinner: c6585a0ae5c67eb33e737695cce88f0262008cce
+  ZendeskSDK: 5eacccb6f5ca7129dbc2df05a057ccde0e62b9e3
 
-PODFILE CHECKSUM: 0bf7547581eb11b57ee5b11a8a6210b4450c4ff3
+PODFILE CHECKSUM: 1f211d6671c62c3dd7ccd79ffe3d1c513e4fd03b
 
 COCOAPODS: 1.0.0

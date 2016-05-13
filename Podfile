@@ -9,6 +9,7 @@ target 'Total Textbooks' do
   pod "SwiftSpinner"
   pod "Material"
   pod "FlatUIKit"
+  pod "ZendeskSDK"
   target 'Total TextbooksTests' do
     inherit! :search_paths
     # Pods for testing
