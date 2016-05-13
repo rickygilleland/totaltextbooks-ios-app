@@ -17,6 +17,8 @@ class MoreViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     @IBOutlet var containerView: UIView! = nil
     var moreView: WKWebView?
     
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+    
     override func loadView() {
         super.loadView()
         
@@ -28,6 +30,24 @@ class MoreViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+        
+        
+        let nav = self.navigationController?.navigationBar
+        
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 30))
+        imageView.contentMode = .ScaleAspectFit
+        
+        let image = UIImage(named: "logo")
+        imageView.image = image
+        
+        navigationItem.titleView = imageView
+        
         moreView!.navigationDelegate = self
         moreView!.UIDelegate = self
         

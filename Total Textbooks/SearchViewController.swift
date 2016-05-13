@@ -21,9 +21,12 @@ class SearchViewController: UIViewController, WKNavigationDelegate, WKUIDelegate
     @IBOutlet weak var forwardButton: UIBarButtonItem!
     @IBOutlet weak var reloadButton: UIBarButtonItem!
     
+    var searchPassed:String!
+    
     
     override func loadView() {
         super.loadView()
+        
         
         self.webView = WKWebView()
         self.view = self.webView!
@@ -34,15 +37,32 @@ class SearchViewController: UIViewController, WKNavigationDelegate, WKUIDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let nav = self.navigationController?.navigationBar
+        
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 30))
+        imageView.contentMode = .ScaleAspectFit
+        
+        let image = UIImage(named: "logo")
+        imageView.image = image
+        
+        navigationItem.titleView = imageView
+        
         webView!.navigationDelegate = self
         webView!.UIDelegate = self
         
         webView!.scrollView.showsHorizontalScrollIndicator = false
         
-        let url = NSBundle.mainBundle().URLForResource("search", withExtension:"html", subdirectory: "www")
+        let query = searchPassed.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
         
-        let req = NSURLRequest(URL:url!)
-        self.webView!.loadRequest(req)
+        
+        let url = NSURL(string: "https://ios.totaltextbooks.com/books/lookup/\(String(query!))")
+        
+        let request = NSURLRequest(URL: url!)
+        self.webView!.loadRequest(request)
+        
+        //let req = NSURLRequest(URL:url!)
+        //self.webView!.loadRequest(req)
         
         //guard let url =  NSURL(string: "https://ios.totaltextbooks.com") else { return }
         
@@ -52,6 +72,14 @@ class SearchViewController: UIViewController, WKNavigationDelegate, WKUIDelegate
         webView!.allowsBackForwardNavigationGestures = true
 
     }
+    
+    func delay(seconds seconds: Double, completion:()->()) {
+        let popTime = dispatch_time(DISPATCH_TIME_NOW, Int64( Double(NSEC_PER_SEC) * seconds ))
+        
+        dispatch_after(popTime, dispatch_get_main_queue()) {
+            completion()
+        }
+    }
 
     func webView(webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
@@ -59,7 +87,10 @@ class SearchViewController: UIViewController, WKNavigationDelegate, WKUIDelegate
             SwiftSpinner.hide()
         })
         SwiftSpinner.showWithDelay(15.0, title: "Just a little longer...")
-        SwiftSpinner.showWithDelay(60.0, title: "Request failed. Please try again.", animated: false)
+        
+        delay(seconds: 60.0, completion: {
+                SwiftSpinner.hide()
+            })
     }
     
     

@@ -7,6 +7,8 @@ target 'Total Textbooks' do
 
   # Pods for Total Textbooks
   pod "SwiftSpinner"
+  pod "Material"
+  pod "FlatUIKit"
   target 'Total TextbooksTests' do
     inherit! :search_paths
     # Pods for testing

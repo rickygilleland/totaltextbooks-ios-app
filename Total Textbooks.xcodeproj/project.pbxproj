@@ -10,16 +10,20 @@
 		0F19220844D5E0153095BA52 /* Pods_Total_TextbooksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9804F489D6F716ED1744A9E /* Pods_Total_TextbooksTests.framework */; };
 		4B40269FCF8500DC0171E213 /* Pods_Total_Textbooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3533133C5D6FB68B1ED90DC /* Pods_Total_Textbooks.framework */; };
 		6495E74F1B58D412547775C0 /* Pods_Total_TextbooksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE500CFDF35CA39AC7F2F61 /* Pods_Total_TextbooksUITests.framework */; };
+		9005C7441CE4BBBC00277047 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9005C7431CE4BBBC00277047 /* Launch Screen.storyboard */; };
 		901453301CE2406D00A14EE4 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 9014532F1CE2406D00A14EE4 /* www */; };
+		908D2B671CE3816D00D19C22 /* main-iphone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 908D2B651CE3816D00D19C22 /* main-iphone.storyboard */; };
 		909EB7C21CDD181500B8157F /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909EB7C11CDD181500B8157F /* HelpViewController.swift */; };
+		90BC3EA51CE37D1E00AA2D22 /* ROBarcodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BC3EA31CE37D1E00AA2D22 /* ROBarcodeScannerViewController.swift */; };
+		90BC3EA61CE37D1E00AA2D22 /* SearchFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BC3EA41CE37D1E00AA2D22 /* SearchFormViewController.swift */; };
+		90DF7CA01CE3B1BE001B9C57 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DF7C9F1CE3B1BE001B9C57 /* SWRevealViewController.m */; };
+		90DF7CA21CE3B8E7001B9C57 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DF7CA11CE3B8E7001B9C57 /* MenuController.swift */; };
 		90E50E771CDB826500874391 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E50E761CDB826500874391 /* AppDelegate.swift */; };
 		90E50E791CDB826500874391 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E50E781CDB826500874391 /* SearchViewController.swift */; };
-		90E50E7E1CDB826500874391 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90E50E7C1CDB826500874391 /* Main.storyboard */; };
 		90E50E801CDB826500874391 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90E50E7F1CDB826500874391 /* Assets.xcassets */; };
 		90E50E831CDB826500874391 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90E50E811CDB826500874391 /* LaunchScreen.storyboard */; };
 		90E50E8E1CDB826500874391 /* Total_TextbooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E50E8D1CDB826500874391 /* Total_TextbooksTests.swift */; };
 		90E50E991CDB826500874391 /* Total_TextbooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E50E981CDB826500874391 /* Total_TextbooksUITests.swift */; };
-		90E50EAF1CDBBBD600874391 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E50EAE1CDBBBD600874391 /* AccountViewController.swift */; };
 		90E50EB11CDBBBE300874391 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E50EB01CDBBBE300874391 /* MoreViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,12 +49,19 @@
 		1DC484778FD37580192EC347 /* Pods-Total TextbooksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total TextbooksTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Total TextbooksTests/Pods-Total TextbooksTests.release.xcconfig"; sourceTree = "<group>"; };
 		575AF65F1870437F6BE3CD3F /* Pods-Total TextbooksUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total TextbooksUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Total TextbooksUITests/Pods-Total TextbooksUITests.release.xcconfig"; sourceTree = "<group>"; };
 		75ECB30B5C553CFB1216DDBD /* Pods-Total Textbooks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total Textbooks.release.xcconfig"; path = "Pods/Target Support Files/Pods-Total Textbooks/Pods-Total Textbooks.release.xcconfig"; sourceTree = "<group>"; };
+		9005C7431CE4BBBC00277047 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		9014532F1CE2406D00A14EE4 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
+		908D2B661CE3816D00D19C22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/main-iphone.storyboard"; sourceTree = "<group>"; };
 		909EB7C11CDD181500B8157F /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		90BC3EA31CE37D1E00AA2D22 /* ROBarcodeScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROBarcodeScannerViewController.swift; sourceTree = "<group>"; };
+		90BC3EA41CE37D1E00AA2D22 /* SearchFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFormViewController.swift; sourceTree = "<group>"; };
+		90DF7C9D1CE3B1BE001B9C57 /* Total Textbooks-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Total Textbooks-Bridging-Header.h"; sourceTree = "<group>"; };
+		90DF7C9E1CE3B1BE001B9C57 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		90DF7C9F1CE3B1BE001B9C57 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		90DF7CA11CE3B8E7001B9C57 /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		90E50E731CDB826500874391 /* Total Textbooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Total Textbooks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E50E761CDB826500874391 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90E50E781CDB826500874391 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		90E50E7D1CDB826500874391 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		90E50E7F1CDB826500874391 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90E50E821CDB826500874391 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90E50E841CDB826500874391 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,8 +71,8 @@
 		90E50E941CDB826500874391 /* Total TextbooksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Total TextbooksUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E50E981CDB826500874391 /* Total_TextbooksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Total_TextbooksUITests.swift; sourceTree = "<group>"; };
 		90E50E9A1CDB826500874391 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		90E50EAE1CDBBBD600874391 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		90E50EB01CDBBBE300874391 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		90F080401CE38FDE001E81E2 /* Total Textbooks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Total Textbooks.entitlements"; sourceTree = "<group>"; };
 		A55A767480814902B363CB6B /* Pods-Total Textbooks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total Textbooks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Total Textbooks/Pods-Total Textbooks.debug.xcconfig"; sourceTree = "<group>"; };
 		B75ECB40D9AAC44C8D1F7E0E /* Pods-Total TextbooksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total TextbooksTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Total TextbooksTests/Pods-Total TextbooksTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E9804F489D6F716ED1744A9E /* Pods_Total_TextbooksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Total_TextbooksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +108,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90DF7C9C1CE3B189001B9C57 /* SWReveallViewController */ = {
+			isa = PBXGroup;
+			children = (
+				90DF7C9E1CE3B1BE001B9C57 /* SWRevealViewController.h */,
+				90DF7C9F1CE3B1BE001B9C57 /* SWRevealViewController.m */,
+				90DF7C9D1CE3B1BE001B9C57 /* Total Textbooks-Bridging-Header.h */,
+			);
+			name = SWReveallViewController;
+			sourceTree = "<group>";
+		};
 		90E50E6A1CDB826400874391 = {
 			isa = PBXGroup;
 			children = (
@@ -122,13 +143,18 @@
 		90E50E751CDB826500874391 /* Total Textbooks */ = {
 			isa = PBXGroup;
 			children = (
+				9005C7431CE4BBBC00277047 /* Launch Screen.storyboard */,
+				90DF7C9C1CE3B189001B9C57 /* SWReveallViewController */,
+				90F080401CE38FDE001E81E2 /* Total Textbooks.entitlements */,
 				9014532F1CE2406D00A14EE4 /* www */,
 				90E50E761CDB826500874391 /* AppDelegate.swift */,
 				90E50E781CDB826500874391 /* SearchViewController.swift */,
-				90E50E7C1CDB826500874391 /* Main.storyboard */,
+				90BC3EA41CE37D1E00AA2D22 /* SearchFormViewController.swift */,
+				908D2B651CE3816D00D19C22 /* main-iphone.storyboard */,
+				90DF7CA11CE3B8E7001B9C57 /* MenuController.swift */,
 				909EB7C11CDD181500B8157F /* HelpViewController.swift */,
-				90E50EAE1CDBBBD600874391 /* AccountViewController.swift */,
 				90E50EB01CDBBBE300874391 /* MoreViewController.swift */,
+				90BC3EA31CE37D1E00AA2D22 /* ROBarcodeScannerViewController.swift */,
 				90E50E7F1CDB826500874391 /* Assets.xcassets */,
 				90E50E811CDB826500874391 /* LaunchScreen.storyboard */,
 				90E50E841CDB826500874391 /* Info.plist */,
@@ -254,6 +280,11 @@
 					90E50E721CDB826400874391 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 83X7W84FVC;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
 					};
 					90E50E881CDB826500874391 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -290,10 +321,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				908D2B671CE3816D00D19C22 /* main-iphone.storyboard in Resources */,
 				901453301CE2406D00A14EE4 /* www in Resources */,
 				90E50E831CDB826500874391 /* LaunchScreen.storyboard in Resources */,
+				9005C7441CE4BBBC00277047 /* Launch Screen.storyboard in Resources */,
 				90E50E801CDB826500874391 /* Assets.xcassets in Resources */,
-				90E50E7E1CDB826500874391 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,11 +473,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90DF7CA21CE3B8E7001B9C57 /* MenuController.swift in Sources */,
 				90E50EB11CDBBBE300874391 /* MoreViewController.swift in Sources */,
 				90E50E771CDB826500874391 /* AppDelegate.swift in Sources */,
-				90E50EAF1CDBBBD600874391 /* AccountViewController.swift in Sources */,
+				90DF7CA01CE3B1BE001B9C57 /* SWRevealViewController.m in Sources */,
+				90BC3EA61CE37D1E00AA2D22 /* SearchFormViewController.swift in Sources */,
 				90E50E791CDB826500874391 /* SearchViewController.swift in Sources */,
 				909EB7C21CDD181500B8157F /* HelpViewController.swift in Sources */,
+				90BC3EA51CE37D1E00AA2D22 /* ROBarcodeScannerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,12 +516,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		90E50E7C1CDB826500874391 /* Main.storyboard */ = {
+		908D2B651CE3816D00D19C22 /* main-iphone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				90E50E7D1CDB826500874391 /* Base */,
+				908D2B661CE3816D00D19C22 /* Base */,
 			);
-			name = Main.storyboard;
+			name = "main-iphone.storyboard";
 			sourceTree = "<group>";
 		};
 		90E50E811CDB826500874391 /* LaunchScreen.storyboard */ = {
@@ -590,14 +625,18 @@
 			baseConfigurationReference = A55A767480814902B363CB6B /* Pods-Total Textbooks.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_USE_OPTIMIZATION_PROFILE = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ricky Gilleland (37N5V43RAF)";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_USE_OPTIMIZATION_PROFILE = NO;
+				CODE_SIGN_ENTITLEMENTS = "Total Textbooks/Total Textbooks.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Total Textbooks/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.totaltextbooks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d1608419-bae6-4846-8634-71323f6c50c1";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Total Textbooks/Total Textbooks-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -606,14 +645,17 @@
 			baseConfigurationReference = 75ECB30B5C553CFB1216DDBD /* Pods-Total Textbooks.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_USE_OPTIMIZATION_PROFILE = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ricky Gilleland (37N5V43RAF)";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_USE_OPTIMIZATION_PROFILE = NO;
+				CODE_SIGN_ENTITLEMENTS = "Total Textbooks/Total Textbooks.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Total Textbooks/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.totaltextbooks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d1608419-bae6-4846-8634-71323f6c50c1";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Total Textbooks/Total Textbooks-Bridging-Header.h";
 			};
 			name = Release;
 		};

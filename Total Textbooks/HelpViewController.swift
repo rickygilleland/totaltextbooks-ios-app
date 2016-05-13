@@ -15,9 +15,7 @@ class HelpViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, 
     @IBOutlet weak var containerView: UIWebView! = nil
     var webView: WKWebView?
     
-    @IBOutlet weak var backButton: UIBarButtonItem!
-    @IBOutlet weak var forwardButton: UIBarButtonItem!
-    @IBOutlet weak var reloadButton: UIBarButtonItem!
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     
     
     override func loadView() {
@@ -32,6 +30,24 @@ class HelpViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+        
+        
+        let nav = self.navigationController?.navigationBar
+        
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 30))
+        imageView.contentMode = .ScaleAspectFit
+        
+        let image = UIImage(named: "logo")
+        imageView.image = image
+        
+        navigationItem.titleView = imageView
+        
         webView!.navigationDelegate = self
         webView!.UIDelegate = self
         
@@ -110,17 +126,6 @@ class HelpViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, 
         }
     }    
     
-    @IBAction func reload(sender: UIBarButtonItem) {
-        let request = NSURLRequest(URL:webView!.URL!)
-        webView!.loadRequest(request)
-    }
-    
-    @IBAction func forward(sender: UIBarButtonItem) {
-        webView!.goForward()
-    }
-    @IBAction func back(sender: UIBarButtonItem) {
-        webView!.goBack()
-    }
     
     
     override func didReceiveMemoryWarning() {

@@ -1,12 +1,18 @@
 PODS:
+  - FlatUIKit (1.6.2)
+  - Material (1.40.1)
   - SwiftSpinner (0.9.5)
 
 DEPENDENCIES:
+  - FlatUIKit
+  - Material
   - SwiftSpinner
 
 SPEC CHECKSUMS:
+  FlatUIKit: 1b41f0d4952ce8d970d8479ce79df54a960242c4
+  Material: 3b5fead4a1e70fc925e163aeeb694c784256d0c8
   SwiftSpinner: c6585a0ae5c67eb33e737695cce88f0262008cce
 
-PODFILE CHECKSUM: 0a152b48aa5cad362b3a5d61b77017419b6cdc20
+PODFILE CHECKSUM: 0bf7547581eb11b57ee5b11a8a6210b4450c4ff3
 
-COCOAPODS: 1.0.0.rc.2
+COCOAPODS: 1.0.0
