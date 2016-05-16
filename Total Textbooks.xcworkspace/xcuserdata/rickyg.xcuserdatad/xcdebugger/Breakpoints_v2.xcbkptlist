@@ -58,12 +58,12 @@
                   moduleName = "Total Textbooks"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/rickyg/Documents/Dev/Total%20Textbooks/Total%20Textbooks/SearchViewController.swift"
-                  timestampString = "484862949.233209"
+                  timestampString = "485102236.647089"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "91"
                   endingLineNumber = "91"
-                  offsetFromSymbolStart = "593">
+                  offsetFromSymbolStart = "580">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -73,12 +73,12 @@
                   moduleName = "Total Textbooks"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/rickyg/Documents/Dev/Total%20Textbooks/Total%20Textbooks/SearchViewController.swift"
-                  timestampString = "484862949.233394"
+                  timestampString = "485102236.647278"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "92"
                   endingLineNumber = "92"
-                  offsetFromSymbolStart = "3">
+                  offsetFromSymbolStart = "4">
                </Location>
             </Locations>
          </BreakpointContent>
