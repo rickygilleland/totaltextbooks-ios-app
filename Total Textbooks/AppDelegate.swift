@@ -33,9 +33,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         ZDKConfig.instance()
             .initializeWithAppId(
-                "4a3429d09621725d4db9b28b53ab6852e0725a71f1e2b18c",
+                "f557b3096dd0d0fab0a39010a1ba3298226c62dbbfc00e46",
                 zendeskUrl: "https://totaltextbooks.zendesk.com",
-                andClientId: "mobile_sdk_client_b3403cb6069b75ce53f8")
+                andClientId: "mobile_sdk_client_ea9996b190d35138c331")
         
         let identity = ZDKAnonymousIdentity()
         ZDKConfig.instance().userIdentity = identity
