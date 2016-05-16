@@ -52,6 +52,52 @@
             </objects>
             <point key="canvasLocation" x="-1858.5" y="1795.5"/>
         </scene>
+        <!--Ext Web View Controller-->
+        <scene sceneID="ukY-Q5-i5i">
+            <objects>
+                <viewController storyboardIdentifier="extModalWebView" id="2gR-9L-P3m" customClass="extWebViewController" customModule="Total_Textbooks" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nHv-H5-mFD"/>
+                        <viewControllerLayoutGuide type="bottom" id="hLr-PZ-f9z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="usP-oC-2x1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Back" id="PoK-l8-f9l">
+                            <connections>
+                                <action selector="back:" destination="2gR-9L-P3m" id="bbx-GL-Ji6"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="Forward" id="XYi-ca-htv">
+                            <connections>
+                                <action selector="forward:" destination="2gR-9L-P3m" id="AvB-14-pT3"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Ww4-LK-uQZ"/>
+                        <barButtonItem systemItem="refresh" id="txb-px-mjD">
+                            <connections>
+                                <action selector="reload:" destination="2gR-9L-P3m" id="zOX-Td-cJP"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="1th-Fk-ePT">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="06Z-vH-j1m"/>
+                    </navigationItem>
+                    <keyCommands/>
+                    <connections>
+                        <outlet property="backButton" destination="PoK-l8-f9l" id="9Ch-0V-KTk"/>
+                        <outlet property="containerView" destination="usP-oC-2x1" id="oPo-UQ-chf"/>
+                        <outlet property="forwardButton" destination="XYi-ca-htv" id="a2J-yJ-8bg"/>
+                        <outlet property="reloadbutton" destination="txb-px-mjD" id="Lg7-mX-BdU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DHL-Kb-f13" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="486" y="1795"/>
+        </scene>
         <!--More-->
         <scene sceneID="vHA-5e-aMK">
             <objects>
@@ -326,6 +372,7 @@
                                     <rect key="frame" x="99" y="402" width="203" height="45"/>
                                     <mask key="constraints">
                                         <include reference="9re-oC-KWp"/>
+                                        <exclude reference="a1P-60-sIa"/>
                                         <exclude reference="pZo-KG-zzY"/>
                                     </mask>
                                 </variation>
@@ -342,7 +389,7 @@
                                     <rect key="frame" x="117" y="313" width="136" height="45"/>
                                     <mask key="constraints">
                                         <exclude reference="1Ss-2A-2Ik"/>
-                                        <include reference="E2S-SZ-1Nc"/>
+                                        <exclude reference="E2S-SZ-1Nc"/>
                                         <exclude reference="kQt-TA-SSv"/>
                                         <exclude reference="pZo-KG-zzY"/>
                                         <include reference="z6h-6j-ELQ"/>
@@ -450,7 +497,8 @@
                                 <variation key="heightClass=regular" misplaced="YES">
                                     <rect key="frame" x="15" y="167" width="344" height="26.5"/>
                                 </variation>
-                                <variation key="widthClass=compact">
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="20" y="267" width="360" height="66"/>
                                     <mask key="constraints">
                                         <exclude reference="SVa-CT-2aX"/>
                                     </mask>
@@ -512,7 +560,8 @@
                                         <include reference="qD6-dw-xaX"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact">
+                                <variation key="widthClass=compact" ambiguous="YES">
+                                    <rect key="frame" x="20" y="195" width="360" height="45"/>
                                     <mask key="constraints">
                                         <exclude reference="76s-o1-IMn"/>
                                         <exclude reference="Uea-5Y-j8F"/>
@@ -1283,13 +1332,17 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="2Tp-lP-c84">
+                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="XgN-UM-Ulp" kind="relationship" relationship="rootViewController" id="7Oi-dV-tmi"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FfL-F4-P0w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3414" y="982.5"/>
+            <point key="canvasLocation" x="-3414" y="972"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9Cf-Tn-XQZ">
@@ -1309,6 +1362,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="acG-lV-V9o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="942" y="982"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xb1-SH-6Ec">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="Uwp-rg-8Dh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3x5-QR-Yfc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Wh5-1X-Dbi">
+                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="2gR-9L-P3m" kind="relationship" relationship="rootViewController" id="jfL-QU-PGb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="slZ-il-MoE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-326" y="1795"/>
         </scene>
     </scenes>
     <resources>

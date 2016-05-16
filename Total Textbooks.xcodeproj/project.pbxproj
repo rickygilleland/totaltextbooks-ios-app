@@ -11,6 +11,7 @@
 		4B40269FCF8500DC0171E213 /* Pods_Total_Textbooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3533133C5D6FB68B1ED90DC /* Pods_Total_Textbooks.framework */; };
 		6495E74F1B58D412547775C0 /* Pods_Total_TextbooksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE500CFDF35CA39AC7F2F61 /* Pods_Total_TextbooksUITests.framework */; };
 		9005C7441CE4BBBC00277047 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9005C7431CE4BBBC00277047 /* Launch Screen.storyboard */; };
+		901247B31CEA19C400CB420A /* extWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901247B21CEA19C400CB420A /* extWebViewController.swift */; };
 		901453301CE2406D00A14EE4 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 9014532F1CE2406D00A14EE4 /* www */; };
 		908D2B671CE3816D00D19C22 /* main-iphone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 908D2B651CE3816D00D19C22 /* main-iphone.storyboard */; };
 		909EB7C21CDD181500B8157F /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909EB7C11CDD181500B8157F /* HelpViewController.swift */; };
@@ -50,6 +51,7 @@
 		575AF65F1870437F6BE3CD3F /* Pods-Total TextbooksUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total TextbooksUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Total TextbooksUITests/Pods-Total TextbooksUITests.release.xcconfig"; sourceTree = "<group>"; };
 		75ECB30B5C553CFB1216DDBD /* Pods-Total Textbooks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total Textbooks.release.xcconfig"; path = "Pods/Target Support Files/Pods-Total Textbooks/Pods-Total Textbooks.release.xcconfig"; sourceTree = "<group>"; };
 		9005C7431CE4BBBC00277047 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		901247B21CEA19C400CB420A /* extWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extWebViewController.swift; sourceTree = "<group>"; };
 		9014532F1CE2406D00A14EE4 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 		908D2B661CE3816D00D19C22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/main-iphone.storyboard"; sourceTree = "<group>"; };
 		909EB7C11CDD181500B8157F /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				90E50E781CDB826500874391 /* SearchViewController.swift */,
 				90BC3EA41CE37D1E00AA2D22 /* SearchFormViewController.swift */,
 				908D2B651CE3816D00D19C22 /* main-iphone.storyboard */,
+				901247B21CEA19C400CB420A /* extWebViewController.swift */,
 				90DF7CA11CE3B8E7001B9C57 /* MenuController.swift */,
 				909EB7C11CDD181500B8157F /* HelpViewController.swift */,
 				90E50EB01CDBBBE300874391 /* MoreViewController.swift */,
@@ -481,6 +484,7 @@
 				90E50E791CDB826500874391 /* SearchViewController.swift in Sources */,
 				909EB7C21CDD181500B8157F /* HelpViewController.swift in Sources */,
 				90BC3EA51CE37D1E00AA2D22 /* ROBarcodeScannerViewController.swift in Sources */,
+				901247B31CEA19C400CB420A /* extWebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
