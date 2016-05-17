@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -86,8 +87,14 @@
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="gaw-1m-Ker"/>
-                                        <include reference="xjJ-rt-xli"/>
+                                        <exclude reference="Rgg-0E-kbg"/>
+                                        <exclude reference="SWd-Ab-6KF"/>
+                                        <exclude reference="gaw-1m-Ker"/>
+                                        <exclude reference="q4T-O6-hb5"/>
+                                        <exclude reference="uNd-fU-TTO"/>
+                                        <exclude reference="xS1-Ew-sUi"/>
+                                        <exclude reference="xjJ-rt-xli"/>
+                                        <exclude reference="yzD-fl-yjW"/>
                                     </mask>
                                 </variation>
                             </label>
@@ -152,8 +159,14 @@
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="kHi-Kf-HDq"/>
-                                        <include reference="nbh-OH-ITS"/>
+                                        <exclude reference="7KC-f0-BzG"/>
+                                        <exclude reference="81x-Xo-fiP"/>
+                                        <exclude reference="N6I-TV-E6d"/>
+                                        <exclude reference="Tv2-8F-4O7"/>
+                                        <exclude reference="ewq-X7-8Fw"/>
+                                        <exclude reference="kHi-Kf-HDq"/>
+                                        <exclude reference="kYQ-wc-12t"/>
+                                        <exclude reference="nbh-OH-ITS"/>
                                     </mask>
                                 </variation>
                             </label>
@@ -163,6 +176,7 @@
                             <constraint firstItem="Dzy-fr-gcK" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="1OC-3x-SX2">
                                 <variation key="heightClass=regular-widthClass=regular" constant="-100"/>
                             </constraint>
+                            <constraint firstItem="Dzy-fr-gcK" firstAttribute="top" secondItem="GJd-Yh-RWb" secondAttribute="bottom" constant="8" id="4JF-Ne-xTz"/>
                             <constraint firstItem="Dzy-fr-gcK" firstAttribute="top" secondItem="GJd-Yh-RWb" secondAttribute="bottom" constant="14" id="4b4-Vp-LVG">
                                 <variation key="heightClass=regular-widthClass=compact" constant="8.5"/>
                                 <variation key="heightClass=regular-widthClass=regular" constant="10"/>
@@ -178,6 +192,7 @@
                             </constraint>
                             <constraint firstItem="Dzy-fr-gcK" firstAttribute="top" secondItem="GJd-Yh-RWb" secondAttribute="bottom" constant="10" id="Iqw-ua-lkW"/>
                             <constraint firstItem="Dzy-fr-gcK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="JA0-0y-8eW"/>
+                            <constraint firstItem="GJd-Yh-RWb" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="16" id="MIn-gY-W6E"/>
                             <constraint firstItem="Dzy-fr-gcK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Oaa-7Z-bg1"/>
                             <constraint firstItem="Dzy-fr-gcK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="RCx-U1-mZj"/>
                             <constraint firstItem="Dzy-fr-gcK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="UPI-N3-xlE"/>
@@ -195,6 +210,7 @@
                                 <variation key="heightClass=regular-widthClass=compact" constant="8.5"/>
                             </constraint>
                             <constraint firstItem="Dzy-fr-gcK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="fpL-le-X5d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GJd-Yh-RWb" secondAttribute="trailing" constant="16" id="oCZ-f3-oa3"/>
                             <constraint firstItem="Dzy-fr-gcK" firstAttribute="top" secondItem="GJd-Yh-RWb" secondAttribute="bottom" constant="8.5" id="pn0-Un-uWl"/>
                             <constraint firstItem="Dzy-fr-gcK" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="url-ko-xoQ">
                                 <variation key="heightClass=regular-widthClass=regular" constant="-100"/>
@@ -205,9 +221,12 @@
                             <mask key="constraints">
                                 <exclude reference="BTV-Lq-sqS"/>
                                 <exclude reference="CF6-iR-RXH"/>
+                                <exclude reference="MIn-gY-W6E"/>
                                 <exclude reference="cg4-Aq-7d4"/>
+                                <exclude reference="oCZ-f3-oa3"/>
                                 <exclude reference="z0V-C8-tt9"/>
                                 <exclude reference="1OC-3x-SX2"/>
+                                <exclude reference="4JF-Ne-xTz"/>
                                 <exclude reference="4b4-Vp-LVG"/>
                                 <exclude reference="9PS-aN-fRk"/>
                                 <exclude reference="Iqw-ua-lkW"/>
@@ -251,10 +270,23 @@
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
+                                <exclude reference="BTV-Lq-sqS"/>
+                                <exclude reference="CF6-iR-RXH"/>
+                                <include reference="MIn-gY-W6E"/>
+                                <include reference="oCZ-f3-oa3"/>
                                 <include reference="z0V-C8-tt9"/>
-                                <include reference="JA0-0y-8eW"/>
+                                <exclude reference="1OC-3x-SX2"/>
+                                <include reference="4JF-Ne-xTz"/>
+                                <exclude reference="4b4-Vp-LVG"/>
+                                <exclude reference="Hrb-UC-gp2"/>
+                                <exclude reference="JA0-0y-8eW"/>
+                                <exclude reference="Oaa-7Z-bg1"/>
+                                <exclude reference="RCx-U1-mZj"/>
+                                <exclude reference="YOt-dS-was"/>
                                 <include reference="ZmE-Bk-0Gw"/>
-                                <include reference="pn0-Un-uWl"/>
+                                <exclude reference="apu-tQ-cRo"/>
+                                <exclude reference="fB3-4e-AFV"/>
+                                <exclude reference="pn0-Un-uWl"/>
                             </mask>
                         </variation>
                     </view>
