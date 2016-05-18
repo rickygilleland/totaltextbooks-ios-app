@@ -28,6 +28,8 @@ class SearchFormViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController!.toolbarHidden = true
+        
         barcodeScanner = self.storyboard!.instantiateViewControllerWithIdentifier("ROBarcodeScannerViewControllerScene") as? ROBarcodeScannerViewController
         
         let nav = self.navigationController?.navigationBar

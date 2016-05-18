@@ -38,6 +38,8 @@ class SearchViewController: UIViewController, WKNavigationDelegate, WKUIDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController!.toolbarHidden = true
+        
         let nav = self.navigationController?.navigationBar
         
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 30))
@@ -98,10 +100,24 @@ class SearchViewController: UIViewController, WKNavigationDelegate, WKUIDelegate
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         SwiftSpinner.hide()
     }
+    
+    
 
     func webView(webView: WKWebView, decidePolicyForNavigationAction navigationAction: WKNavigationAction, decisionHandler: ((WKNavigationActionPolicy) -> Void)) {
         if (navigationAction.navigationType == WKNavigationType.LinkActivated && !navigationAction.request.URL!.host!.lowercaseString.hasPrefix("ios.totaltextbooks.com")) {
-            UIApplication.sharedApplication().openURL(navigationAction.request.URL!)
+            
+            
+            let extWebView = self.storyboard!.instantiateViewControllerWithIdentifier("extModalWebView") as! extWebViewController
+            var url = navigationAction.request.URL
+            extWebView.url = url
+            
+            //self.presentViewController(extWebView, animated: true, completion: nil)
+            self.navigationController!.pushViewController(extWebView, animated: true)
+            
+            //let extUrl = navigationAction.request.URL
+            //UIApplication.sharedApplication().openURL(navigationAction.request.URL!)
+            
+            
             decisionHandler(WKNavigationActionPolicy.Cancel)
         } else {
             decisionHandler(WKNavigationActionPolicy.Allow)
@@ -125,6 +141,7 @@ class SearchViewController: UIViewController, WKNavigationDelegate, WKUIDelegate
     @IBAction func back(sender: UIBarButtonItem) {
         webView!.goBack()
     }
+    
     
     
     override func didReceiveMemoryWarning() {
