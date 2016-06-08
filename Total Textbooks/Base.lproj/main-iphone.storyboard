@@ -613,7 +613,8 @@
                                                             <include reference="bRK-zn-Rkv"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                    <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                                        <rect key="frame" x="609" y="48" width="136" height="30"/>
                                                         <mask key="constraints">
                                                             <include reference="1EE-20-LZr"/>
                                                         </mask>
@@ -1305,7 +1306,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="uy6-0d-mro">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.23570824130000001" blue="0.38816105769999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.0" green="0.23570824130000001" blue="0.38816105769999998" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="yxd-7C-D4B">
                                 <cells>
@@ -1318,12 +1320,13 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Textbooks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6H-oS-5tc">
                                                     <rect key="frame" x="33" y="36" width="193" height="21"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
+                                                    <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.0" green="0.23570824130000001" blue="0.38816105769999998" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="qNC-B3-TEd">
                                         <rect key="frame" x="0.0" y="95" width="600" height="70"/>
@@ -1335,7 +1338,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAW-pw-2a6">
                                                     <rect key="frame" x="37" y="24" width="54" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                                         <rect key="frame" x="46" y="11" width="54" height="21"/>
@@ -1343,6 +1346,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.0" green="0.23570824130000001" blue="0.38816105769999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="CKh-eB-hsR" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="Sve-yX-B9H"/>
                                         </connections>
@@ -1357,7 +1361,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Help" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vM-w5-VmY">
                                                     <rect key="frame" x="39" y="24" width="36" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                                         <rect key="frame" x="47" y="11" width="36" height="21"/>
@@ -1365,6 +1369,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.0" green="0.23570824130000001" blue="0.38816105769999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="NMT-CU-fU2" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="MP1-Nh-nlE"/>
                                         </connections>
@@ -1379,7 +1384,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbH-ze-Yce">
                                                     <rect key="frame" x="37" y="24" width="47" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                                         <rect key="frame" x="43" y="11" width="47" height="21"/>
@@ -1387,6 +1392,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.0" green="0.23570824130000001" blue="0.38816105769999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="W9S-jq-arP" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="ycM-h7-h02"/>
                                         </connections>
@@ -1402,7 +1408,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1WL-2E-ha6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1657" y="312"/>
+            <point key="canvasLocation" x="-1657.5" y="312"/>
         </scene>
         <!--SearchForm-->
         <scene sceneID="hrv-Wp-Dhu">
@@ -2753,7 +2759,7 @@
         <image name="Info-50" width="250" height="250"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tjq-L1-6PI"/>
+        <segue reference="Sve-yX-B9H"/>
         <segue reference="E95-TT-gET"/>
     </inferredMetricsTieBreakers>
 </document>
