@@ -330,7 +330,10 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
                 
                 let url = NSURL(string: (dict["URL"] as? String)!)
                 
-                if #available(iOS 9.0, *) {
+                //open Amazon in Safari because of their rules
+                if (self.merchantArray[indexPath.row] == "amazon") {
+                    UIApplication.sharedApplication().openURL(url!)
+                } else if #available(iOS 9.0, *) {
                     let vc = SFSafariViewController(URL: url!)
                     self.presentViewController(vc, animated: true, completion: nil)
                 } else {
