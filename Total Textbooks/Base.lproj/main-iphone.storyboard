@@ -38,7 +38,8 @@
                                         <exclude reference="Ej1-6R-aZB"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact">
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="15" y="72" width="385" height="60"/>
                                     <mask key="constraints">
                                         <exclude reference="Ej1-6R-aZB"/>
                                     </mask>
@@ -893,7 +894,8 @@
                                         <exclude reference="rLn-2c-jxN"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact">
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="311" width="400" height="289"/>
                                     <mask key="constraints">
                                         <exclude reference="74q-OA-2qO"/>
                                         <exclude reference="med-Ga-TCZ"/>
@@ -1169,12 +1171,15 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="20" y="148" width="360" height="431.5"/>
+                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="mNq-c7-SKv" id="ZZV-bI-C8m"/>
                                     <outlet property="delegate" destination="mNq-c7-SKv" id="SsN-YM-4ur"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tap the book you would like to search for." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkZ-3L-wXO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tap the book you would like to search for." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkZ-3L-wXO">
                                 <rect key="frame" x="20" y="111" width="317" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="317" id="7lL-7M-paj"/>
@@ -1182,19 +1187,39 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="20" y="108" width="317" height="37"/>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="PHW-h3-R0u" secondAttribute="leading" id="2FZ-XR-OQW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zkZ-3L-wXO" secondAttribute="trailing" constant="43" id="BdW-67-wxp"/>
                             <constraint firstAttribute="leadingMargin" secondItem="GOZ-IJ-92b" secondAttribute="leading" id="DpY-dn-ZYy"/>
                             <constraint firstAttribute="leadingMargin" secondItem="zkZ-3L-wXO" secondAttribute="leading" id="Dut-5n-Cxe"/>
-                            <constraint firstItem="zkZ-3L-wXO" firstAttribute="top" secondItem="GOZ-IJ-92b" secondAttribute="bottom" constant="5" id="PE6-wd-Jnv"/>
+                            <constraint firstItem="zkZ-3L-wXO" firstAttribute="top" secondItem="GOZ-IJ-92b" secondAttribute="bottom" constant="5" id="PE6-wd-Jnv">
+                                <variation key="widthClass=compact" constant="0.5"/>
+                            </constraint>
                             <constraint firstItem="Ucz-nY-wfB" firstAttribute="top" secondItem="PHW-h3-R0u" secondAttribute="bottom" constant="20" id="Quf-8H-3xl"/>
-                            <constraint firstItem="PHW-h3-R0u" firstAttribute="top" secondItem="zkZ-3L-wXO" secondAttribute="bottom" constant="12" id="uhK-HL-j4B"/>
+                            <constraint firstItem="PHW-h3-R0u" firstAttribute="top" secondItem="zkZ-3L-wXO" secondAttribute="bottom" constant="12" id="uhK-HL-j4B">
+                                <variation key="widthClass=compact" constant="3"/>
+                            </constraint>
                             <constraint firstAttribute="trailingMargin" secondItem="PHW-h3-R0u" secondAttribute="trailing" id="zNN-Dw-y6S"/>
-                            <constraint firstItem="GOZ-IJ-92b" firstAttribute="top" secondItem="6lr-Ju-RM2" secondAttribute="bottom" constant="21" id="ziZ-wO-ieG"/>
+                            <constraint firstItem="GOZ-IJ-92b" firstAttribute="top" secondItem="6lr-Ju-RM2" secondAttribute="bottom" constant="21" id="ziZ-wO-ieG">
+                                <variation key="widthClass=compact" constant="18"/>
+                            </constraint>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="BdW-67-wxp"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="BdW-67-wxp"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="sx8-VB-fkC"/>
                     <connections>
@@ -2760,6 +2785,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Sve-yX-B9H"/>
-        <segue reference="E95-TT-gET"/>
+        <segue reference="GSu-eZ-byA"/>
     </inferredMetricsTieBreakers>
 </document>
