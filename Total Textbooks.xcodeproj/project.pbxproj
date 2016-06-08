@@ -16,6 +16,8 @@
 		909EB7C21CDD181500B8157F /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909EB7C11CDD181500B8157F /* HelpViewController.swift */; };
 		90BC3EA51CE37D1E00AA2D22 /* ROBarcodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BC3EA31CE37D1E00AA2D22 /* ROBarcodeScannerViewController.swift */; };
 		90BC3EA61CE37D1E00AA2D22 /* SearchFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BC3EA41CE37D1E00AA2D22 /* SearchFormViewController.swift */; };
+		90D166C11D01DFCC00DCAD2D /* SearchTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D166C01D01DFCC00DCAD2D /* SearchTitleViewController.swift */; };
+		90D3E1D61D0838410024500B /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3E1D51D0838410024500B /* AboutViewController.swift */; };
 		90DF7CA01CE3B1BE001B9C57 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DF7C9F1CE3B1BE001B9C57 /* SWRevealViewController.m */; };
 		90DF7CA21CE3B8E7001B9C57 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DF7CA11CE3B8E7001B9C57 /* MenuController.swift */; };
 		90E50E771CDB826500874391 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E50E761CDB826500874391 /* AppDelegate.swift */; };
@@ -23,7 +25,6 @@
 		90E50E801CDB826500874391 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90E50E7F1CDB826500874391 /* Assets.xcassets */; };
 		90E50E8E1CDB826500874391 /* Total_TextbooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E50E8D1CDB826500874391 /* Total_TextbooksTests.swift */; };
 		90E50E991CDB826500874391 /* Total_TextbooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E50E981CDB826500874391 /* Total_TextbooksUITests.swift */; };
-		90E50EB11CDBBBE300874391 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E50EB01CDBBBE300874391 /* MoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		909EB7C11CDD181500B8157F /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		90BC3EA31CE37D1E00AA2D22 /* ROBarcodeScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROBarcodeScannerViewController.swift; sourceTree = "<group>"; };
 		90BC3EA41CE37D1E00AA2D22 /* SearchFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFormViewController.swift; sourceTree = "<group>"; };
+		90D166C01D01DFCC00DCAD2D /* SearchTitleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTitleViewController.swift; sourceTree = "<group>"; };
+		90D3E1D51D0838410024500B /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		90DF7C9D1CE3B1BE001B9C57 /* Total Textbooks-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Total Textbooks-Bridging-Header.h"; sourceTree = "<group>"; };
 		90DF7C9E1CE3B1BE001B9C57 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		90DF7C9F1CE3B1BE001B9C57 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -69,7 +72,6 @@
 		90E50E941CDB826500874391 /* Total TextbooksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Total TextbooksUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E50E981CDB826500874391 /* Total_TextbooksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Total_TextbooksUITests.swift; sourceTree = "<group>"; };
 		90E50E9A1CDB826500874391 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		90E50EB01CDBBBE300874391 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		90F080401CE38FDE001E81E2 /* Total Textbooks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Total Textbooks.entitlements"; sourceTree = "<group>"; };
 		A55A767480814902B363CB6B /* Pods-Total Textbooks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total Textbooks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Total Textbooks/Pods-Total Textbooks.debug.xcconfig"; sourceTree = "<group>"; };
 		B75ECB40D9AAC44C8D1F7E0E /* Pods-Total TextbooksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total TextbooksTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Total TextbooksTests/Pods-Total TextbooksTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -141,17 +143,18 @@
 		90E50E751CDB826500874391 /* Total Textbooks */ = {
 			isa = PBXGroup;
 			children = (
+				90D3E1D51D0838410024500B /* AboutViewController.swift */,
 				9005C7431CE4BBBC00277047 /* Launch Screen.storyboard */,
 				90DF7C9C1CE3B189001B9C57 /* SWReveallViewController */,
 				90F080401CE38FDE001E81E2 /* Total Textbooks.entitlements */,
 				90E50E761CDB826500874391 /* AppDelegate.swift */,
-				90E50E781CDB826500874391 /* SearchViewController.swift */,
 				90BC3EA41CE37D1E00AA2D22 /* SearchFormViewController.swift */,
+				90D166C01D01DFCC00DCAD2D /* SearchTitleViewController.swift */,
+				90E50E781CDB826500874391 /* SearchViewController.swift */,
 				908D2B651CE3816D00D19C22 /* main-iphone.storyboard */,
 				901247B21CEA19C400CB420A /* extWebViewController.swift */,
 				90DF7CA11CE3B8E7001B9C57 /* MenuController.swift */,
 				909EB7C11CDD181500B8157F /* HelpViewController.swift */,
-				90E50EB01CDBBBE300874391 /* MoreViewController.swift */,
 				90BC3EA31CE37D1E00AA2D22 /* ROBarcodeScannerViewController.swift */,
 				90E50E7F1CDB826500874391 /* Assets.xcassets */,
 				90E50E841CDB826500874391 /* Info.plist */,
@@ -469,13 +472,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				90DF7CA21CE3B8E7001B9C57 /* MenuController.swift in Sources */,
-				90E50EB11CDBBBE300874391 /* MoreViewController.swift in Sources */,
 				90E50E771CDB826500874391 /* AppDelegate.swift in Sources */,
 				90DF7CA01CE3B1BE001B9C57 /* SWRevealViewController.m in Sources */,
 				90BC3EA61CE37D1E00AA2D22 /* SearchFormViewController.swift in Sources */,
+				90D166C11D01DFCC00DCAD2D /* SearchTitleViewController.swift in Sources */,
 				90E50E791CDB826500874391 /* SearchViewController.swift in Sources */,
 				909EB7C21CDD181500B8157F /* HelpViewController.swift in Sources */,
 				90BC3EA51CE37D1E00AA2D22 /* ROBarcodeScannerViewController.swift in Sources */,
+				90D3E1D61D0838410024500B /* AboutViewController.swift in Sources */,
 				901247B31CEA19C400CB420A /* extWebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

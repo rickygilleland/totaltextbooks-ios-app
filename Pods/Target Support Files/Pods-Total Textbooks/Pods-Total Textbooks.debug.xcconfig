@@ -1,11 +1,11 @@
 CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES
 EMBEDDED_CONTENT_CONTAINS_SWIFT = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/FlatUIKit" "$PODS_CONFIGURATION_BUILD_DIR/Material" "$PODS_CONFIGURATION_BUILD_DIR/SwiftSpinner" "${PODS_ROOT}/ZendeskSDK"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/Alamofire" "$PODS_CONFIGURATION_BUILD_DIR/FlatUIKit" "$PODS_CONFIGURATION_BUILD_DIR/HanekeSwift" "$PODS_CONFIGURATION_BUILD_DIR/Material" "$PODS_CONFIGURATION_BUILD_DIR/SwiftSpinner" "$PODS_CONFIGURATION_BUILD_DIR/SwiftyJSON" "$PODS_CONFIGURATION_BUILD_DIR/TextFieldEffects" "${PODS_ROOT}/ZendeskSDK"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/ZendeskSDK"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/FlatUIKit/FlatUIKit.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/Material/Material.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/SwiftSpinner/SwiftSpinner.framework/Headers" -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/ZendeskSDK"
-OTHER_LDFLAGS = $(inherited) -ObjC -framework "FlatUIKit" -framework "Material" -framework "MessageUI" -framework "MobileCoreServices" -framework "Security" -framework "SwiftSpinner" -framework "SystemConfiguration" -framework "ZendeskProviderSDK" -framework "ZendeskSDK"
+OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/Alamofire/Alamofire.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/FlatUIKit/FlatUIKit.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/HanekeSwift/Haneke.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/Material/Material.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/SwiftSpinner/SwiftSpinner.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/SwiftyJSON/SwiftyJSON.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/TextFieldEffects/TextFieldEffects.framework/Headers" -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/ZendeskSDK"
+OTHER_LDFLAGS = $(inherited) -ObjC -framework "Alamofire" -framework "FlatUIKit" -framework "Haneke" -framework "Material" -framework "MessageUI" -framework "MobileCoreServices" -framework "Security" -framework "SwiftSpinner" -framework "SwiftyJSON" -framework "SystemConfiguration" -framework "TextFieldEffects" -framework "ZendeskProviderSDK" -framework "ZendeskSDK"
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
 PODS_BUILD_DIR = $BUILD_DIR
 PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)

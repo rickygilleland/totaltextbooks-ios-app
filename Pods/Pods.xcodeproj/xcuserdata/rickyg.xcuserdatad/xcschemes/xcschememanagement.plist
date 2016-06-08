@@ -4,7 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FlatUIKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>HanekeSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -44,20 +54,35 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>TextFieldEffects.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>58B1AB757CB76E8437CBFC01A67FF99A</key>
+		<key>2C2B1953A91633859BF7AD238FF567A0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5CF139B7D6298D56C0BB5770372D711F</key>
+		<key>5D181ABD2172A213B29E5C8BBA0586C7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6F20E324D863E55247117AA1745DDAEC</key>
+		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>958EC39DD79BF94E1C5BECA416A02062</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,12 +92,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>B089559E351F0F16411C9503E770FC3B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B5FB957A5AB4C99A6DC55ED4A70DDC4A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C200CCED5B6E8112F8179B2C5F8F599A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C4FF14EC9E7A04BDF05B4CFE1F7D8F79</key>
+		<key>CD3494978F51B45C961AF0A8C260AB95</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,7 +117,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FF4ECEA631934BD0F167B9EB544EC9BD</key>
+		<key>D8FB1C575B9FAB8D06C927394DD07C62</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DE9B0536CD7D58980FF5CD1F2E927CF6</key>
 		<dict>
 			<key>primary</key>
 			<true/>

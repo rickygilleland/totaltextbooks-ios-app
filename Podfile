@@ -10,6 +10,10 @@ target 'Total Textbooks' do
   pod "Material"
   pod "FlatUIKit"
   pod "ZendeskSDK"
+  pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+  pod 'Alamofire', '~> 3.4'
+  pod 'HanekeSwift'
+  pod 'TextFieldEffects'
   target 'Total TextbooksTests' do
     inherit! :search_paths
     # Pods for testing

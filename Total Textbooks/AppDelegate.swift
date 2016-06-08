@@ -43,6 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
@@ -64,7 +65,52 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    @available(iOS 9.0, *)
+    func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void) {
+        
+        // Handle quick actions
+        completionHandler(handleQuickAction(shortcutItem))
+        
+    }
+    
+    @available(iOS 9.0, *)
+    func handleQuickAction(shortcutItem: UIApplicationShortcutItem) -> Bool {
 
+        var quickActionHandled = false
+        let searchForm = SearchFormViewController()
+        var barcodeScannerView:ROBarcodeScannerViewController?
+        let navigationController = UINavigationController()
+        
+        let barcodeScanner = ROBarcodeScannerViewController()
+        // Define the callback which handles the returned result
+        barcodeScanner.barcodeScanned = { (barcode:String) in
+            // The scanned result can be fetched here
+            //print("Barcode scanned: \(barcode)")
+            searchForm.searchTextField.text = barcode
+        }
+        
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        self.window!.rootViewController = navigationController
+        
+        self.window!.backgroundColor = UIColor.whiteColor()
+        
+        self.window!.makeKeyAndVisible()
+        
+        // Push the view
+        if let barcodeScanner = barcodeScannerView {
+            navigationController.pushViewController(barcodeScanner, animated: true)
+        }
+        
+        
+
+        quickActionHandled = true
+
+        print(quickActionHandled)
+        return quickActionHandled
+
+    }
 
 }
 

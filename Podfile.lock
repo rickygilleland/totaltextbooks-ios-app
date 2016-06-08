@@ -1,26 +1,47 @@
 PODS:
+  - Alamofire (3.4.0)
   - FlatUIKit (1.6.2)
-  - Material (1.41.1)
+  - HanekeSwift (0.10.1)
+  - Material (1.41.6)
   - SwiftSpinner (0.9.5)
-  - ZendeskSDK (1.6.0.1):
-    - ZendeskSDK/Providers (= 1.6.0.1)
-    - ZendeskSDK/UI (= 1.6.0.1)
-  - ZendeskSDK/Providers (1.6.0.1)
-  - ZendeskSDK/UI (1.6.0.1):
+  - SwiftyJSON (2.3.2)
+  - TextFieldEffects (1.2.0)
+  - ZendeskSDK (1.6.1.1):
+    - ZendeskSDK/Providers (= 1.6.1.1)
+    - ZendeskSDK/UI (= 1.6.1.1)
+  - ZendeskSDK/Providers (1.6.1.1)
+  - ZendeskSDK/UI (1.6.1.1):
     - ZendeskSDK/Providers
 
 DEPENDENCIES:
+  - Alamofire (~> 3.4)
   - FlatUIKit
+  - HanekeSwift
   - Material
   - SwiftSpinner
+  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+  - TextFieldEffects
   - ZendeskSDK
 
-SPEC CHECKSUMS:
-  FlatUIKit: 1b41f0d4952ce8d970d8479ce79df54a960242c4
-  Material: 441818e40ca8d30a4b83f9795e75a0d8c88ccf97
-  SwiftSpinner: c6585a0ae5c67eb33e737695cce88f0262008cce
-  ZendeskSDK: 5eacccb6f5ca7129dbc2df05a057ccde0e62b9e3
+EXTERNAL SOURCES:
+  SwiftyJSON:
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
-PODFILE CHECKSUM: 1f211d6671c62c3dd7ccd79ffe3d1c513e4fd03b
+CHECKOUT OPTIONS:
+  SwiftyJSON:
+    :commit: 2a5b70f06001316d4fb54501edc70b4084705da0
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+SPEC CHECKSUMS:
+  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  FlatUIKit: 1b41f0d4952ce8d970d8479ce79df54a960242c4
+  HanekeSwift: 08e47d3d0f2899ec58e5d257beba0de619aca9e8
+  Material: fcbcee7543c79e9917a94b3510c0cc9eeefe156b
+  SwiftSpinner: c6585a0ae5c67eb33e737695cce88f0262008cce
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  TextFieldEffects: bc4fd3bd557321bd61a0762f3f50965477a36f62
+  ZendeskSDK: b08a24cdf036a61dc8c680c389b208be4d6dc5ae
+
+PODFILE CHECKSUM: a7c63be08ef10d503004ab88f5a366b471eff6e6
 
 COCOAPODS: 1.0.0
