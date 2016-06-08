@@ -12,6 +12,7 @@ import SwiftSpinner
 import SwiftyJSON
 import Alamofire
 import Material
+import JSSAlertView
 
 class SearchFormViewController: UIViewController, UITextFieldDelegate {
     
@@ -103,17 +104,16 @@ class SearchFormViewController: UIViewController, UITextFieldDelegate {
         return true
     }
 
-
     @IBAction func searchButtonTapped(sender: AnyObject?) {
         let searchQuery:NSString = searchTextField.text!
         if (searchQuery == "" || searchTextField.text!.isEmpty) {
             
-            let alertView:UIAlertView = UIAlertView()
-            alertView.title = "No Book Entered"
-            alertView.message = "Please enter a book to continue."
-            alertView.delegate = self
-            alertView.addButtonWithTitle("OK")
-            alertView.show()
+            JSSAlertView().danger(
+                self,
+                title: "No Book Entered",
+                text: "Please enter a book to continue."
+            )
+
         } else {
             SwiftSpinner.show("Loading").addTapHandler({
                 SwiftSpinner.hide()
@@ -134,21 +134,19 @@ class SearchFormViewController: UIViewController, UITextFieldDelegate {
                 
                 if ((statusCode) == 500) {
                     SwiftSpinner.hide()
-                    let alertView:UIAlertView = UIAlertView()
-                    alertView.title = "Error Searching for Book"
-                    alertView.message = "There was an issue completing your request. Please check your network connection or try again in a few minutes. If this issue persists, please use the Help page to contact us."
-                    alertView.delegate = self
-                    alertView.addButtonWithTitle("OK")
-                    alertView.show()
+                    JSSAlertView().danger(
+                        self,
+                        title: "Error Searching for Book",
+                        text: "There was an issue completing your request. Please check your network connection or try again in a few minutes. If this issue persists, please use the Help page to contact us."
+                    )
                 }
                 else if ((statusCode) != 200) {
                     SwiftSpinner.hide()
-                    let alertView:UIAlertView = UIAlertView()
-                    alertView.title = "Error Searching for Book"
-                    alertView.message = "There was an issue completing your request. Please check your network connection or try again in a few minutes. If this issue persists, please use the Help page to contact us."
-                    alertView.delegate = self
-                    alertView.addButtonWithTitle("OK")
-                    alertView.show()
+                    JSSAlertView().danger(
+                        self,
+                        title: "Error Searching for Book",
+                        text: "There was an issue completing your request. Please check your network connection or try again in a few minutes. If this issue persists, please use the Help page to contact us."
+                    )
                 } else {
                     if((responseData.result.value) != nil) {
                         //looks like we received a successful response -- time to pick which view to shoot the user to
@@ -161,22 +159,20 @@ class SearchFormViewController: UIViewController, UITextFieldDelegate {
                             self.performSegueWithIdentifier("searchSegue", sender: sender)
                         } else if (swiftyJsonVar["code"] == "500") {
                             //no book was found
-                            let alertView:UIAlertView = UIAlertView()
-                            alertView.title = "Book Not Found"
-                            alertView.message = "We couldn't find your book. Please enter another book title or ISBN, or try our barcode scanner."
-                            alertView.delegate = self
-                            alertView.addButtonWithTitle("OK")
-                            alertView.show()
+                            JSSAlertView().danger(
+                                self,
+                                title: "Book Not Found",
+                                text: "We couldn't find your book. Please enter another book title or ISBN, or try our barcode scanner."
+                            )
                         }
                 
                         SwiftSpinner.hide()
                     } else {
-                        let alertView:UIAlertView = UIAlertView()
-                        alertView.title = "Error Searching for Book"
-                        alertView.message = "There was an issue completing your request. Please check your network connection or try again in a few minutes. If this issue persists, please use the Help page to contact us."
-                        alertView.delegate = self
-                        alertView.addButtonWithTitle("OK")
-                        alertView.show()
+                        JSSAlertView().danger(
+                            self,
+                            title: "Error Searching for Book",
+                            text: "There was an issue completing your request. Please check your network connection or try again in a few minutes. If this issue persists, please use the Help page to contact us."
+                        )
                     }
                 }
             }
@@ -204,12 +200,11 @@ class SearchFormViewController: UIViewController, UITextFieldDelegate {
             let searchQuery:NSString = searchTextField.text!
             if (searchQuery == "" || searchTextField.text!.isEmpty) {
                 
-                let alertView:UIAlertView = UIAlertView()
-                alertView.title = "No Book Entered"
-                alertView.message = "Please enter a book to continue."
-                alertView.delegate = self
-                alertView.addButtonWithTitle("OK")
-                alertView.show()
+                JSSAlertView().danger(
+                    self,
+                    title: "No Book Entered",
+                    text: "Please enter a book to continue."
+                )
                 return false
             }
                 

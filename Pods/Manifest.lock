@@ -2,6 +2,7 @@ PODS:
   - Alamofire (3.4.0)
   - FlatUIKit (1.6.2)
   - HanekeSwift (0.10.1)
+  - JSSAlertView (1.1.5)
   - Material (1.41.8)
   - SwiftSpinner (0.9.5)
   - SwiftyJSON (2.3.2)
@@ -17,6 +18,7 @@ DEPENDENCIES:
   - Alamofire (~> 3.4)
   - FlatUIKit
   - HanekeSwift
+  - JSSAlertView
   - Material
   - SwiftSpinner
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
@@ -36,12 +38,13 @@ SPEC CHECKSUMS:
   Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
   FlatUIKit: 1b41f0d4952ce8d970d8479ce79df54a960242c4
   HanekeSwift: 08e47d3d0f2899ec58e5d257beba0de619aca9e8
+  JSSAlertView: 1ff5d4dcb28b00a38c0293c4c555231c02590be1
   Material: df01578ac30c9b5aa0b329ce63a2cd51d2cfd158
   SwiftSpinner: c6585a0ae5c67eb33e737695cce88f0262008cce
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   TextFieldEffects: bc4fd3bd557321bd61a0762f3f50965477a36f62
   ZendeskSDK: b08a24cdf036a61dc8c680c389b208be4d6dc5ae
 
-PODFILE CHECKSUM: a7c63be08ef10d503004ab88f5a366b471eff6e6
+PODFILE CHECKSUM: 227168c44e4b0b03da91687f7fbdb900ce87a19f
 
 COCOAPODS: 1.0.0

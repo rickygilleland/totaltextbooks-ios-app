@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>JSSAlertView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Material-io.cosmicmind.material.fonts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -72,7 +77,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5D181ABD2172A213B29E5C8BBA0586C7</key>
+		<key>56E07477B26B4745BC38563D35DA4051</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6FEBD766C6F3F758820689572E2CEA29</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>70342E889A3164ACA592EFF95A07E381</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>72D57DED5129BDCAEB112D61B15B08A2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,27 +117,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B5FB957A5AB4C99A6DC55ED4A70DDC4A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>C200CCED5B6E8112F8179B2C5F8F599A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CD3494978F51B45C961AF0A8C260AB95</key>
+		<key>C2EB12FAF11A89793873C0BB0AC0FF72</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>D8D29EAB5CACC6767DB3902165CEF888</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D8FB1C575B9FAB8D06C927394DD07C62</key>
 		<dict>
 			<key>primary</key>
 			<true/>

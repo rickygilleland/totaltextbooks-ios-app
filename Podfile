@@ -14,6 +14,7 @@ target 'Total Textbooks' do
   pod 'Alamofire', '~> 3.4'
   pod 'HanekeSwift'
   pod 'TextFieldEffects'
+  pod 'JSSAlertView'
   target 'Total TextbooksTests' do
     inherit! :search_paths
     # Pods for testing

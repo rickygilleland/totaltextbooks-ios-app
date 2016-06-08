@@ -11,6 +11,7 @@ import SwiftyJSON
 import SwiftSpinner
 import Alamofire
 import Haneke
+import JSSAlertView
 
 class customTitleTableViewCell: UITableViewCell {
     @IBOutlet weak var bookTitle: UILabel!
@@ -63,12 +64,11 @@ class SearchTitleViewController: UIViewController, UITableViewDataSource, UITabl
                 let swiftyJsonVar = JSON(responseData.result.value!)
                 if (swiftyJsonVar["parsedTitleResponse"] == "false") {
                     //something isn't right -- throw an error
-                    let alertView:UIAlertView = UIAlertView()
-                    alertView.title = "Oops! Something went wrong"
-                    alertView.message = "Please try your search again. If this message persists, please use the Help page to contact us."
-                    alertView.delegate = self
-                    alertView.addButtonWithTitle("OK")
-                    alertView.show()
+                    JSSAlertView().danger(
+                        self,
+                        title: "Oops! Something went wrong",
+                        text: "Please try your search again. If this message persists, use the Help page to contact us."
+                    )
                 } else if let titleData = swiftyJsonVar["parsedTitleResponse"].arrayObject {
                     for (key, subJson) in swiftyJsonVar["parsedTitleResponse"] {
                         if let title = subJson["title"].string {
@@ -94,12 +94,11 @@ class SearchTitleViewController: UIViewController, UITableViewDataSource, UITabl
                 
             } else {
                 //Something either went wrong, or we couldn't find their book.
-                let alertView:UIAlertView = UIAlertView()
-                alertView.title = "Book not found"
-                alertView.message = "We couldn't find any books matching your search. Please hit the back button and try another book title or ISBN."
-                alertView.delegate = self
-                alertView.addButtonWithTitle("OK")
-                alertView.show()
+                JSSAlertView().danger(
+                    self,
+                    title: "Book Not Found",
+                    text: "We couldn't find your book. Please enter another book title or ISBN, or try our barcode scanner."
+                )
             }
         }
 
