@@ -32,9 +32,13 @@ class SearchTitleViewController: UIViewController, UITableViewDataSource, UITabl
     var bookIsbn:String!
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var resultsFound: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //start with nothing so no one sees the placeholder content
+        self.resultsFound.text = ""
 
         self.navigationController!.toolbarHidden = true
         
@@ -84,6 +88,8 @@ class SearchTitleViewController: UIViewController, UITableViewDataSource, UITabl
                         }
                     }
                     self.tableView.reloadData()
+                    
+                    self.resultsFound.text = "\(self.titleArray.count)" + " Results Found"
                 }
                 
             } else {

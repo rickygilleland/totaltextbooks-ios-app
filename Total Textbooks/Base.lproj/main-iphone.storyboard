@@ -1228,6 +1228,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="sx8-VB-fkC"/>
                     <connections>
+                        <outlet property="resultsFound" destination="GOZ-IJ-92b" id="XHb-LO-8Th"/>
                         <outlet property="tableView" destination="PHW-h3-R0u" id="gQN-qa-IPX"/>
                         <segue destination="9pv-A4-QxB" kind="show" identifier="searchTitleToIsbnSegue" id="GSu-eZ-byA"/>
                     </connections>
@@ -2845,6 +2846,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Sve-yX-B9H"/>
-        <segue reference="E95-TT-gET"/>
+        <segue reference="GSu-eZ-byA"/>
     </inferredMetricsTieBreakers>
 </document>
