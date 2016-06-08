@@ -15,6 +15,8 @@ class HelpViewController: UIViewController {
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
+    @IBOutlet weak var kbButton: UIButton!
+    @IBOutlet weak var contactButton: UIButton!
     
     override func loadView() {
         super.loadView()
@@ -42,6 +44,13 @@ class HelpViewController: UIViewController {
         imageView.image = image
         
         navigationItem.titleView = imageView
+        
+        //style the buttons
+        kbButton.layer.borderWidth = 1 // Set border width
+        kbButton.layer.cornerRadius = 5 // Set border radius (Make it curved, increase this for a more rounded button
+        
+        contactButton.layer.borderWidth = 1 // Set border width
+        contactButton.layer.cornerRadius = 5 // Set border radius (Make it curved, increase this for a more rounded button
         
     }
     

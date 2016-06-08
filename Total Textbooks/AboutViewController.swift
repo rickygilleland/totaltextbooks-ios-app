@@ -53,8 +53,6 @@ class AboutViewController: UIViewController, WKNavigationDelegate, WKUIDelegate 
         
         guard let url =  NSURL(string: "https://ios.totaltextbooks.com/about") else { return }
         moreView!.navigationDelegate = self
-        //homeView!.loadRequest(NSURLRequest(URL: url))
-        //view.addSubview(homeView!)
         
         //var url = NSURL(string:"https://ios.dev.totaltextbooks.com")
         var req = NSURLRequest(URL:url)
