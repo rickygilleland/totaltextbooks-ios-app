@@ -115,7 +115,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         })
         
         //Get the basic book info and decide which view we are sending them to
-        Alamofire.request(.GET, "https://api.dev.textbookpricefinder.com/search/bookInfo/\(String(query!))/nc8ur498rhn3983").responseJSON { (responseData) -> Void in
+        Alamofire.request(.GET, "https://api.textbookpricefinder.com/search/bookInfo/\(String(query!))/nc8ur498rhn3983").responseJSON { (responseData) -> Void in
             if((responseData.result.value) != nil) {
                 let swiftyJsonVar = JSON(responseData.result.value!)["vitalInfo"]
                 
@@ -134,7 +134,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
             }
         }
         
-        Alamofire.request(.GET, "https://api.dev.textbookpricefinder.com/search/all/\(String(query!))/nc8ur498rhn3983").responseJSON { (responseData) -> Void in
+        Alamofire.request(.GET, "https://api.textbookpricefinder.com/search/all/\(String(query!))/nc8ur498rhn3983").responseJSON { (responseData) -> Void in
             if((responseData.result.value) != nil) {
                 let swiftyJsonVar = JSON(responseData.result.value!)
                 

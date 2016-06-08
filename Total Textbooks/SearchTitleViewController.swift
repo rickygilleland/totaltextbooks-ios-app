@@ -54,7 +54,7 @@ class SearchTitleViewController: UIViewController, UITableViewDataSource, UITabl
             SwiftSpinner.hide()
         })
             
-        Alamofire.request(.GET, "https://api.dev.textbookpricefinder.com/search/all/\(String(query!))/nc8ur498rhn3983").responseJSON { (responseData) -> Void in
+        Alamofire.request(.GET, "https://api.textbookpricefinder.com/search/all/\(String(query!))/nc8ur498rhn3983").responseJSON { (responseData) -> Void in
             if((responseData.result.value) != nil) {
                 let swiftyJsonVar = JSON(responseData.result.value!)
                 if (swiftyJsonVar["parsedTitleResponse"] == "false") {

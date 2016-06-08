@@ -122,7 +122,7 @@ class SearchFormViewController: UIViewController, UITextFieldDelegate {
             let query = searchQuery.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
         
             //Get the basic book info and decide which view we are sending them to
-            Alamofire.request(.GET, "https://api.dev.textbookpricefinder.com/search/bookInfo/\(String(query!))/nc8ur498rhn3983").responseJSON { (responseData) -> Void in
+            Alamofire.request(.GET, "https://api.textbookpricefinder.com/search/bookInfo/\(String(query!))/nc8ur498rhn3983").responseJSON { (responseData) -> Void in
                 //successfull until proven otherwise
                 var statusCode = 200
                 if (responseData.response?.statusCode) != nil {
