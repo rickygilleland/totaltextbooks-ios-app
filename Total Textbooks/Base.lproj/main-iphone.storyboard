@@ -613,8 +613,7 @@
                                                             <include reference="bRK-zn-Rkv"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                                        <rect key="frame" x="609" y="48" width="136" height="30"/>
+                                                    <variation key="heightClass=regular-widthClass=regular">
                                                         <mask key="constraints">
                                                             <include reference="1EE-20-LZr"/>
                                                         </mask>

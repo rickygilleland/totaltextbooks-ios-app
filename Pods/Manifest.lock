@@ -2,7 +2,7 @@ PODS:
   - Alamofire (3.4.0)
   - FlatUIKit (1.6.2)
   - HanekeSwift (0.10.1)
-  - Material (1.41.6)
+  - Material (1.41.8)
   - SwiftSpinner (0.9.5)
   - SwiftyJSON (2.3.2)
   - TextFieldEffects (1.2.0)
@@ -36,7 +36,7 @@ SPEC CHECKSUMS:
   Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
   FlatUIKit: 1b41f0d4952ce8d970d8479ce79df54a960242c4
   HanekeSwift: 08e47d3d0f2899ec58e5d257beba0de619aca9e8
-  Material: fcbcee7543c79e9917a94b3510c0cc9eeefe156b
+  Material: df01578ac30c9b5aa0b329ce63a2cd51d2cfd158
   SwiftSpinner: c6585a0ae5c67eb33e737695cce88f0262008cce
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   TextFieldEffects: bc4fd3bd557321bd61a0762f3f50965477a36f62
