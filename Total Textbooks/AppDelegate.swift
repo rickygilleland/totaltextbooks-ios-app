@@ -40,6 +40,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let identity = ZDKAnonymousIdentity()
         ZDKConfig.instance().userIdentity = identity
         
+        //set the Amazon Ads API Key
+        AmazonAdRegistration.sharedRegistration().setAppKey("5f153858377a4bea96b9bb45da30ce3a")
+        
         return true
     }
 
