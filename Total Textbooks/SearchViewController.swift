@@ -235,7 +235,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
             } else {
                 let url = dict["merchantImage"] as? String
                 let prefixedUrl = "https://www.totaltextbooks.com" + url!
-                                                merchantLogoUrl = NSURL(string: (prefixedUrl))
+                merchantLogoUrl = NSURL(string: (prefixedUrl))
             }
         
             cell.merchantLogo.hnk_setImageFromURL(merchantLogoUrl!)
