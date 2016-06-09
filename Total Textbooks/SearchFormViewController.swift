@@ -120,9 +120,16 @@ class SearchFormViewController: UIViewController, UITextFieldDelegate {
             })
         
             let query = searchQuery.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+            
+            let parameters = [
+                    "query": query!,
+                    "key": "nc8ur498rhn39gkjkjgjkdfhg1=fdgdf3r=r43r3290rierjg",
+                    "clientId": UIDevice.currentDevice().identifierForVendor!.UUIDString,
+                    "timestamp": "\(NSDate().timeIntervalSince1970 * 1000)"
+            ]
         
             //Get the basic book info and decide which view we are sending them to
-            Alamofire.request(.GET, "https://api.textbookpricefinder.com/search/bookInfo/\(String(query!))/nc8ur498rhn3983").responseJSON { (responseData) -> Void in
+            Alamofire.request(.POST, "https://api.textbookpricefinder.com/search/bookInfo/\(String(query!))", parameters: parameters).responseJSON { (responseData) -> Void in
                 //successfull until proven otherwise
                 var statusCode = 200
                 if (responseData.response?.statusCode) != nil {

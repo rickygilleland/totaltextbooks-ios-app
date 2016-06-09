@@ -58,8 +58,15 @@ class SearchTitleViewController: UIViewController, UITableViewDataSource, UITabl
         SwiftSpinner.show("Loading").addTapHandler({
             SwiftSpinner.hide()
         })
+        
+        let parameters = [
+            "query": query!,
+            "key": "nc8ur498rhn39gkjkjgjkdfhg1=fdgdf3r=r43r3290rierjg",
+            "clientId": UIDevice.currentDevice().identifierForVendor!.UUIDString,
+            "timestamp": "\(NSDate().timeIntervalSince1970 * 1000)"
+        ]
             
-        Alamofire.request(.GET, "https://api.textbookpricefinder.com/search/all/\(String(query!))/nc8ur498rhn3983").responseJSON { (responseData) -> Void in
+        Alamofire.request(.POST, "https://api.textbookpricefinder.com/search/all/\(String(query!))", parameters: parameters).responseJSON { (responseData) -> Void in
             if((responseData.result.value) != nil) {
                 let swiftyJsonVar = JSON(responseData.result.value!)
                 if (swiftyJsonVar["parsedTitleResponse"] == "false") {
