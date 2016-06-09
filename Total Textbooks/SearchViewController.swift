@@ -47,6 +47,7 @@ class customSellTableViewCell: UITableViewCell {
 class SearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
+    weak var activityIndicatorView: UIActivityIndicatorView!
     
     @IBOutlet weak var bookTitle: UILabel!
     @IBOutlet weak var bookCover: UIImageView!
@@ -106,6 +107,12 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         imageView.image = image
         
         navigationItem.titleView = imageView
+        
+        //show the activity indicator on the tableview
+        let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
+        tableView.backgroundView = activityIndicatorView
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        self.activityIndicatorView = activityIndicatorView
 
 
         let query = searchPassed.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
@@ -141,6 +148,8 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
             }
         }
         
+        activityIndicatorView.startAnimating()
+        
         Alamofire.request(.POST, "https://api.textbookpricefinder.com/search/all/\(String(query!))", parameters: parameters).responseJSON { (responseData) -> Void in
             if((responseData.result.value) != nil) {
                 let swiftyJsonVar = JSON(responseData.result.value!)
@@ -175,12 +184,15 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
                 }
 
                 if self.sellArrRes.count > 0 {
-                    //self.sellTableView.reloadData()
+                    self.tableView.reloadData()
                     //self.performSegueWithIdentifier("sellResultsSegue", sender: self)
                     //NSNotificationCenter.defaultCenter().postNotificationName("sellReload", object: nil)
                 }
                 
             }
+            
+            self.activityIndicatorView.stopAnimating()
+            self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
         }
         
         
