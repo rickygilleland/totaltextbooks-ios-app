@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aW8-QB-qPh">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="v3v-Hp-HPl"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="My Photo Gallery" id="DbD-1x-bPh"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lkp-A4-yfM">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="8TQ-HW-UCa"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Previous" id="TgO-1L-1Yt">
+                                        <connections>
+                                            <action selector="previousImage:" destination="BYZ-38-t0r" id="zjI-1e-LQ5"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="flexibleSpace" id="B5d-Va-lln"/>
+                                    <barButtonItem title="Next" id="UOM-va-1ff">
+                                        <connections>
+                                            <action selector="nextImage:" destination="BYZ-38-t0r" id="UjW-zM-gMF"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HWn-Um-qYV">
+                                <rect key="frame" x="0.0" y="44" width="600" height="512"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="a6T-3O-HzN"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aW8-QB-qPh" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="DEA-Wg-ZTy"/>
+                            <constraint firstItem="lkp-A4-yfM" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Dec-ES-4D4"/>
+                            <constraint firstItem="lkp-A4-yfM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FYt-eC-JOu"/>
+                            <constraint firstItem="lkp-A4-yfM" firstAttribute="top" secondItem="HWn-Um-qYV" secondAttribute="bottom" id="V3p-Pj-8Oa"/>
+                            <constraint firstItem="lkp-A4-yfM" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="Wj5-AI-Xzi"/>
+                            <constraint firstItem="aW8-QB-qPh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Z6p-Rd-Ylx"/>
+                            <constraint firstItem="HWn-Um-qYV" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="bKA-mq-qo1"/>
+                            <constraint firstItem="aW8-QB-qPh" firstAttribute="bottom" secondItem="HWn-Um-qYV" secondAttribute="top" id="cAC-t7-TZc"/>
+                            <constraint firstItem="aW8-QB-qPh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="voJ-E8-0MN"/>
+                            <constraint firstItem="HWn-Um-qYV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zzC-4z-dob"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="navBar" destination="aW8-QB-qPh" id="UnA-Dl-eyv"/>
+                        <outlet property="navBarHeightConstraint" destination="v3v-Hp-HPl" id="U8q-nC-qck"/>
+                        <outlet property="next" destination="UOM-va-1ff" id="Nbh-PX-leI"/>
+                        <outlet property="previous" destination="TgO-1L-1Yt" id="E3Y-b9-CuP"/>
+                        <outlet property="scrollView" destination="HWn-Um-qYV" id="5Gb-SY-Pme"/>
+                        <outlet property="toolbar" destination="lkp-A4-yfM" id="y6P-VV-vrD"/>
+                        <outlet property="toolbarHeightConstraint" destination="8TQ-HW-UCa" id="Km7-ZZ-B7f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

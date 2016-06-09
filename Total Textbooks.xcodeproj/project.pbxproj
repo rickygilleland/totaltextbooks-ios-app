@@ -18,6 +18,16 @@
 		90BC3EA61CE37D1E00AA2D22 /* SearchFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BC3EA41CE37D1E00AA2D22 /* SearchFormViewController.swift */; };
 		90D166C11D01DFCC00DCAD2D /* SearchTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D166C01D01DFCC00DCAD2D /* SearchTitleViewController.swift */; };
 		90D3E1D61D0838410024500B /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3E1D51D0838410024500B /* AboutViewController.swift */; };
+		90D3E1DD1D09B1660024500B /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D3E1DB1D09B1660024500B /* AdSupport.framework */; };
+		90D3E1DE1D09B1660024500B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D3E1DC1D09B1660024500B /* CoreLocation.framework */; };
+		90D3E1E01D09B1730024500B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D3E1DF1D09B1730024500B /* SystemConfiguration.framework */; };
+		90D3E1E21D09B17A0024500B /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D3E1E11D09B17A0024500B /* CoreTelephony.framework */; };
+		90D3E1E41D09B1800024500B /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D3E1E31D09B1800024500B /* MediaPlayer.framework */; };
+		90D3E1E71D09B1880024500B /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D3E1E51D09B1880024500B /* EventKit.framework */; };
+		90D3E1E81D09B1880024500B /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D3E1E61D09B1880024500B /* EventKitUI.framework */; };
+		90D3E1EA1D09B1D80024500B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D3E1E91D09B1D80024500B /* StoreKit.framework */; };
+		90D3E1EC1D09B1DD0024500B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D3E1EB1D09B1DD0024500B /* QuartzCore.framework */; };
+		90D3E1EE1D09B3030024500B /* AmazonAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D3E1ED1D09B3030024500B /* AmazonAd.framework */; };
 		90DF7CA01CE3B1BE001B9C57 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DF7C9F1CE3B1BE001B9C57 /* SWRevealViewController.m */; };
 		90DF7CA21CE3B8E7001B9C57 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DF7CA11CE3B8E7001B9C57 /* MenuController.swift */; };
 		90E50E771CDB826500874391 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E50E761CDB826500874391 /* AppDelegate.swift */; };
@@ -57,6 +67,17 @@
 		90BC3EA41CE37D1E00AA2D22 /* SearchFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFormViewController.swift; sourceTree = "<group>"; };
 		90D166C01D01DFCC00DCAD2D /* SearchTitleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTitleViewController.swift; sourceTree = "<group>"; };
 		90D3E1D51D0838410024500B /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		90D3E1D91D09B1020024500B /* AmazonAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AmazonAd.framework; path = "Total Textbooks/AmazonSDK/AmazonMobileAds/AmazonAd.framework"; sourceTree = "<group>"; };
+		90D3E1DB1D09B1660024500B /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		90D3E1DC1D09B1660024500B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		90D3E1DF1D09B1730024500B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		90D3E1E11D09B17A0024500B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		90D3E1E31D09B1800024500B /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		90D3E1E51D09B1880024500B /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		90D3E1E61D09B1880024500B /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		90D3E1E91D09B1D80024500B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		90D3E1EB1D09B1DD0024500B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		90D3E1ED1D09B3030024500B /* AmazonAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AmazonAd.framework; path = AmazonSDK/AmazonMobileAds/AmazonAd.framework; sourceTree = "<group>"; };
 		90DF7C9D1CE3B1BE001B9C57 /* Total Textbooks-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Total Textbooks-Bridging-Header.h"; sourceTree = "<group>"; };
 		90DF7C9E1CE3B1BE001B9C57 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		90DF7C9F1CE3B1BE001B9C57 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -85,6 +106,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90D3E1EE1D09B3030024500B /* AmazonAd.framework in Frameworks */,
+				90D3E1EC1D09B1DD0024500B /* QuartzCore.framework in Frameworks */,
+				90D3E1EA1D09B1D80024500B /* StoreKit.framework in Frameworks */,
+				90D3E1E71D09B1880024500B /* EventKit.framework in Frameworks */,
+				90D3E1E81D09B1880024500B /* EventKitUI.framework in Frameworks */,
+				90D3E1E41D09B1800024500B /* MediaPlayer.framework in Frameworks */,
+				90D3E1E21D09B17A0024500B /* CoreTelephony.framework in Frameworks */,
+				90D3E1E01D09B1730024500B /* SystemConfiguration.framework in Frameworks */,
+				90D3E1DD1D09B1660024500B /* AdSupport.framework in Frameworks */,
+				90D3E1DE1D09B1660024500B /* CoreLocation.framework in Frameworks */,
 				4B40269FCF8500DC0171E213 /* Pods_Total_Textbooks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,6 +214,17 @@
 		99AD649D5A8039DA456B863B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				90D3E1ED1D09B3030024500B /* AmazonAd.framework */,
+				90D3E1EB1D09B1DD0024500B /* QuartzCore.framework */,
+				90D3E1E91D09B1D80024500B /* StoreKit.framework */,
+				90D3E1E51D09B1880024500B /* EventKit.framework */,
+				90D3E1E61D09B1880024500B /* EventKitUI.framework */,
+				90D3E1E31D09B1800024500B /* MediaPlayer.framework */,
+				90D3E1E11D09B17A0024500B /* CoreTelephony.framework */,
+				90D3E1DF1D09B1730024500B /* SystemConfiguration.framework */,
+				90D3E1DB1D09B1660024500B /* AdSupport.framework */,
+				90D3E1DC1D09B1660024500B /* CoreLocation.framework */,
+				90D3E1D91D09B1020024500B /* AmazonAd.framework */,
 				F3533133C5D6FB68B1ED90DC /* Pods_Total_Textbooks.framework */,
 				E9804F489D6F716ED1744A9E /* Pods_Total_TextbooksTests.framework */,
 				EAE500CFDF35CA39AC7F2F61 /* Pods_Total_TextbooksUITests.framework */,
@@ -622,6 +664,12 @@
 				CODE_SIGN_ENTITLEMENTS = "Total Textbooks/Total Textbooks.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Total",
+					Textbooks/AmazonSDK/AmazonMobileAds,
+					"$(PROJECT_DIR)/AmazonSDK/AmazonMobileAds",
+				);
 				INFOPLIST_FILE = "Total Textbooks/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -643,6 +691,12 @@
 				CODE_SIGN_ENTITLEMENTS = "Total Textbooks/Total Textbooks.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Total",
+					Textbooks/AmazonSDK/AmazonMobileAds,
+					"$(PROJECT_DIR)/AmazonSDK/AmazonMobileAds",
+				);
 				INFOPLIST_FILE = "Total Textbooks/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

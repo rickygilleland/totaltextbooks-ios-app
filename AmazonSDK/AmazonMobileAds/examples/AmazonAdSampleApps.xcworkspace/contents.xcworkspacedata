@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:FramedModelessInterstitialAdSample/FramedModelessInterstitialAdSample.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SwipeableModelessInterstitialAdSample/SwipeableModelessInterstitialAdSample.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:InfiniteScrollAdSample/InfiniteScrollAdSample.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:FloatingAdUniversalSample_Swift/FloatingAdUniversalSample_Swift.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SimpleAdUniversalSample_Swift/SimpleAdUniversalSample_Swift.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:InterstitialAdUniversalSample_Swift/InterstitialAdUniversalSample_Swift.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SimpleAdSample/SimpleAdSample.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:FloatingAdUniversalSample/FloatingAdUniversalSample.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:InterstitialAdUniversalSample/InterstitialAdUniversalSample.xcodeproj">
+   </FileRef>
+</Workspace>
