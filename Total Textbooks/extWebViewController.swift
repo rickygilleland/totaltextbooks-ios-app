@@ -37,16 +37,19 @@ class extWebViewController: UIViewController, WKNavigationDelegate, WKUIDelegate
         super.viewDidLoad()
 
         self.navigationItem.hidesBackButton = true
-        let newBackButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Bordered, target: self, action: "backNavButton:")
+        let newBackButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Bordered, target: self, action: #selector(extWebViewController.backNavButton(_:)))
         self.navigationItem.leftBarButtonItem = newBackButton;
         
         webView!.navigationDelegate = self
         webView!.UIDelegate = self
         
-        self.navigationController!.toolbarHidden = false;
+        //self.navigationController!.toolbarHidden = false;
         
         let URLRequest = NSURLRequest(URL: self.url)
+        //print(URLRequest)
         self.webView!.loadRequest(URLRequest)
+        
+        //self.webView!.loadRequest(NSURLRequest(URL: NSURL(string: "https://google.com")!))
         
     }
 

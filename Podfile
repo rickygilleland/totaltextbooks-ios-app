@@ -8,8 +8,12 @@ target 'Total Textbooks' do
   # Pods for Total Textbooks
   pod "SwiftSpinner"
   pod "Material"
-  pod "FlatUIKit"
   pod "ZendeskSDK"
+  pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+  pod 'Alamofire', '~> 3.4'
+  pod 'HanekeSwift'
+  pod 'TextFieldEffects'
+  pod 'JSSAlertView'
   target 'Total TextbooksTests' do
     inherit! :search_paths
     # Pods for testing
@@ -19,5 +23,13 @@ target 'Total Textbooks' do
     inherit! :search_paths
     # Pods for testing
   end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['ENABLE_BITCODE'] = 'NO'
+    end
+  end
+end
 
 end

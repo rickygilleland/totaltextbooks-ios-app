@@ -16,6 +16,18 @@
 		909EB7C21CDD181500B8157F /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909EB7C11CDD181500B8157F /* HelpViewController.swift */; };
 		90BC3EA51CE37D1E00AA2D22 /* ROBarcodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BC3EA31CE37D1E00AA2D22 /* ROBarcodeScannerViewController.swift */; };
 		90BC3EA61CE37D1E00AA2D22 /* SearchFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BC3EA41CE37D1E00AA2D22 /* SearchFormViewController.swift */; };
+		90D166C11D01DFCC00DCAD2D /* SearchTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D166C01D01DFCC00DCAD2D /* SearchTitleViewController.swift */; };
+		90D3E1D61D0838410024500B /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3E1D51D0838410024500B /* AboutViewController.swift */; };
+		90D3E1DD1D09B1660024500B /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D3E1DB1D09B1660024500B /* AdSupport.framework */; };
+		90D3E1DE1D09B1660024500B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D3E1DC1D09B1660024500B /* CoreLocation.framework */; };
+		90D3E1E01D09B1730024500B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D3E1DF1D09B1730024500B /* SystemConfiguration.framework */; };
+		90D3E1E21D09B17A0024500B /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D3E1E11D09B17A0024500B /* CoreTelephony.framework */; };
+		90D3E1E41D09B1800024500B /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D3E1E31D09B1800024500B /* MediaPlayer.framework */; };
+		90D3E1E71D09B1880024500B /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D3E1E51D09B1880024500B /* EventKit.framework */; };
+		90D3E1E81D09B1880024500B /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D3E1E61D09B1880024500B /* EventKitUI.framework */; };
+		90D3E1EA1D09B1D80024500B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D3E1E91D09B1D80024500B /* StoreKit.framework */; };
+		90D3E1EC1D09B1DD0024500B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D3E1EB1D09B1DD0024500B /* QuartzCore.framework */; };
+		90D3E1EE1D09B3030024500B /* AmazonAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D3E1ED1D09B3030024500B /* AmazonAd.framework */; };
 		90DF7CA01CE3B1BE001B9C57 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DF7C9F1CE3B1BE001B9C57 /* SWRevealViewController.m */; };
 		90DF7CA21CE3B8E7001B9C57 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DF7CA11CE3B8E7001B9C57 /* MenuController.swift */; };
 		90E50E771CDB826500874391 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E50E761CDB826500874391 /* AppDelegate.swift */; };
@@ -23,7 +35,6 @@
 		90E50E801CDB826500874391 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90E50E7F1CDB826500874391 /* Assets.xcassets */; };
 		90E50E8E1CDB826500874391 /* Total_TextbooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E50E8D1CDB826500874391 /* Total_TextbooksTests.swift */; };
 		90E50E991CDB826500874391 /* Total_TextbooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E50E981CDB826500874391 /* Total_TextbooksUITests.swift */; };
-		90E50EB11CDBBBE300874391 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E50EB01CDBBBE300874391 /* MoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +65,19 @@
 		909EB7C11CDD181500B8157F /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		90BC3EA31CE37D1E00AA2D22 /* ROBarcodeScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROBarcodeScannerViewController.swift; sourceTree = "<group>"; };
 		90BC3EA41CE37D1E00AA2D22 /* SearchFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFormViewController.swift; sourceTree = "<group>"; };
+		90D166C01D01DFCC00DCAD2D /* SearchTitleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTitleViewController.swift; sourceTree = "<group>"; };
+		90D3E1D51D0838410024500B /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		90D3E1D91D09B1020024500B /* AmazonAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AmazonAd.framework; path = "Total Textbooks/AmazonSDK/AmazonMobileAds/AmazonAd.framework"; sourceTree = "<group>"; };
+		90D3E1DB1D09B1660024500B /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		90D3E1DC1D09B1660024500B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		90D3E1DF1D09B1730024500B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		90D3E1E11D09B17A0024500B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		90D3E1E31D09B1800024500B /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		90D3E1E51D09B1880024500B /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		90D3E1E61D09B1880024500B /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		90D3E1E91D09B1D80024500B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		90D3E1EB1D09B1DD0024500B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		90D3E1ED1D09B3030024500B /* AmazonAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AmazonAd.framework; path = AmazonSDK/AmazonMobileAds/AmazonAd.framework; sourceTree = "<group>"; };
 		90DF7C9D1CE3B1BE001B9C57 /* Total Textbooks-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Total Textbooks-Bridging-Header.h"; sourceTree = "<group>"; };
 		90DF7C9E1CE3B1BE001B9C57 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		90DF7C9F1CE3B1BE001B9C57 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -69,7 +93,6 @@
 		90E50E941CDB826500874391 /* Total TextbooksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Total TextbooksUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E50E981CDB826500874391 /* Total_TextbooksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Total_TextbooksUITests.swift; sourceTree = "<group>"; };
 		90E50E9A1CDB826500874391 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		90E50EB01CDBBBE300874391 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		90F080401CE38FDE001E81E2 /* Total Textbooks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Total Textbooks.entitlements"; sourceTree = "<group>"; };
 		A55A767480814902B363CB6B /* Pods-Total Textbooks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total Textbooks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Total Textbooks/Pods-Total Textbooks.debug.xcconfig"; sourceTree = "<group>"; };
 		B75ECB40D9AAC44C8D1F7E0E /* Pods-Total TextbooksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total TextbooksTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Total TextbooksTests/Pods-Total TextbooksTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +106,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90D3E1EE1D09B3030024500B /* AmazonAd.framework in Frameworks */,
+				90D3E1EC1D09B1DD0024500B /* QuartzCore.framework in Frameworks */,
+				90D3E1EA1D09B1D80024500B /* StoreKit.framework in Frameworks */,
+				90D3E1E71D09B1880024500B /* EventKit.framework in Frameworks */,
+				90D3E1E81D09B1880024500B /* EventKitUI.framework in Frameworks */,
+				90D3E1E41D09B1800024500B /* MediaPlayer.framework in Frameworks */,
+				90D3E1E21D09B17A0024500B /* CoreTelephony.framework in Frameworks */,
+				90D3E1E01D09B1730024500B /* SystemConfiguration.framework in Frameworks */,
+				90D3E1DD1D09B1660024500B /* AdSupport.framework in Frameworks */,
+				90D3E1DE1D09B1660024500B /* CoreLocation.framework in Frameworks */,
 				4B40269FCF8500DC0171E213 /* Pods_Total_Textbooks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,17 +174,18 @@
 		90E50E751CDB826500874391 /* Total Textbooks */ = {
 			isa = PBXGroup;
 			children = (
+				90D3E1D51D0838410024500B /* AboutViewController.swift */,
 				9005C7431CE4BBBC00277047 /* Launch Screen.storyboard */,
 				90DF7C9C1CE3B189001B9C57 /* SWReveallViewController */,
 				90F080401CE38FDE001E81E2 /* Total Textbooks.entitlements */,
 				90E50E761CDB826500874391 /* AppDelegate.swift */,
-				90E50E781CDB826500874391 /* SearchViewController.swift */,
 				90BC3EA41CE37D1E00AA2D22 /* SearchFormViewController.swift */,
+				90D166C01D01DFCC00DCAD2D /* SearchTitleViewController.swift */,
+				90E50E781CDB826500874391 /* SearchViewController.swift */,
 				908D2B651CE3816D00D19C22 /* main-iphone.storyboard */,
 				901247B21CEA19C400CB420A /* extWebViewController.swift */,
 				90DF7CA11CE3B8E7001B9C57 /* MenuController.swift */,
 				909EB7C11CDD181500B8157F /* HelpViewController.swift */,
-				90E50EB01CDBBBE300874391 /* MoreViewController.swift */,
 				90BC3EA31CE37D1E00AA2D22 /* ROBarcodeScannerViewController.swift */,
 				90E50E7F1CDB826500874391 /* Assets.xcassets */,
 				90E50E841CDB826500874391 /* Info.plist */,
@@ -180,6 +214,17 @@
 		99AD649D5A8039DA456B863B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				90D3E1ED1D09B3030024500B /* AmazonAd.framework */,
+				90D3E1EB1D09B1DD0024500B /* QuartzCore.framework */,
+				90D3E1E91D09B1D80024500B /* StoreKit.framework */,
+				90D3E1E51D09B1880024500B /* EventKit.framework */,
+				90D3E1E61D09B1880024500B /* EventKitUI.framework */,
+				90D3E1E31D09B1800024500B /* MediaPlayer.framework */,
+				90D3E1E11D09B17A0024500B /* CoreTelephony.framework */,
+				90D3E1DF1D09B1730024500B /* SystemConfiguration.framework */,
+				90D3E1DB1D09B1660024500B /* AdSupport.framework */,
+				90D3E1DC1D09B1660024500B /* CoreLocation.framework */,
+				90D3E1D91D09B1020024500B /* AmazonAd.framework */,
 				F3533133C5D6FB68B1ED90DC /* Pods_Total_Textbooks.framework */,
 				E9804F489D6F716ED1744A9E /* Pods_Total_TextbooksTests.framework */,
 				EAE500CFDF35CA39AC7F2F61 /* Pods_Total_TextbooksUITests.framework */,
@@ -207,12 +252,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90E50E9D1CDB826500874391 /* Build configuration list for PBXNativeTarget "Total Textbooks" */;
 			buildPhases = (
-				4ADDE6FAE1786D5EE3AE040B /* 📦 Check Pods Manifest.lock */,
+				4ADDE6FAE1786D5EE3AE040B /* [CP] Check Pods Manifest.lock */,
 				90E50E6F1CDB826400874391 /* Sources */,
 				90E50E701CDB826400874391 /* Frameworks */,
 				90E50E711CDB826400874391 /* Resources */,
-				62759D523703F72BEE666FEC /* 📦 Embed Pods Frameworks */,
-				5B23BB533540B6B6C512EBA3 /* 📦 Copy Pods Resources */,
+				62759D523703F72BEE666FEC /* [CP] Embed Pods Frameworks */,
+				5B23BB533540B6B6C512EBA3 /* [CP] Copy Pods Resources */,
+				90C07D7D1D09DBA0008A88E3 /* Increment Version Number */,
 			);
 			buildRules = (
 			);
@@ -227,12 +273,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90E50EA01CDB826500874391 /* Build configuration list for PBXNativeTarget "Total TextbooksTests" */;
 			buildPhases = (
-				41EA3D27D2B20FD7908F77F7 /* 📦 Check Pods Manifest.lock */,
+				41EA3D27D2B20FD7908F77F7 /* [CP] Check Pods Manifest.lock */,
 				90E50E851CDB826500874391 /* Sources */,
 				90E50E861CDB826500874391 /* Frameworks */,
 				90E50E871CDB826500874391 /* Resources */,
-				E1AAFBFF097E8BC9ABEFAB8E /* 📦 Embed Pods Frameworks */,
-				803FA769426CD777A05DF087 /* 📦 Copy Pods Resources */,
+				E1AAFBFF097E8BC9ABEFAB8E /* [CP] Embed Pods Frameworks */,
+				803FA769426CD777A05DF087 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,11 +294,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90E50EA31CDB826500874391 /* Build configuration list for PBXNativeTarget "Total TextbooksUITests" */;
 			buildPhases = (
-				0B3C76E542603E82D57BD676 /* 📦 Check Pods Manifest.lock */,
+				0B3C76E542603E82D57BD676 /* [CP] Check Pods Manifest.lock */,
 				90E50E901CDB826500874391 /* Sources */,
 				90E50E911CDB826500874391 /* Frameworks */,
 				90E50E921CDB826500874391 /* Resources */,
-				B0ED168E7E063EFDF4B1ECD0 /* 📦 Copy Pods Resources */,
+				B0ED168E7E063EFDF4B1ECD0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -341,14 +387,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0B3C76E542603E82D57BD676 /* 📦 Check Pods Manifest.lock */ = {
+		0B3C76E542603E82D57BD676 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,14 +402,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		41EA3D27D2B20FD7908F77F7 /* 📦 Check Pods Manifest.lock */ = {
+		41EA3D27D2B20FD7908F77F7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,14 +417,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		4ADDE6FAE1786D5EE3AE040B /* 📦 Check Pods Manifest.lock */ = {
+		4ADDE6FAE1786D5EE3AE040B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,14 +432,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		5B23BB533540B6B6C512EBA3 /* 📦 Copy Pods Resources */ = {
+		5B23BB533540B6B6C512EBA3 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,14 +447,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Total Textbooks/Pods-Total Textbooks-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		62759D523703F72BEE666FEC /* 📦 Embed Pods Frameworks */ = {
+		62759D523703F72BEE666FEC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,14 +462,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Total Textbooks/Pods-Total Textbooks-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		803FA769426CD777A05DF087 /* 📦 Copy Pods Resources */ = {
+		803FA769426CD777A05DF087 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,14 +477,28 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Total TextbooksTests/Pods-Total TextbooksTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B0ED168E7E063EFDF4B1ECD0 /* 📦 Copy Pods Resources */ = {
+		90C07D7D1D09DBA0008A88E3 /* Increment Version Number */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "Increment Version Number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "sh \"update-version.sh\" --reflect-commits";
+		};
+		B0ED168E7E063EFDF4B1ECD0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,14 +506,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Total TextbooksUITests/Pods-Total TextbooksUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E1AAFBFF097E8BC9ABEFAB8E /* 📦 Embed Pods Frameworks */ = {
+		E1AAFBFF097E8BC9ABEFAB8E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,13 +529,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				90DF7CA21CE3B8E7001B9C57 /* MenuController.swift in Sources */,
-				90E50EB11CDBBBE300874391 /* MoreViewController.swift in Sources */,
 				90E50E771CDB826500874391 /* AppDelegate.swift in Sources */,
 				90DF7CA01CE3B1BE001B9C57 /* SWRevealViewController.m in Sources */,
 				90BC3EA61CE37D1E00AA2D22 /* SearchFormViewController.swift in Sources */,
+				90D166C11D01DFCC00DCAD2D /* SearchTitleViewController.swift in Sources */,
 				90E50E791CDB826500874391 /* SearchViewController.swift in Sources */,
 				909EB7C21CDD181500B8157F /* HelpViewController.swift in Sources */,
 				90BC3EA51CE37D1E00AA2D22 /* ROBarcodeScannerViewController.swift in Sources */,
+				90D3E1D61D0838410024500B /* AboutViewController.swift in Sources */,
 				901247B31CEA19C400CB420A /* extWebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -543,7 +604,9 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 5;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -566,6 +629,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -589,7 +653,9 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 5;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -605,6 +671,7 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
@@ -618,6 +685,14 @@
 				CODE_SIGN_ENTITLEMENTS = "Total Textbooks/Total Textbooks.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 5;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Total",
+					Textbooks/AmazonSDK/AmazonMobileAds,
+					"$(PROJECT_DIR)/AmazonSDK/AmazonMobileAds",
+				);
 				INFOPLIST_FILE = "Total Textbooks/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -626,6 +701,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Total Textbooks/Total Textbooks-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -639,6 +715,14 @@
 				CODE_SIGN_ENTITLEMENTS = "Total Textbooks/Total Textbooks.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 5;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Total",
+					Textbooks/AmazonSDK/AmazonMobileAds,
+					"$(PROJECT_DIR)/AmazonSDK/AmazonMobileAds",
+				);
 				INFOPLIST_FILE = "Total Textbooks/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -646,6 +730,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Total Textbooks/Total Textbooks-Bridging-Header.h";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};

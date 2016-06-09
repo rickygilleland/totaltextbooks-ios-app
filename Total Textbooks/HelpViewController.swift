@@ -15,6 +15,11 @@ class HelpViewController: UIViewController {
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
+    @IBOutlet weak var kbButton: UIButton!
+    @IBOutlet weak var contactButton: UIButton!
+    
+    @IBOutlet weak var versionNum: UILabel!
+    @IBOutlet weak var buildNum: UILabel!
     
     override func loadView() {
         super.loadView()
@@ -43,8 +48,23 @@ class HelpViewController: UIViewController {
         
         navigationItem.titleView = imageView
         
+        //style the buttons
+        kbButton.layer.borderWidth = 1 // Set border width
+        kbButton.layer.cornerRadius = 5 // Set border radius (Make it curved, increase this for a more rounded button
+        
+        contactButton.layer.borderWidth = 1 // Set border width
+        contactButton.layer.cornerRadius = 5 // Set border radius (Make it curved, increase this for a more rounded button
+        
+        //set the version number label
+        if let version = NSBundle.mainBundle().infoDictionary?["CFBundleShortVersionString"] as? String {
+            self.versionNum.text = version
+        }
+        //set the build number label
+        if let build = NSBundle.mainBundle().infoDictionary?["CFBundleVersion"] as? String {
+            self.buildNum.text = build
+        }
+        
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
