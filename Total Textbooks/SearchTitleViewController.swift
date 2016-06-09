@@ -67,11 +67,18 @@ class SearchTitleViewController: UIViewController, UITableViewDataSource, UITabl
             SwiftSpinner.hide()
         })
         
+        //get the version number
+        let version = NSBundle.mainBundle().infoDictionary?["CFBundleShortVersionString"] as? String
+        //get the build number
+        let build = NSBundle.mainBundle().infoDictionary?["CFBundleVersion"] as? String
+        
         let parameters = [
             "query": query!,
             "key": "nc8ur498rhn39gkjkjgjkdfhg1=fdgdf3r=r43r3290rierjg",
             "clientId": UIDevice.currentDevice().identifierForVendor!.UUIDString,
-            "timestamp": "\(NSDate().timeIntervalSince1970 * 1000)"
+            "timestamp": "\(NSDate().timeIntervalSince1970 * 1000)",
+            "version": version!,
+            "build": build!
         ]
             
         Alamofire.request(.POST, "https://api.textbookpricefinder.com/search/all/\(String(query!))", parameters: parameters).responseJSON { (responseData) -> Void in

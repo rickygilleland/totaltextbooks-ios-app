@@ -121,11 +121,19 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
             SwiftSpinner.hide()
         })
         
+        //get the version number
+        let version = NSBundle.mainBundle().infoDictionary?["CFBundleShortVersionString"] as? String
+        //get the build number
+        let build = NSBundle.mainBundle().infoDictionary?["CFBundleVersion"] as? String
+
+        
         let parameters = [
             "query": query!,
             "key": "nc8ur498rhn39gkjkjgjkdfhg1=fdgdf3r=r43r3290rierjg",
             "clientId": UIDevice.currentDevice().identifierForVendor!.UUIDString,
-            "timestamp": "\(NSDate().timeIntervalSince1970 * 1000)"
+            "timestamp": "\(NSDate().timeIntervalSince1970 * 1000)",
+            "version": version!,
+            "build": build!
         ]
         
         //Get the basic book info

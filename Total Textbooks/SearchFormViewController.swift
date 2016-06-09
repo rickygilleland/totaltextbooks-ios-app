@@ -121,15 +121,25 @@ class SearchFormViewController: UIViewController, UITextFieldDelegate {
         
             let query = searchQuery.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
             
+            //get the version number
+            let version = NSBundle.mainBundle().infoDictionary?["CFBundleShortVersionString"] as? String
+            //get the build number
+            let build = NSBundle.mainBundle().infoDictionary?["CFBundleVersion"] as? String
+            
+            print(build)
+            
             let parameters = [
-                    "query": query!,
-                    "key": "nc8ur498rhn39gkjkjgjkdfhg1=fdgdf3r=r43r3290rierjg",
-                    "clientId": UIDevice.currentDevice().identifierForVendor!.UUIDString,
-                    "timestamp": "\(NSDate().timeIntervalSince1970 * 1000)"
+                "query": query!,
+                "key": "nc8ur498rhn39gkjkjgjkdfhg1=fdgdf3r=r43r3290rierjg",
+                "clientId": UIDevice.currentDevice().identifierForVendor!.UUIDString,
+                "timestamp": "\(NSDate().timeIntervalSince1970 * 1000)",
+                "version": version!,
+                "build": build!
             ]
         
             //Get the basic book info and decide which view we are sending them to
             Alamofire.request(.POST, "https://api.textbookpricefinder.com/search/bookInfo/\(String(query!))", parameters: parameters).responseJSON { (responseData) -> Void in
+                print(responseData.result.value)
                 //successfull until proven otherwise
                 var statusCode = 200
                 if (responseData.response?.statusCode) != nil {
@@ -171,7 +181,29 @@ class SearchFormViewController: UIViewController, UITextFieldDelegate {
                                 title: "Book Not Found",
                                 text: "We couldn't find your book. Please enter another book title or ISBN, or try our barcode scanner."
                             )
+                        } else if (swiftyJsonVar["code"] == "403") {
+                            //the API is blocking them for doing bad stuff
+                            if (swiftyJsonVar["errors"] == "No API key") {
+                                JSSAlertView().danger(
+                                    self,
+                                    title: "Error Searching for Book",
+                                    text: "There was an issue completing your request. Please try again in a few minutes. If this issue persists, use the Help page to contact us."
+                                )
+                            } else if (swiftyJsonVar["errors"] == "Too many requests") {
+                                JSSAlertView().danger(
+                                    self,
+                                    title: "Too Many Requests",
+                                    text: "There was an issue completing your request. Please try again in a few minutes. If this issue persists, use the Help page to contact us."
+                                )
+                            } else {
+                                JSSAlertView().danger(
+                                    self,
+                                    title: "Error Searching for Book",
+                                    text: "There was an issue completing your request. Please try again in a few minutes. If this issue persists, use the Help page to contact us."
+                                )
+                            }
                         }
+
                 
                         SwiftSpinner.hide()
                     } else {
