@@ -20,7 +20,7 @@ class customTitleTableViewCell: UITableViewCell {
     @IBOutlet weak var bookEdition: UILabel!
 }
 
-class SearchTitleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SearchTitleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AmazonAdViewDelegate {
     
     var searchPassed:String!
     
@@ -34,6 +34,8 @@ class SearchTitleViewController: UIViewController, UITableViewDataSource, UITabl
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var resultsFound: UILabel!
+    
+    @IBOutlet var amazonAdView: AmazonAdView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +54,12 @@ class SearchTitleViewController: UIViewController, UITableViewDataSource, UITabl
         imageView.image = image
         
         navigationItem.titleView = imageView
+        
+        //load the Amazon Ad
+        //let adFrame: CGRect = CGRectMake(0, self.view.bounds.size.height-50, UIScreen.mainScreen().bounds.size.width, 50);
+        amazonAdView = AmazonAdView.init(adSize: AmazonAdSize_320x50)
+        loadAmazonAd()
+        amazonAdView.delegate = self
         
         let query = searchPassed.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
         
@@ -109,7 +117,6 @@ class SearchTitleViewController: UIViewController, UITableViewDataSource, UITabl
             }
         }
 
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -150,6 +157,72 @@ class SearchTitleViewController: UIViewController, UITableViewDataSource, UITabl
             let svc = segue.destinationViewController as! SearchViewController
             svc.searchPassed = searchQuery as String
         }
+    }
+    
+    func loadAmazonAdWithUserInterfaceIdiom(userInterfaceIdiom: UIUserInterfaceIdiom, interfaceOrientation: UIInterfaceOrientation) -> Void {
+        
+        var options = AmazonAdOptions()
+        options.isTestRequest = false
+        
+        var amazonAdCenterYOffsetFromBottom: Float = 0.0
+        
+        if (userInterfaceIdiom == UIUserInterfaceIdiom.Phone) {
+            amazonAdCenterYOffsetFromBottom = 25.0
+            
+            amazonAdView.autoresizingMask = (UIViewAutoresizing)(rawValue: UIViewAutoresizing.FlexibleLeftMargin.rawValue | UIViewAutoresizing.FlexibleRightMargin.rawValue | UIViewAutoresizing.FlexibleBottomMargin.rawValue | UIViewAutoresizing.FlexibleTopMargin.rawValue);
+        } else {
+            amazonAdView.removeFromSuperview()
+            
+            if (interfaceOrientation == UIInterfaceOrientation.Portrait) {
+                amazonAdCenterYOffsetFromBottom = 45.0
+                
+                amazonAdView = AmazonAdView(adSize: AmazonAdSize_728x90)
+                amazonAdView.center = CGPointMake(self.view.bounds.size.width / 2.0, self.view.bounds.size.height - 45.0)
+            } else {
+                amazonAdCenterYOffsetFromBottom = 45.0
+                
+                amazonAdView = AmazonAdView(adSize: AmazonAdSize_1024x50)
+                amazonAdView.center = CGPointMake(self.view.bounds.size.width / 2.0, self.view.bounds.size.height - 45.0)
+            }
+            self.view.addSubview(amazonAdView)
+            amazonAdView.delegate = self
+        }
+        
+        UIView.animateWithDuration(NSTimeInterval(0.6), animations: {
+            self.amazonAdView.center = CGPointMake(self.view.bounds.size.width/2.0, self.view.bounds.size.height - CGFloat(amazonAdCenterYOffsetFromBottom))
+        })
+        
+        amazonAdView.loadAd(options)
+    }
+    
+    func loadAmazonAd(){
+        loadAmazonAdWithUserInterfaceIdiom(UIDevice.currentDevice().userInterfaceIdiom, interfaceOrientation: UIApplication.sharedApplication().statusBarOrientation)
+    }
+    
+    // Mark: - AmazonAdViewDelegate
+    func viewControllerForPresentingModalView() -> UIViewController {
+        return self
+    }
+    
+    func adViewDidLoad(view: AmazonAdView!) -> Void {
+        self.view.addSubview(amazonAdView)
+        // Amazon Ad center Y offset from bottom.
+        // The value is based on the device and orientation, and it will be used for sliding in the floating ad.
+        var amazonAdCenterYOffsetFromBottom: Float = 0.0;
+        
+        if (UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Phone) {
+            amazonAdCenterYOffsetFromBottom = 25.0
+        } else {
+            if (UIApplication.sharedApplication().statusBarOrientation == UIInterfaceOrientation.Portrait) {
+                amazonAdCenterYOffsetFromBottom = 45.0
+            } else {
+                amazonAdCenterYOffsetFromBottom = 25.0
+            }
+        }
+        
+        UIView.animateWithDuration(NSTimeInterval(0.6), animations: {
+            self.amazonAdView.center = CGPointMake(self.view.bounds.size.width/2.0, self.view.bounds.size.height - CGFloat(amazonAdCenterYOffsetFromBottom))
+        })
     }
 
     /*

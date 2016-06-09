@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="X25-07-a1w">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="X25-07-a1w">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -1142,8 +1142,20 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tap the book you would like to search for." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkZ-3L-wXO">
+                                <rect key="frame" x="20" y="111" width="317" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="317" id="7lL-7M-paj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="20" y="108" width="317" height="37"/>
+                                </variation>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="148" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PHW-h3-R0u">
-                                <rect key="frame" x="20" y="144" width="560" height="436"/>
+                                <rect key="frame" x="20" y="140" width="560" height="440"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="titleCell" rowHeight="148" id="dlc-vn-Ihb" customClass="customTitleTableViewCell" customModule="Total_Textbooks" customModuleProvider="target">
@@ -1230,18 +1242,6 @@
                                     <outlet property="delegate" destination="mNq-c7-SKv" id="SsN-YM-4ur"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tap the book you would like to search for." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkZ-3L-wXO">
-                                <rect key="frame" x="20" y="111" width="317" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="317" id="7lL-7M-paj"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="20" y="108" width="317" height="37"/>
-                                </variation>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1249,17 +1249,16 @@
                             <constraint firstAttribute="trailingMargin" secondItem="zkZ-3L-wXO" secondAttribute="trailing" constant="43" id="BdW-67-wxp"/>
                             <constraint firstAttribute="leadingMargin" secondItem="GOZ-IJ-92b" secondAttribute="leading" id="DpY-dn-ZYy"/>
                             <constraint firstAttribute="leadingMargin" secondItem="zkZ-3L-wXO" secondAttribute="leading" id="Dut-5n-Cxe"/>
+                            <constraint firstItem="Ucz-nY-wfB" firstAttribute="top" secondItem="PHW-h3-R0u" secondAttribute="bottom" constant="20" id="FYh-RJ-enj"/>
                             <constraint firstItem="zkZ-3L-wXO" firstAttribute="top" secondItem="GOZ-IJ-92b" secondAttribute="bottom" constant="5" id="PE6-wd-Jnv">
                                 <variation key="widthClass=compact" constant="0.5"/>
                             </constraint>
-                            <constraint firstItem="Ucz-nY-wfB" firstAttribute="top" secondItem="PHW-h3-R0u" secondAttribute="bottom" constant="20" id="Quf-8H-3xl"/>
-                            <constraint firstItem="PHW-h3-R0u" firstAttribute="top" secondItem="zkZ-3L-wXO" secondAttribute="bottom" constant="12" id="uhK-HL-j4B">
+                            <constraint firstItem="GOZ-IJ-92b" firstAttribute="top" secondItem="6lr-Ju-RM2" secondAttribute="bottom" constant="21" id="eci-h3-4eo"/>
+                            <constraint firstItem="Ucz-nY-wfB" firstAttribute="top" secondItem="PHW-h3-R0u" secondAttribute="bottom" constant="20" id="foO-uK-kO2"/>
+                            <constraint firstItem="PHW-h3-R0u" firstAttribute="top" secondItem="zkZ-3L-wXO" secondAttribute="bottom" constant="8" id="uhK-HL-j4B">
                                 <variation key="widthClass=compact" constant="3"/>
                             </constraint>
                             <constraint firstAttribute="trailingMargin" secondItem="PHW-h3-R0u" secondAttribute="trailing" id="zNN-Dw-y6S"/>
-                            <constraint firstItem="GOZ-IJ-92b" firstAttribute="top" secondItem="6lr-Ju-RM2" secondAttribute="bottom" constant="21" id="ziZ-wO-ieG">
-                                <variation key="widthClass=compact" constant="18"/>
-                            </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -1274,6 +1273,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="sx8-VB-fkC"/>
                     <connections>
+                        <outlet property="amazonAdView" destination="sOV-fI-3me" id="z8R-QV-9FD"/>
                         <outlet property="resultsFound" destination="GOZ-IJ-92b" id="XHb-LO-8Th"/>
                         <outlet property="tableView" destination="PHW-h3-R0u" id="gQN-qa-IPX"/>
                         <segue destination="9pv-A4-QxB" kind="show" identifier="searchTitleToIsbnSegue" id="GSu-eZ-byA"/>

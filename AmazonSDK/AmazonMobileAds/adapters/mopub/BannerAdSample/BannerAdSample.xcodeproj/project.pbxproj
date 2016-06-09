@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7100C6DB1C58258D00BF6FD0 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7100C6DA1C58258D00BF6FD0 /* AdSupport.framework */; };
+		7100C6DD1C58259500BF6FD0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7100C6DC1C58259500BF6FD0 /* CoreGraphics.framework */; };
+		7100C6DF1C58259B00BF6FD0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7100C6DE1C58259B00BF6FD0 /* CoreLocation.framework */; };
+		7100C6E11C5825A100BF6FD0 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7100C6E01C5825A100BF6FD0 /* CoreMedia.framework */; };
+		7100C6E31C5825A800BF6FD0 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7100C6E21C5825A800BF6FD0 /* CoreTelephony.framework */; };
+		7100C6E61C5825AF00BF6FD0 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7100C6E41C5825AF00BF6FD0 /* EventKit.framework */; };
+		7100C6E71C5825AF00BF6FD0 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7100C6E51C5825AF00BF6FD0 /* EventKitUI.framework */; };
+		7100C6EA1C5825BF00BF6FD0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7100C6E81C5825BF00BF6FD0 /* AVFoundation.framework */; };
+		7100C6EB1C5825BF00BF6FD0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7100C6E91C5825BF00BF6FD0 /* Foundation.framework */; };
+		7100C6ED1C5825C700BF6FD0 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7100C6EC1C5825C700BF6FD0 /* MediaPlayer.framework */; };
+		7100C6EF1C5825CD00BF6FD0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7100C6EE1C5825CD00BF6FD0 /* QuartzCore.framework */; };
+		7100C6F11C5825D400BF6FD0 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7100C6F01C5825D400BF6FD0 /* StoreKit.framework */; };
+		7100C6F31C5825DF00BF6FD0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7100C6F21C5825DF00BF6FD0 /* SystemConfiguration.framework */; };
+		7100C6F51C5825E500BF6FD0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7100C6F41C5825E500BF6FD0 /* UIKit.framework */; };
+		7100C6F71C5825F100BF6FD0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7100C6F61C5825F100BF6FD0 /* AudioToolbox.framework */; };
+		7100C6F91C5825FF00BF6FD0 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7100C6F81C5825FF00BF6FD0 /* iAd.framework */; };
+		7100C6FB1C58260E00BF6FD0 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7100C6FA1C58260E00BF6FD0 /* libxml2.tbd */; };
+		7100C6FD1C58261500BF6FD0 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7100C6FC1C58261500BF6FD0 /* MessageUI.framework */; };
+		7100C6FF1C58261B00BF6FD0 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7100C6FE1C58261B00BF6FD0 /* MobileCoreServices.framework */; };
+		7100C7011C58262300BF6FD0 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7100C7001C58262300BF6FD0 /* PassKit.framework */; };
+		7100C7031C58262900BF6FD0 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7100C7021C58262800BF6FD0 /* Social.framework */; };
+		7100C7051C58262F00BF6FD0 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7100C7041C58262F00BF6FD0 /* CoreBluetooth.framework */; };
+		713215DD1C5822A700F68056 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 713215DC1C5822A700F68056 /* main.m */; };
+		713215E01C5822A700F68056 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 713215DF1C5822A700F68056 /* AppDelegate.m */; };
+		713215E31C5822A700F68056 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 713215E21C5822A700F68056 /* ViewController.m */; };
+		713215E61C5822A700F68056 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 713215E41C5822A700F68056 /* Main.storyboard */; };
+		713215E81C5822A700F68056 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 713215E71C5822A700F68056 /* Assets.xcassets */; };
+		713215EB1C5822A700F68056 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 713215E91C5822A700F68056 /* LaunchScreen.storyboard */; };
+		71CCBAB21C72A8BE0035819E /* AmazonBannerCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CCBAAD1C72A8BE0035819E /* AmazonBannerCustomEvent.m */; };
+		71CCBAB31C72A8BE0035819E /* AmazonInterstitialCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CCBAAF1C72A8BE0035819E /* AmazonInterstitialCustomEvent.m */; };
+		71CCBAB51C72A8F90035819E /* AmazonAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71CCBAB11C72A8BE0035819E /* AmazonAd.framework */; };
+		EDEFEBC2269C2C26BE8F4A7A /* libPods-BannerAdSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0195013F21AA5D99C35D3C1B /* libPods-BannerAdSample.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0195013F21AA5D99C35D3C1B /* libPods-BannerAdSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BannerAdSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E17F65171DA497C45CF0559 /* Pods-BannerAdSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BannerAdSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-BannerAdSample/Pods-BannerAdSample.release.xcconfig"; sourceTree = "<group>"; };
+		7100C6DA1C58258D00BF6FD0 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		7100C6DC1C58259500BF6FD0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7100C6DE1C58259B00BF6FD0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		7100C6E01C5825A100BF6FD0 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		7100C6E21C5825A800BF6FD0 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		7100C6E41C5825AF00BF6FD0 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		7100C6E51C5825AF00BF6FD0 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		7100C6E81C5825BF00BF6FD0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7100C6E91C5825BF00BF6FD0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7100C6EC1C5825C700BF6FD0 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		7100C6EE1C5825CD00BF6FD0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		7100C6F01C5825D400BF6FD0 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		7100C6F21C5825DF00BF6FD0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		7100C6F41C5825E500BF6FD0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7100C6F61C5825F100BF6FD0 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		7100C6F81C5825FF00BF6FD0 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		7100C6FA1C58260E00BF6FD0 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		7100C6FC1C58261500BF6FD0 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		7100C6FE1C58261B00BF6FD0 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		7100C7001C58262300BF6FD0 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
+		7100C7021C58262800BF6FD0 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		7100C7041C58262F00BF6FD0 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		713215D81C5822A700F68056 /* BannerAdSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BannerAdSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		713215DC1C5822A700F68056 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		713215DE1C5822A700F68056 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		713215DF1C5822A700F68056 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		713215E11C5822A700F68056 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		713215E21C5822A700F68056 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		713215E51C5822A700F68056 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		713215E71C5822A700F68056 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		713215EA1C5822A700F68056 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		713215EC1C5822A700F68056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71CCBAAC1C72A8BE0035819E /* AmazonBannerCustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmazonBannerCustomEvent.h; sourceTree = "<group>"; };
+		71CCBAAD1C72A8BE0035819E /* AmazonBannerCustomEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmazonBannerCustomEvent.m; sourceTree = "<group>"; };
+		71CCBAAE1C72A8BE0035819E /* AmazonInterstitialCustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmazonInterstitialCustomEvent.h; sourceTree = "<group>"; };
+		71CCBAAF1C72A8BE0035819E /* AmazonInterstitialCustomEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmazonInterstitialCustomEvent.m; sourceTree = "<group>"; };
+		71CCBAB11C72A8BE0035819E /* AmazonAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AmazonAd.framework; sourceTree = "<group>"; };
+		DA820769E1D7D6A29927163F /* Pods-BannerAdSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BannerAdSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BannerAdSample/Pods-BannerAdSample.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		713215D51C5822A600F68056 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71CCBAB51C72A8F90035819E /* AmazonAd.framework in Frameworks */,
+				7100C7051C58262F00BF6FD0 /* CoreBluetooth.framework in Frameworks */,
+				7100C7031C58262900BF6FD0 /* Social.framework in Frameworks */,
+				7100C7011C58262300BF6FD0 /* PassKit.framework in Frameworks */,
+				7100C6FF1C58261B00BF6FD0 /* MobileCoreServices.framework in Frameworks */,
+				7100C6FD1C58261500BF6FD0 /* MessageUI.framework in Frameworks */,
+				7100C6FB1C58260E00BF6FD0 /* libxml2.tbd in Frameworks */,
+				7100C6F91C5825FF00BF6FD0 /* iAd.framework in Frameworks */,
+				7100C6EA1C5825BF00BF6FD0 /* AVFoundation.framework in Frameworks */,
+				7100C6F71C5825F100BF6FD0 /* AudioToolbox.framework in Frameworks */,
+				7100C6F51C5825E500BF6FD0 /* UIKit.framework in Frameworks */,
+				7100C6F31C5825DF00BF6FD0 /* SystemConfiguration.framework in Frameworks */,
+				7100C6F11C5825D400BF6FD0 /* StoreKit.framework in Frameworks */,
+				7100C6EF1C5825CD00BF6FD0 /* QuartzCore.framework in Frameworks */,
+				7100C6ED1C5825C700BF6FD0 /* MediaPlayer.framework in Frameworks */,
+				7100C6EB1C5825BF00BF6FD0 /* Foundation.framework in Frameworks */,
+				7100C6E61C5825AF00BF6FD0 /* EventKit.framework in Frameworks */,
+				7100C6E71C5825AF00BF6FD0 /* EventKitUI.framework in Frameworks */,
+				7100C6E31C5825A800BF6FD0 /* CoreTelephony.framework in Frameworks */,
+				7100C6E11C5825A100BF6FD0 /* CoreMedia.framework in Frameworks */,
+				7100C6DF1C58259B00BF6FD0 /* CoreLocation.framework in Frameworks */,
+				7100C6DD1C58259500BF6FD0 /* CoreGraphics.framework in Frameworks */,
+				7100C6DB1C58258D00BF6FD0 /* AdSupport.framework in Frameworks */,
+				EDEFEBC2269C2C26BE8F4A7A /* libPods-BannerAdSample.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7100C7061C58263200BF6FD0 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				7100C7041C58262F00BF6FD0 /* CoreBluetooth.framework */,
+				7100C7021C58262800BF6FD0 /* Social.framework */,
+				7100C7001C58262300BF6FD0 /* PassKit.framework */,
+				7100C6FE1C58261B00BF6FD0 /* MobileCoreServices.framework */,
+				7100C6FC1C58261500BF6FD0 /* MessageUI.framework */,
+				7100C6FA1C58260E00BF6FD0 /* libxml2.tbd */,
+				7100C6F81C5825FF00BF6FD0 /* iAd.framework */,
+				7100C6F61C5825F100BF6FD0 /* AudioToolbox.framework */,
+				7100C6F41C5825E500BF6FD0 /* UIKit.framework */,
+				7100C6F21C5825DF00BF6FD0 /* SystemConfiguration.framework */,
+				7100C6F01C5825D400BF6FD0 /* StoreKit.framework */,
+				7100C6EE1C5825CD00BF6FD0 /* QuartzCore.framework */,
+				7100C6EC1C5825C700BF6FD0 /* MediaPlayer.framework */,
+				7100C6E81C5825BF00BF6FD0 /* AVFoundation.framework */,
+				7100C6E91C5825BF00BF6FD0 /* Foundation.framework */,
+				7100C6E41C5825AF00BF6FD0 /* EventKit.framework */,
+				7100C6E51C5825AF00BF6FD0 /* EventKitUI.framework */,
+				7100C6E21C5825A800BF6FD0 /* CoreTelephony.framework */,
+				7100C6E01C5825A100BF6FD0 /* CoreMedia.framework */,
+				7100C6DE1C58259B00BF6FD0 /* CoreLocation.framework */,
+				7100C6DC1C58259500BF6FD0 /* CoreGraphics.framework */,
+				7100C6DA1C58258D00BF6FD0 /* AdSupport.framework */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		713215CF1C5822A600F68056 = {
+			isa = PBXGroup;
+			children = (
+				71CCBAAB1C72A8BE0035819E /* Adapter */,
+				713215DA1C5822A700F68056 /* BannerAdSample */,
+				7100C7061C58263200BF6FD0 /* Framework */,
+				713215D91C5822A700F68056 /* Products */,
+				981BA35A8596DB16ED5B1382 /* Pods */,
+				F42DFCBD73CDE4C1CD63EB64 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		713215D91C5822A700F68056 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				713215D81C5822A700F68056 /* BannerAdSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		713215DA1C5822A700F68056 /* BannerAdSample */ = {
+			isa = PBXGroup;
+			children = (
+				713215DE1C5822A700F68056 /* AppDelegate.h */,
+				713215DF1C5822A700F68056 /* AppDelegate.m */,
+				713215E11C5822A700F68056 /* ViewController.h */,
+				713215E21C5822A700F68056 /* ViewController.m */,
+				713215E41C5822A700F68056 /* Main.storyboard */,
+				713215E71C5822A700F68056 /* Assets.xcassets */,
+				713215E91C5822A700F68056 /* LaunchScreen.storyboard */,
+				713215EC1C5822A700F68056 /* Info.plist */,
+				713215DB1C5822A700F68056 /* Supporting Files */,
+			);
+			path = BannerAdSample;
+			sourceTree = "<group>";
+		};
+		713215DB1C5822A700F68056 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				713215DC1C5822A700F68056 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		71CCBAAB1C72A8BE0035819E /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				71CCBAAC1C72A8BE0035819E /* AmazonBannerCustomEvent.h */,
+				71CCBAAD1C72A8BE0035819E /* AmazonBannerCustomEvent.m */,
+				71CCBAAE1C72A8BE0035819E /* AmazonInterstitialCustomEvent.h */,
+				71CCBAAF1C72A8BE0035819E /* AmazonInterstitialCustomEvent.m */,
+				71CCBAB01C72A8BE0035819E /* SDK */,
+			);
+			name = Adapter;
+			path = ../Adapter;
+			sourceTree = "<group>";
+		};
+		71CCBAB01C72A8BE0035819E /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				71CCBAB11C72A8BE0035819E /* AmazonAd.framework */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
+		981BA35A8596DB16ED5B1382 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA820769E1D7D6A29927163F /* Pods-BannerAdSample.debug.xcconfig */,
+				4E17F65171DA497C45CF0559 /* Pods-BannerAdSample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F42DFCBD73CDE4C1CD63EB64 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0195013F21AA5D99C35D3C1B /* libPods-BannerAdSample.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		713215D71C5822A600F68056 /* BannerAdSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 713215EF1C5822A700F68056 /* Build configuration list for PBXNativeTarget "BannerAdSample" */;
+			buildPhases = (
+				FCAA45FF26EA7BD0B67D6C3E /* Check Pods Manifest.lock */,
+				713215D41C5822A600F68056 /* Sources */,
+				713215D51C5822A600F68056 /* Frameworks */,
+				713215D61C5822A600F68056 /* Resources */,
+				9D09C83998A1E40E4A256FB0 /* Embed Pods Frameworks */,
+				4E3A4E283CD99DB4F822D230 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BannerAdSample;
+			productName = BannerAdSample;
+			productReference = 713215D81C5822A700F68056 /* BannerAdSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		713215D01C5822A600F68056 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Amazon.com;
+				TargetAttributes = {
+					713215D71C5822A600F68056 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = GRH38V7KNU;
+					};
+				};
+			};
+			buildConfigurationList = 713215D31C5822A600F68056 /* Build configuration list for PBXProject "BannerAdSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 713215CF1C5822A600F68056;
+			productRefGroup = 713215D91C5822A700F68056 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				713215D71C5822A600F68056 /* BannerAdSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		713215D61C5822A600F68056 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				713215EB1C5822A700F68056 /* LaunchScreen.storyboard in Resources */,
+				713215E81C5822A700F68056 /* Assets.xcassets in Resources */,
+				713215E61C5822A700F68056 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E3A4E283CD99DB4F822D230 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BannerAdSample/Pods-BannerAdSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D09C83998A1E40E4A256FB0 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BannerAdSample/Pods-BannerAdSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCAA45FF26EA7BD0B67D6C3E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		713215D41C5822A600F68056 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				713215E31C5822A700F68056 /* ViewController.m in Sources */,
+				71CCBAB21C72A8BE0035819E /* AmazonBannerCustomEvent.m in Sources */,
+				713215E01C5822A700F68056 /* AppDelegate.m in Sources */,
+				71CCBAB31C72A8BE0035819E /* AmazonInterstitialCustomEvent.m in Sources */,
+				713215DD1C5822A700F68056 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		713215E41C5822A700F68056 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				713215E51C5822A700F68056 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		713215E91C5822A700F68056 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				713215EA1C5822A700F68056 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		713215ED1C5822A700F68056 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		713215EE1C5822A700F68056 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		713215F01C5822A700F68056 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA820769E1D7D6A29927163F /* Pods-BannerAdSample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Adapter/SDK";
+				INFOPLIST_FILE = BannerAdSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amazon.mobileAds.BannerAdSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		713215F11C5822A700F68056 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E17F65171DA497C45CF0559 /* Pods-BannerAdSample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../Adapter/SDK";
+				INFOPLIST_FILE = BannerAdSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amazon.mobileAds.BannerAdSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		713215D31C5822A600F68056 /* Build configuration list for PBXProject "BannerAdSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				713215ED1C5822A700F68056 /* Debug */,
+				713215EE1C5822A700F68056 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		713215EF1C5822A700F68056 /* Build configuration list for PBXNativeTarget "BannerAdSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				713215F01C5822A700F68056 /* Debug */,
+				713215F11C5822A700F68056 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 713215D01C5822A600F68056 /* Project object */;
+}

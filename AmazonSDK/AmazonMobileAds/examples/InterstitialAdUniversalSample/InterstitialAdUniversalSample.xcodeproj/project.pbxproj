@@ -1,0 +1,381 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		247D78D21950D11B0090BB92 /* AmazonAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D8DB0C194124FC0062D78B /* AmazonAd.framework */; };
+		24D8DACD194123D50062D78B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D8DACC194123D50062D78B /* Foundation.framework */; };
+		24D8DAD1194123D50062D78B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D8DAD0194123D50062D78B /* UIKit.framework */; };
+		24D8DAD7194123D50062D78B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24D8DAD5194123D50062D78B /* InfoPlist.strings */; };
+		24D8DAD9194123D50062D78B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D8DAD8194123D50062D78B /* main.m */; };
+		24D8DADD194123D50062D78B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D8DADC194123D50062D78B /* AppDelegate.m */; };
+		24D8DAE0194123D50062D78B /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24D8DADE194123D50062D78B /* Main_iPhone.storyboard */; };
+		24D8DAE3194123D50062D78B /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24D8DAE1194123D50062D78B /* Main_iPad.storyboard */; };
+		24D8DAE6194123D50062D78B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D8DAE5194123D50062D78B /* ViewController.m */; };
+		24D8DAE8194123D50062D78B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24D8DAE7194123D50062D78B /* Images.xcassets */; };
+		24D8DB05194124BE0062D78B /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D8DB04194124BE0062D78B /* CoreTelephony.framework */; };
+		24D8DB07194124CB0062D78B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D8DB06194124CB0062D78B /* SystemConfiguration.framework */; };
+		24D8DB09194124D80062D78B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D8DB08194124D80062D78B /* CoreLocation.framework */; };
+		24D8DB0B194124E20062D78B /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D8DB0A194124E20062D78B /* AdSupport.framework */; };
+		24D8DB0F1941320C0062D78B /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D8DB0E1941320C0062D78B /* MediaPlayer.framework */; };
+		24E6905019C21B21005CACCB /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E6904E19C21B21005CACCB /* EventKit.framework */; };
+		24E6905119C21B21005CACCB /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E6904F19C21B21005CACCB /* EventKitUI.framework */; };
+		EC1AE5721A2E92F30001B1AE /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC1AE5711A2E92F30001B1AE /* StoreKit.framework */; };
+		EC99F51A1A30F6BA009466EB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC99F5191A30F6BA009466EB /* CoreGraphics.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		24D8DAC9194123D50062D78B /* InterstitialAdUniversalSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InterstitialAdUniversalSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		24D8DACC194123D50062D78B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		24D8DAD0194123D50062D78B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		24D8DAD4194123D50062D78B /* InterstitialAdUniversalSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InterstitialAdUniversalSample-Info.plist"; sourceTree = "<group>"; };
+		24D8DAD6194123D50062D78B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		24D8DAD8194123D50062D78B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		24D8DADA194123D50062D78B /* InterstitialAdUniversalSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InterstitialAdUniversalSample-Prefix.pch"; sourceTree = "<group>"; };
+		24D8DADB194123D50062D78B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		24D8DADC194123D50062D78B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		24D8DADF194123D50062D78B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		24D8DAE2194123D50062D78B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		24D8DAE4194123D50062D78B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		24D8DAE5194123D50062D78B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		24D8DAE7194123D50062D78B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		24D8DAEE194123D50062D78B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		24D8DB04194124BE0062D78B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		24D8DB06194124CB0062D78B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		24D8DB08194124D80062D78B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		24D8DB0A194124E20062D78B /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		24D8DB0C194124FC0062D78B /* AmazonAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AmazonAd.framework; path = ../AmazonAd/AmazonAd.framework; sourceTree = "<group>"; };
+		24D8DB0E1941320C0062D78B /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		24E6904E19C21B21005CACCB /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		24E6904F19C21B21005CACCB /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		EC1AE5711A2E92F30001B1AE /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		EC99F5191A30F6BA009466EB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		24D8DAC6194123D50062D78B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC99F51A1A30F6BA009466EB /* CoreGraphics.framework in Frameworks */,
+				EC1AE5721A2E92F30001B1AE /* StoreKit.framework in Frameworks */,
+				24E6905019C21B21005CACCB /* EventKit.framework in Frameworks */,
+				24E6905119C21B21005CACCB /* EventKitUI.framework in Frameworks */,
+				247D78D21950D11B0090BB92 /* AmazonAd.framework in Frameworks */,
+				24D8DB0F1941320C0062D78B /* MediaPlayer.framework in Frameworks */,
+				24D8DB0B194124E20062D78B /* AdSupport.framework in Frameworks */,
+				24D8DB09194124D80062D78B /* CoreLocation.framework in Frameworks */,
+				24D8DB07194124CB0062D78B /* SystemConfiguration.framework in Frameworks */,
+				24D8DB05194124BE0062D78B /* CoreTelephony.framework in Frameworks */,
+				24D8DAD1194123D50062D78B /* UIKit.framework in Frameworks */,
+				24D8DACD194123D50062D78B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		24D8DAC0194123D50062D78B = {
+			isa = PBXGroup;
+			children = (
+				24D8DAD2194123D50062D78B /* InterstitialAdUniversalSample */,
+				24D8DACB194123D50062D78B /* Frameworks */,
+				24D8DACA194123D50062D78B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		24D8DACA194123D50062D78B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				24D8DAC9194123D50062D78B /* InterstitialAdUniversalSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		24D8DACB194123D50062D78B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC99F5191A30F6BA009466EB /* CoreGraphics.framework */,
+				EC1AE5711A2E92F30001B1AE /* StoreKit.framework */,
+				24E6904E19C21B21005CACCB /* EventKit.framework */,
+				24E6904F19C21B21005CACCB /* EventKitUI.framework */,
+				24D8DB0E1941320C0062D78B /* MediaPlayer.framework */,
+				24D8DB0C194124FC0062D78B /* AmazonAd.framework */,
+				24D8DB0A194124E20062D78B /* AdSupport.framework */,
+				24D8DB08194124D80062D78B /* CoreLocation.framework */,
+				24D8DB06194124CB0062D78B /* SystemConfiguration.framework */,
+				24D8DB04194124BE0062D78B /* CoreTelephony.framework */,
+				24D8DACC194123D50062D78B /* Foundation.framework */,
+				24D8DAD0194123D50062D78B /* UIKit.framework */,
+				24D8DAEE194123D50062D78B /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		24D8DAD2194123D50062D78B /* InterstitialAdUniversalSample */ = {
+			isa = PBXGroup;
+			children = (
+				24D8DADB194123D50062D78B /* AppDelegate.h */,
+				24D8DADC194123D50062D78B /* AppDelegate.m */,
+				24D8DADE194123D50062D78B /* Main_iPhone.storyboard */,
+				24D8DAE1194123D50062D78B /* Main_iPad.storyboard */,
+				24D8DAE4194123D50062D78B /* ViewController.h */,
+				24D8DAE5194123D50062D78B /* ViewController.m */,
+				24D8DAE7194123D50062D78B /* Images.xcassets */,
+				24D8DAD3194123D50062D78B /* Supporting Files */,
+			);
+			path = InterstitialAdUniversalSample;
+			sourceTree = "<group>";
+		};
+		24D8DAD3194123D50062D78B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				24D8DAD4194123D50062D78B /* InterstitialAdUniversalSample-Info.plist */,
+				24D8DAD5194123D50062D78B /* InfoPlist.strings */,
+				24D8DAD8194123D50062D78B /* main.m */,
+				24D8DADA194123D50062D78B /* InterstitialAdUniversalSample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		24D8DAC8194123D50062D78B /* InterstitialAdUniversalSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24D8DAFE194123D50062D78B /* Build configuration list for PBXNativeTarget "InterstitialAdUniversalSample" */;
+			buildPhases = (
+				24D8DAC5194123D50062D78B /* Sources */,
+				24D8DAC6194123D50062D78B /* Frameworks */,
+				24D8DAC7194123D50062D78B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InterstitialAdUniversalSample;
+			productName = InterstitialAdUniversalSample;
+			productReference = 24D8DAC9194123D50062D78B /* InterstitialAdUniversalSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		24D8DAC1194123D50062D78B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = amazon;
+			};
+			buildConfigurationList = 24D8DAC4194123D50062D78B /* Build configuration list for PBXProject "InterstitialAdUniversalSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 24D8DAC0194123D50062D78B;
+			productRefGroup = 24D8DACA194123D50062D78B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				24D8DAC8194123D50062D78B /* InterstitialAdUniversalSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		24D8DAC7194123D50062D78B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24D8DAE3194123D50062D78B /* Main_iPad.storyboard in Resources */,
+				24D8DAE8194123D50062D78B /* Images.xcassets in Resources */,
+				24D8DAE0194123D50062D78B /* Main_iPhone.storyboard in Resources */,
+				24D8DAD7194123D50062D78B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		24D8DAC5194123D50062D78B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24D8DAE6194123D50062D78B /* ViewController.m in Sources */,
+				24D8DADD194123D50062D78B /* AppDelegate.m in Sources */,
+				24D8DAD9194123D50062D78B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		24D8DAD5194123D50062D78B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24D8DAD6194123D50062D78B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		24D8DADE194123D50062D78B /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24D8DADF194123D50062D78B /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		24D8DAE1194123D50062D78B /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24D8DAE2194123D50062D78B /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		24D8DAFC194123D50062D78B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		24D8DAFD194123D50062D78B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		24D8DAFF194123D50062D78B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../AmazonAd\"",
+				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InterstitialAdUniversalSample/InterstitialAdUniversalSample-Prefix.pch";
+				INFOPLIST_FILE = "InterstitialAdUniversalSample/InterstitialAdUniversalSample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		24D8DB00194123D50062D78B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../AmazonAd\"",
+				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InterstitialAdUniversalSample/InterstitialAdUniversalSample-Prefix.pch";
+				INFOPLIST_FILE = "InterstitialAdUniversalSample/InterstitialAdUniversalSample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		24D8DAC4194123D50062D78B /* Build configuration list for PBXProject "InterstitialAdUniversalSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24D8DAFC194123D50062D78B /* Debug */,
+				24D8DAFD194123D50062D78B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24D8DAFE194123D50062D78B /* Build configuration list for PBXNativeTarget "InterstitialAdUniversalSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24D8DAFF194123D50062D78B /* Debug */,
+				24D8DB00194123D50062D78B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 24D8DAC1194123D50062D78B /* Project object */;
+}

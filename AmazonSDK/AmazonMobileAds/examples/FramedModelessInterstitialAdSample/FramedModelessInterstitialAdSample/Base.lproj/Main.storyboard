@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsg-pZ-6kL">
+                                <rect key="frame" x="388" y="285" width="62" height="30"/>
+                                <state key="normal" title="Show Ad">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showModelessInterstitial:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XeD-S7-RZO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18u-Iv-zM9">
+                                <rect key="frame" x="150" y="285" width="62" height="30"/>
+                                <state key="normal" title="Load Ad">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadModelessInterstitial:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Axw-fi-Fib"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Modeless Interstitial Loaded" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8E-rL-aGA">
+                                <rect key="frame" x="16" y="330" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view hidden="YES" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eBi-c9-vzg" userLabel="Dim View">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OZg-sK-46V" userLabel="Ad Container View">
+                                <rect key="frame" x="31" y="36" width="538" height="528"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55O-BL-d4v" userLabel="Close Button">
+                                <rect key="frame" x="514" y="41" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="BUf-t9-Qmg"/>
+                                    <constraint firstAttribute="height" constant="50" id="DmB-nb-R5O"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="CloseButtonNormal.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="CloseButtonHighlighted.png"/>
+                                <connections>
+                                    <action selector="closeModelessInterstitial:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V3M-my-4bG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="18u-Iv-zM9" firstAttribute="height" secondItem="G8E-rL-aGA" secondAttribute="height" id="2u8-GB-q3d"/>
+                            <constraint firstItem="55O-BL-d4v" firstAttribute="centerX" secondItem="OZg-sK-46V" secondAttribute="trailing" constant="-30" id="9qR-8y-gZ9"/>
+                            <constraint firstAttribute="centerY" secondItem="eBi-c9-vzg" secondAttribute="centerY" id="Acv-BJ-rg5"/>
+                            <constraint firstItem="18u-Iv-zM9" firstAttribute="height" secondItem="nsg-pZ-6kL" secondAttribute="height" id="BLJ-5u-fwj"/>
+                            <constraint firstItem="G8E-rL-aGA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="CNn-0r-ibA"/>
+                            <constraint firstItem="18u-Iv-zM9" firstAttribute="width" secondItem="nsg-pZ-6kL" secondAttribute="width" id="EvC-Rc-hcn"/>
+                            <constraint firstItem="OZg-sK-46V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Eyg-Be-wF7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="G8E-rL-aGA" secondAttribute="trailing" id="LU0-cl-jyJ"/>
+                            <constraint firstItem="OZg-sK-46V" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MxM-8G-4TN"/>
+                            <constraint firstAttribute="centerX" secondItem="eBi-c9-vzg" secondAttribute="centerX" id="THi-Xt-X0X"/>
+                            <constraint firstItem="55O-BL-d4v" firstAttribute="centerY" secondItem="OZg-sK-46V" secondAttribute="top" constant="30" id="UDE-5h-xwL"/>
+                            <constraint firstItem="OZg-sK-46V" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.88" id="XLH-g7-9IF"/>
+                            <constraint firstItem="18u-Iv-zM9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="centerXWithinMargins" multiplier="0.5" id="XTa-M5-PQN"/>
+                            <constraint firstItem="nsg-pZ-6kL" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="centerXWithinMargins" multiplier="1.5" id="ZDZ-uU-uok"/>
+                            <constraint firstItem="G8E-rL-aGA" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" multiplier="0.6" id="bJo-ro-WZ2"/>
+                            <constraint firstItem="eBi-c9-vzg" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="cI4-TD-34f"/>
+                            <constraint firstItem="OZg-sK-46V" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.88" constant="10" id="h2g-kC-52F"/>
+                            <constraint firstItem="18u-Iv-zM9" firstAttribute="centerY" secondItem="wfy-db-euE" secondAttribute="centerY" multiplier="0.5" id="sMx-uh-R5M"/>
+                            <constraint firstItem="eBi-c9-vzg" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="tw9-h8-hu7"/>
+                            <constraint firstItem="18u-Iv-zM9" firstAttribute="centerY" secondItem="nsg-pZ-6kL" secondAttribute="centerY" id="zFb-MD-cz4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="adContainerView" destination="OZg-sK-46V" id="WaZ-co-gmq"/>
+                        <outlet property="adContainerViewHeightConstraint" destination="XLH-g7-9IF" id="aNh-zp-Ucq"/>
+                        <outlet property="adContainerViewWidthConstraint" destination="h2g-kC-52F" id="BH5-Ca-M6E"/>
+                        <outlet property="closeButton" destination="55O-BL-d4v" id="wY8-yh-RGN"/>
+                        <outlet property="dimView" destination="eBi-c9-vzg" id="Mmc-T3-Mk3"/>
+                        <outlet property="loadAdButton" destination="18u-Iv-zM9" id="z9A-zj-dMI"/>
+                        <outlet property="loadStatusLabel" destination="G8E-rL-aGA" id="gPd-01-9UM"/>
+                        <outlet property="showAdButton" destination="nsg-pZ-6kL" id="jIo-RK-PrU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="399" y="341"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CloseButtonHighlighted.png" width="88" height="88"/>
+        <image name="CloseButtonNormal.png" width="88" height="88"/>
+    </resources>
+</document>
