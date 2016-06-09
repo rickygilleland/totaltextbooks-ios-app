@@ -24,6 +24,11 @@
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
+		<key>JSSAlertView.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>14</integer>
+		</dict>
 		<key>Material-io.cosmicmind.material.fonts.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -72,6 +77,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>09A525944CCF84FFEA96067F69E9D58E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>0A50281C64F57A42E737701821530D7C</key>
 		<dict>
 			<key>primary</key>
@@ -97,12 +107,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>33EDDC1B58F6A887C8A3FE8C1A4AA8DA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>41FF47B04EF6A6FA95DE609A3973E64F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>5D181ABD2172A213B29E5C8BBA0586C7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>71C1DF39EE1271EA1147F993CA1439A0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>72D57DED5129BDCAEB112D61B15B08A2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -168,6 +193,11 @@
 			<true/>
 		</dict>
 		<key>E9B135270376531E4D0CAAD8205F00BD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EA6B3F3E668348631B8CE03EC666B6B1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
