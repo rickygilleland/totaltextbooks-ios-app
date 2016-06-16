@@ -7,26 +7,18 @@
 //
 
 import UIKit
-import WebKit
-import SwiftSpinner
-import JSSAlertView
 
-class AboutViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
-    
-    let baseUrl = NSURL(string: "https://ios.totaltextbooks.com")!
-    
-    @IBOutlet var containerView: UIView! = nil
-    var moreView: WKWebView?
+class AboutViewController: UIViewController {
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
+    @IBOutlet weak var getHelpBtn: UIButton!
+    
+    @IBOutlet weak var version: UILabel!
+    @IBOutlet weak var build: UILabel!
+    
     override func loadView() {
         super.loadView()
-        
-        self.moreView = WKWebView()
-        self.view = self.moreView!
-        
-        
     }
     
     override func viewDidLoad() {
@@ -49,62 +41,25 @@ class AboutViewController: UIViewController, WKNavigationDelegate, WKUIDelegate 
         
         navigationItem.titleView = imageView
         
-        moreView!.navigationDelegate = self
-        moreView!.UIDelegate = self
+        //style the search and scan barcode buttons
+        getHelpBtn.layer.borderWidth = 1 // Set border width
+        getHelpBtn.layer.cornerRadius = 5 // Set border radius (Make it curved, increase this for a more rounded button
         
-        guard let url =  NSURL(string: "https://ios.totaltextbooks.com/about") else { return }
-        moreView!.navigationDelegate = self
-        
-        //var url = NSURL(string:"https://ios.dev.totaltextbooks.com")
-        var req = NSURLRequest(URL:url)
-        self.moreView!.loadRequest(req)
-    }
-    
-    func delay(seconds seconds: Double, completion:()->()) {
-        let popTime = dispatch_time(DISPATCH_TIME_NOW, Int64( Double(NSEC_PER_SEC) * seconds ))
-        
-        dispatch_after(popTime, dispatch_get_main_queue()) {
-            completion()
+        //set the version number label
+        if let version = NSBundle.mainBundle().infoDictionary?["CFBundleShortVersionString"] as? String {
+            self.version.text = version
+        }
+        //set the build number label
+        if let build = NSBundle.mainBundle().infoDictionary?["CFBundleVersion"] as? String {
+            self.build.text = "(" + build + ")"
         }
     }
     
-    func webView(webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-        SwiftSpinner.show("Loading...").addTapHandler({
-            SwiftSpinner.hide()
-            })
-        SwiftSpinner.showWithDelay(15.0, title: "Just a little longer...")
+    @IBAction func getHelpBtn(sender: AnyObject) {
         
-        //after 60 seconds stop loading and show an error
-        delay(seconds: 60.0, completion: {
-            self.moreView!.stopLoading()
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-            SwiftSpinner.hide()
-            JSSAlertView().danger(
-                self,
-                title: "Error Loading Page",
-                text: "There was an issue completing your request. Please check your network connection or try again in a few minutes. If this issue persists, please use the Help page to contact us."
-            )
-            
-        })
-
+        self.performSegueWithIdentifier("showHelpView", sender: sender)
+        
     }
-    
-    
-    func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-        SwiftSpinner.hide()
-    }
-    
-    func webView(webView: WKWebView, decidePolicyForNavigationAction navigationAction: WKNavigationAction, decisionHandler: ((WKNavigationActionPolicy) -> Void)) {
-        if (navigationAction.navigationType == WKNavigationType.LinkActivated && !navigationAction.request.URL!.host!.lowercaseString.hasPrefix("ios.totaltextbooks.com")) {
-            UIApplication.sharedApplication().openURL(navigationAction.request.URL!)
-            decisionHandler(WKNavigationActionPolicy.Cancel)
-        } else {
-            decisionHandler(WKNavigationActionPolicy.Allow)
-        }
-    }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
