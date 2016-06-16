@@ -9,6 +9,7 @@
 import UIKit
 import WebKit
 import SwiftSpinner
+import JSSAlertView
 
 class AboutViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     
@@ -59,11 +60,34 @@ class AboutViewController: UIViewController, WKNavigationDelegate, WKUIDelegate 
         self.moreView!.loadRequest(req)
     }
     
+    func delay(seconds seconds: Double, completion:()->()) {
+        let popTime = dispatch_time(DISPATCH_TIME_NOW, Int64( Double(NSEC_PER_SEC) * seconds ))
+        
+        dispatch_after(popTime, dispatch_get_main_queue()) {
+            completion()
+        }
+    }
+    
     func webView(webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-        SwiftSpinner.show("Loading...")
+        SwiftSpinner.show("Loading...").addTapHandler({
+            SwiftSpinner.hide()
+            })
         SwiftSpinner.showWithDelay(15.0, title: "Just a little longer...")
-        SwiftSpinner.showWithDelay(60.0, title: "Request failed. Please try again.", animated: false)
+        
+        //after 60 seconds stop loading and show an error
+        delay(seconds: 60.0, completion: {
+            self.moreView!.stopLoading()
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+            SwiftSpinner.hide()
+            JSSAlertView().danger(
+                self,
+                title: "Error Loading Page",
+                text: "There was an issue completing your request. Please check your network connection or try again in a few minutes. If this issue persists, please use the Help page to contact us."
+            )
+            
+        })
+
     }
     
     
