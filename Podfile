@@ -14,15 +14,6 @@ target 'Total Textbooks' do
   pod 'HanekeSwift'
   pod 'TextFieldEffects'
   pod 'JSSAlertView'
-  target 'Total TextbooksTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'Total TextbooksUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
 
 post_install do |installer|
   installer.pods_project.targets.each do |target|

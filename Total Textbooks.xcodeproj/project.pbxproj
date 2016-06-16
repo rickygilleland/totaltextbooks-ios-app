@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F19220844D5E0153095BA52 /* Pods_Total_TextbooksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9804F489D6F716ED1744A9E /* Pods_Total_TextbooksTests.framework */; };
 		4B40269FCF8500DC0171E213 /* Pods_Total_Textbooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3533133C5D6FB68B1ED90DC /* Pods_Total_Textbooks.framework */; };
 		6495E74F1B58D412547775C0 /* Pods_Total_TextbooksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE500CFDF35CA39AC7F2F61 /* Pods_Total_TextbooksUITests.framework */; };
 		9001C0791D12F2ED004CEF68 /* SearchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9001C0781D12F2ED004CEF68 /* SearchViewControllerTests.swift */; };
@@ -57,7 +56,6 @@
 
 /* Begin PBXFileReference section */
 		0E8BB32BFCBA051361343715 /* Pods-Total TextbooksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total TextbooksUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Total TextbooksUITests/Pods-Total TextbooksUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		1DC484778FD37580192EC347 /* Pods-Total TextbooksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total TextbooksTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Total TextbooksTests/Pods-Total TextbooksTests.release.xcconfig"; sourceTree = "<group>"; };
 		575AF65F1870437F6BE3CD3F /* Pods-Total TextbooksUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total TextbooksUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Total TextbooksUITests/Pods-Total TextbooksUITests.release.xcconfig"; sourceTree = "<group>"; };
 		75ECB30B5C553CFB1216DDBD /* Pods-Total Textbooks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total Textbooks.release.xcconfig"; path = "Pods/Target Support Files/Pods-Total Textbooks/Pods-Total Textbooks.release.xcconfig"; sourceTree = "<group>"; };
 		9001C0781D12F2ED004CEF68 /* SearchViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewControllerTests.swift; sourceTree = "<group>"; };
@@ -97,7 +95,6 @@
 		90E50E9A1CDB826500874391 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90F080401CE38FDE001E81E2 /* Total Textbooks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Total Textbooks.entitlements"; sourceTree = "<group>"; };
 		A55A767480814902B363CB6B /* Pods-Total Textbooks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total Textbooks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Total Textbooks/Pods-Total Textbooks.debug.xcconfig"; sourceTree = "<group>"; };
-		B75ECB40D9AAC44C8D1F7E0E /* Pods-Total TextbooksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total TextbooksTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Total TextbooksTests/Pods-Total TextbooksTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E9804F489D6F716ED1744A9E /* Pods_Total_TextbooksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Total_TextbooksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE500CFDF35CA39AC7F2F61 /* Pods_Total_TextbooksUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Total_TextbooksUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3533133C5D6FB68B1ED90DC /* Pods_Total_Textbooks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Total_Textbooks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,7 +123,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F19220844D5E0153095BA52 /* Pods_Total_TextbooksTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,8 +236,6 @@
 			children = (
 				A55A767480814902B363CB6B /* Pods-Total Textbooks.debug.xcconfig */,
 				75ECB30B5C553CFB1216DDBD /* Pods-Total Textbooks.release.xcconfig */,
-				B75ECB40D9AAC44C8D1F7E0E /* Pods-Total TextbooksTests.debug.xcconfig */,
-				1DC484778FD37580192EC347 /* Pods-Total TextbooksTests.release.xcconfig */,
 				0E8BB32BFCBA051361343715 /* Pods-Total TextbooksUITests.debug.xcconfig */,
 				575AF65F1870437F6BE3CD3F /* Pods-Total TextbooksUITests.release.xcconfig */,
 			);
@@ -740,7 +734,6 @@
 		};
 		90E50EA11CDB826500874391 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B75ECB40D9AAC44C8D1F7E0E /* Pods-Total TextbooksTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Total TextbooksTests/Info.plist";
@@ -753,7 +746,6 @@
 		};
 		90E50EA21CDB826500874391 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1DC484778FD37580192EC347 /* Pods-Total TextbooksTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Total TextbooksTests/Info.plist";
