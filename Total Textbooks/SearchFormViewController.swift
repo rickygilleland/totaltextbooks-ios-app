@@ -126,8 +126,6 @@ class SearchFormViewController: UIViewController, UITextFieldDelegate {
             //get the build number
             let build = NSBundle.mainBundle().infoDictionary?["CFBundleVersion"] as? String
             
-            print(build)
-            
             let parameters = [
                 "query": query!,
                 "key": "nc8ur498rhn39gkjkjgjkdfhg1=fdgdf3r=r43r3290rierjg",
