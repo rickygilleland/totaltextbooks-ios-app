@@ -121,6 +121,7 @@ class SearchTitleViewController: UIViewController, UITableViewDataSource, UITabl
                     title: "Book Not Found",
                     text: "We couldn't find your book. Please enter another book title or ISBN, or try our barcode scanner."
                 )
+                self.performSegueWithIdentifier("searchTitleToSearchForm", sender: self)
             }
         }
 
@@ -169,7 +170,7 @@ class SearchTitleViewController: UIViewController, UITableViewDataSource, UITabl
     func loadAmazonAdWithUserInterfaceIdiom(userInterfaceIdiom: UIUserInterfaceIdiom, interfaceOrientation: UIInterfaceOrientation) -> Void {
         
         var options = AmazonAdOptions()
-        options.isTestRequest = false
+        options.isTestRequest = true
         
         var amazonAdCenterYOffsetFromBottom: Float = 0.0
         
