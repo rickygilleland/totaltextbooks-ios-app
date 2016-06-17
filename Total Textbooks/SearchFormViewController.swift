@@ -31,6 +31,17 @@ class SearchFormViewController: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
     }
     
+    func viewWillAppear() {
+        
+        let name = "Search Form View"
+    
+        let tracker = GAI.sharedInstance().defaultTracker
+        tracker.set(kGAIScreenName, value: name)
+    
+        let builder = GAIDictionaryBuilder.createScreenView()
+        tracker.send(builder.build() as [NSObject : AnyObject])
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

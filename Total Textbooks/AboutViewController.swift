@@ -17,6 +17,17 @@ class AboutViewController: UIViewController {
     @IBOutlet weak var version: UILabel!
     @IBOutlet weak var build: UILabel!
     
+    func viewWillAppear() {
+        
+        let name = "About View"
+        
+        let tracker = GAI.sharedInstance().defaultTracker
+        tracker.set(kGAIScreenName, value: name)
+        
+        let builder = GAIDictionaryBuilder.createScreenView()
+        tracker.send(builder.build() as [NSObject : AnyObject])
+    }
+    
     override func loadView() {
         super.loadView()
     }

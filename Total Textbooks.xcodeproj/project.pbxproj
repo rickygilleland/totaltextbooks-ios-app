@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4B40269FCF8500DC0171E213 /* Pods_Total_Textbooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3533133C5D6FB68B1ED90DC /* Pods_Total_Textbooks.framework */; };
-		6495E74F1B58D412547775C0 /* Pods_Total_TextbooksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE500CFDF35CA39AC7F2F61 /* Pods_Total_TextbooksUITests.framework */; };
 		9001C0791D12F2ED004CEF68 /* SearchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9001C0781D12F2ED004CEF68 /* SearchViewControllerTests.swift */; };
 		9005C7441CE4BBBC00277047 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9005C7431CE4BBBC00277047 /* Launch Screen.storyboard */; };
 		901247B31CEA19C400CB420A /* extWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901247B21CEA19C400CB420A /* extWebViewController.swift */; };
@@ -35,6 +34,7 @@
 		90E50E801CDB826500874391 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90E50E7F1CDB826500874391 /* Assets.xcassets */; };
 		90E50E8E1CDB826500874391 /* Total_TextbooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E50E8D1CDB826500874391 /* Total_TextbooksTests.swift */; };
 		90E50E991CDB826500874391 /* Total_TextbooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E50E981CDB826500874391 /* Total_TextbooksUITests.swift */; };
+		90FDB86E1D141DA40068FD60 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90FDB86D1D141DA40068FD60 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +55,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0E8BB32BFCBA051361343715 /* Pods-Total TextbooksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total TextbooksUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Total TextbooksUITests/Pods-Total TextbooksUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		575AF65F1870437F6BE3CD3F /* Pods-Total TextbooksUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total TextbooksUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Total TextbooksUITests/Pods-Total TextbooksUITests.release.xcconfig"; sourceTree = "<group>"; };
 		75ECB30B5C553CFB1216DDBD /* Pods-Total Textbooks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total Textbooks.release.xcconfig"; path = "Pods/Target Support Files/Pods-Total Textbooks/Pods-Total Textbooks.release.xcconfig"; sourceTree = "<group>"; };
 		9001C0781D12F2ED004CEF68 /* SearchViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewControllerTests.swift; sourceTree = "<group>"; };
 		9005C7431CE4BBBC00277047 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -94,6 +92,7 @@
 		90E50E981CDB826500874391 /* Total_TextbooksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Total_TextbooksUITests.swift; sourceTree = "<group>"; };
 		90E50E9A1CDB826500874391 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90F080401CE38FDE001E81E2 /* Total Textbooks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Total Textbooks.entitlements"; sourceTree = "<group>"; };
+		90FDB86D1D141DA40068FD60 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		A55A767480814902B363CB6B /* Pods-Total Textbooks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Total Textbooks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Total Textbooks/Pods-Total Textbooks.debug.xcconfig"; sourceTree = "<group>"; };
 		E9804F489D6F716ED1744A9E /* Pods_Total_TextbooksTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Total_TextbooksTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE500CFDF35CA39AC7F2F61 /* Pods_Total_TextbooksUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Total_TextbooksUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,7 +129,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6495E74F1B58D412547775C0 /* Pods_Total_TextbooksUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +170,7 @@
 		90E50E751CDB826500874391 /* Total Textbooks */ = {
 			isa = PBXGroup;
 			children = (
+				90FDB86D1D141DA40068FD60 /* GoogleService-Info.plist */,
 				90D3E1D51D0838410024500B /* AboutViewController.swift */,
 				9005C7431CE4BBBC00277047 /* Launch Screen.storyboard */,
 				90DF7C9C1CE3B189001B9C57 /* SWReveallViewController */,
@@ -236,8 +235,6 @@
 			children = (
 				A55A767480814902B363CB6B /* Pods-Total Textbooks.debug.xcconfig */,
 				75ECB30B5C553CFB1216DDBD /* Pods-Total Textbooks.release.xcconfig */,
-				0E8BB32BFCBA051361343715 /* Pods-Total TextbooksUITests.debug.xcconfig */,
-				575AF65F1870437F6BE3CD3F /* Pods-Total TextbooksUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -362,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				908D2B671CE3816D00D19C22 /* main-iphone.storyboard in Resources */,
+				90FDB86E1D141DA40068FD60 /* GoogleService-Info.plist in Resources */,
 				9005C7441CE4BBBC00277047 /* Launch Screen.storyboard in Resources */,
 				90E50E801CDB826500874391 /* Assets.xcassets in Resources */,
 			);
@@ -758,7 +756,6 @@
 		};
 		90E50EA41CDB826500874391 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0E8BB32BFCBA051361343715 /* Pods-Total TextbooksUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "Total TextbooksUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -770,7 +767,6 @@
 		};
 		90E50EA51CDB826500874391 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 575AF65F1870437F6BE3CD3F /* Pods-Total TextbooksUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "Total TextbooksUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

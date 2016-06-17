@@ -43,6 +43,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //set the Amazon Ads API Key
         AmazonAdRegistration.sharedRegistration().setAppKey("5f153858377a4bea96b9bb45da30ce3a")
         
+        //Google Analytics
+        // Configure tracker from GoogleService-Info.plist.
+        var configureError:NSError?
+        GGLContext.sharedInstance().configureWithError(&configureError)
+        assert(configureError == nil, "Error configuring Google services: \(configureError)")
+        
+        let gai = GAI.sharedInstance()
+        gai.trackUncaughtExceptions = true  // report uncaught exceptions
+        
         return true
     }
 
