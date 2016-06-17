@@ -76,6 +76,17 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
     var curTable:String!
     
+    func viewWillAppear() {
+        
+        let name = "Search Results View"
+        
+        let tracker = GAI.sharedInstance().defaultTracker
+        tracker.set(kGAIScreenName, value: name)
+        
+        let builder = GAIDictionaryBuilder.createScreenView()
+        tracker.send(builder.build() as [NSObject : AnyObject])
+    }
+    
     override func loadView() {
         super.loadView()
 

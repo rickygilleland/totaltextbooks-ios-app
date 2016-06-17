@@ -18,6 +18,17 @@ class HelpViewController: UIViewController {
     @IBOutlet weak var kbButton: UIButton!
     @IBOutlet weak var contactButton: UIButton!
     
+    func viewWillAppear() {
+        
+        let name = "Help View"
+        
+        let tracker = GAI.sharedInstance().defaultTracker
+        tracker.set(kGAIScreenName, value: name)
+        
+        let builder = GAIDictionaryBuilder.createScreenView()
+        tracker.send(builder.build() as [NSObject : AnyObject])
+    }
+    
     override func loadView() {
         super.loadView()
 
