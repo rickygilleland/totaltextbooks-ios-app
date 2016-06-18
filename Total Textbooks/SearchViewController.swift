@@ -66,6 +66,14 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
     var searchPassed:String!
     
+    var bookTitlePassed:String!
+    var bookCoverPassed:NSURL!
+    var isbn10Passed:String!
+    var isbn13Passed:String!
+    var authorPassed:String!
+    var editionPassed:String!
+    var msrpPassed:String!
+    
     var condition:String!
     
     var buyArrRes = [[String:AnyObject]]()
@@ -143,6 +151,8 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
             SwiftSpinner.hide()
         })
         
+        activityIndicatorView.startAnimating()
+        
         //get the version number
         let version = NSBundle.mainBundle().infoDictionary?["CFBundleShortVersionString"] as? String
         //get the build number
@@ -158,27 +168,55 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
             "build": build!
         ]
         
-        //Get the basic book info
-        Alamofire.request(.POST, "https://api.textbookpricefinder.com/search/bookInfo/\(String(query!))", parameters: parameters).responseJSON { (responseData) -> Void in
-            if((responseData.result.value) != nil) {
-                let swiftyJsonVar = JSON(responseData.result.value!)["vitalInfo"]
-                
-                if swiftyJsonVar["vitalInfo"] != nil {
-                    self.bookTitle.text = swiftyJsonVar["vitalInfo"]["title"].stringValue
-                    let coverUrl = NSURL(string: swiftyJsonVar["vitalInfo"]["cover"].stringValue)
-                    self.bookCover.hnk_setImageFromURL(coverUrl!)
-                    self.isbn10.text = swiftyJsonVar["vitalInfo"]["isbn10"].stringValue
-                    self.isbn13.text = swiftyJsonVar["vitalInfo"]["isbn13"].stringValue
-                    self.author.text = swiftyJsonVar["vitalInfo"]["author"].stringValue
-                    self.edition.text = swiftyJsonVar["vitalInfo"]["edition"].stringValue
-                    self.msrp.text = swiftyJsonVar["vitalInfo"]["msrp"].stringValue
-                }
-                
-                SwiftSpinner.hide()
+        //Do we already have the vital info? (Passed from the searchFormView)
+        if (bookTitlePassed != nil) {
+            
+            self.bookTitle.text = self.bookTitlePassed
+            
+            if (self.bookCoverPassed != nil) {
+                self.bookCover.hnk_setImageFromURL(self.bookCoverPassed)
             }
+            if (self.isbn10Passed != nil) {
+                self.isbn10.text = self.isbn10Passed
+            }
+            if (self.isbn13Passed != nil) {
+                self.isbn13.text = self.isbn13Passed
+            }
+            if (self.authorPassed != nil) {
+                self.author.text = self.authorPassed
+            }
+            if (self.editionPassed != nil) {
+                self.edition.text = self.editionPassed
+            }
+            if (self.msrpPassed != nil) {
+                self.msrp.text = self.msrpPassed
+            }
+            
+            SwiftSpinner.hide()
+            
+        } else {
+            
+            //Get the basic book info
+            Alamofire.request(.POST, "https://api.textbookpricefinder.com/search/bookInfo/\(String(query!))", parameters: parameters).responseJSON { (responseData) -> Void in
+                if((responseData.result.value) != nil) {
+                    let swiftyJsonVar = JSON(responseData.result.value!)["vitalInfo"]
+                    
+                    if swiftyJsonVar["vitalInfo"] != nil {
+                        self.bookTitle.text = swiftyJsonVar["vitalInfo"]["title"].stringValue
+                        let coverUrl = NSURL(string: swiftyJsonVar["vitalInfo"]["cover"].stringValue)
+                        self.bookCover.hnk_setImageFromURL(coverUrl!)
+                        self.isbn10.text = swiftyJsonVar["vitalInfo"]["isbn10"].stringValue
+                        self.isbn13.text = swiftyJsonVar["vitalInfo"]["isbn13"].stringValue
+                        self.author.text = swiftyJsonVar["vitalInfo"]["author"].stringValue
+                        self.edition.text = swiftyJsonVar["vitalInfo"]["edition"].stringValue
+                        self.msrp.text = swiftyJsonVar["vitalInfo"]["msrp"].stringValue
+                    }
+                    
+                    SwiftSpinner.hide()
+                }
+            }
+            
         }
-        
-        activityIndicatorView.startAnimating()
         
         Alamofire.request(.POST, "https://api.textbookpricefinder.com/search/all/\(String(query!))", parameters: parameters).responseJSON { (responseData) -> Void in
             if((responseData.result.value) != nil) {
@@ -220,6 +258,9 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
                 }
                 
             }
+            
+            //call .hide() again just in case the bookInfo call times out for some reason
+            SwiftSpinner.hide()
             
             self.activityIndicatorView.stopAnimating()
             self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine

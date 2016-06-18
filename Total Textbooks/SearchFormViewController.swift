@@ -21,6 +21,14 @@ class SearchFormViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var scanBarcodeButton: MaterialButton!
     
+    var bookTitle:String!
+    var bookCover:NSURL!
+    var isbn10:String!
+    var isbn13:String!
+    var author:String!
+    var edition:String!
+    var msrp:String!
+    
     var background:UIImageView?
     
     var barcodeScanner:ROBarcodeScannerViewController?
@@ -148,7 +156,6 @@ class SearchFormViewController: UIViewController, UITextFieldDelegate {
         
             //Get the basic book info and decide which view we are sending them to
             Alamofire.request(.POST, "https://api.textbookpricefinder.com/search/bookInfo/\(String(query!))", parameters: parameters).responseJSON { (responseData) -> Void in
-                print(responseData.result.value)
                 //successfull until proven otherwise
                 var statusCode = 200
                 if (responseData.response?.statusCode) != nil {
@@ -182,6 +189,20 @@ class SearchFormViewController: UIViewController, UITextFieldDelegate {
                             self.performSegueWithIdentifier("searchTitleSegue", sender: sender)
                         } else if (swiftyJsonVar["isIsbn"] == "true" && swiftyJsonVar["code"] == "200") {
                             //an ISBN was entered and a book was found, send them to the main result view
+                            let swiftyJsonVar = JSON(responseData.result.value!)["vitalInfo"]["vitalInfo"]
+                            
+                            if swiftyJsonVar != nil {
+                                
+                                self.bookTitle = swiftyJsonVar["title"].stringValue
+                                self.bookCover = NSURL(string: swiftyJsonVar["cover"].stringValue)
+                                self.isbn10 = swiftyJsonVar["isbn10"].stringValue
+                                self.isbn13 = swiftyJsonVar["isbn13"].stringValue
+                                self.author = swiftyJsonVar["author"].stringValue
+                                self.edition = swiftyJsonVar["edition"].stringValue
+                                self.msrp = swiftyJsonVar["msrp"].stringValue
+                               
+                            }
+                            
                             self.performSegueWithIdentifier("searchSegue", sender: sender)
                         } else if (swiftyJsonVar["code"] == "500") {
                             //no book was found
@@ -270,6 +291,30 @@ class SearchFormViewController: UIViewController, UITextFieldDelegate {
             let searchQuery:NSString = searchTextField.text!
             let svc = segue.destinationViewController as! SearchViewController
             svc.searchPassed = searchQuery as String
+            
+            if (self.bookTitle != nil) {
+                svc.bookTitlePassed = self.bookTitle as String?
+            }
+            if (self.bookCover != nil) {
+                svc.bookCoverPassed = self.bookCover as NSURL?
+            }
+            if (self.isbn10 != nil) {
+                svc.isbn10Passed = self.isbn10 as String?
+            }
+            if (self.isbn13 != nil) {
+                svc.isbn13Passed = self.isbn13 as String?
+            }
+            if (self.author != nil) {
+                svc.authorPassed = self.author as String?
+            }
+            if (self.edition != nil) {
+                svc.editionPassed = self.edition as String?
+            }
+            if (self.msrp != nil) {
+                svc.msrpPassed = self.msrp as String?
+            }
+            
+            
         } else if (segue.identifier == "searchTitleSegue") {
             let searchQuery:NSString = searchTextField.text!
             let svc = segue.destinationViewController as! SearchTitleViewController
