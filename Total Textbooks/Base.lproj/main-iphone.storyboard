@@ -1273,7 +1273,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="sx8-VB-fkC"/>
                     <connections>
-                        <outlet property="amazonAdView" destination="sOV-fI-3me" id="z8R-QV-9FD"/>
                         <outlet property="resultsFound" destination="GOZ-IJ-92b" id="XHb-LO-8Th"/>
                         <outlet property="tableView" destination="PHW-h3-R0u" id="gQN-qa-IPX"/>
                         <segue destination="9pv-A4-QxB" kind="show" identifier="searchTitleToIsbnSegue" id="GSu-eZ-byA"/>

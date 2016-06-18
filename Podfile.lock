@@ -1,5 +1,16 @@
 PODS:
   - Alamofire (3.4.1)
+  - Bolts (1.7.0):
+    - Bolts/AppLinks (= 1.7.0)
+    - Bolts/Tasks (= 1.7.0)
+  - Bolts/AppLinks (1.7.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.7.0)
+  - FBAudienceNetwork (4.13.1)
+  - FBSDKCoreKit (4.13.1):
+    - Bolts (~> 1.7)
+  - FBSDKShareKit (4.13.1):
+    - FBSDKCoreKit
   - FirebaseAnalytics (3.2.0):
     - FirebaseInstanceID (~> 1.0)
     - GoogleInterchangeUtilities (~> 1.2)
@@ -32,6 +43,9 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 3.4)
+  - FBAudienceNetwork
+  - FBSDKCoreKit
+  - FBSDKShareKit
   - Google/Analytics
   - HanekeSwift
   - JSSAlertView
@@ -52,6 +66,10 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  Bolts: a0058fa3b331c5a1e4402d534f2dae36dbff31e4
+  FBAudienceNetwork: 00f43ca44ee26fdadda3aa42032b8b87c8ace033
+  FBSDKCoreKit: 2807fe0da2ddb49a1469da6d6ff597f99912980f
+  FBSDKShareKit: c9438df7573b33780ac8c3451201c5ebb260ffca
   FirebaseAnalytics: 6f75b04e6bfb8e0b6e9ef298e04c24eea3b13863
   FirebaseInstanceID: d014d574053a2fe84478f12f7bae96979e7051bb
   Google: 813c467362eabc11385f5a5cc9ad0cb651a58f4e
@@ -67,6 +85,6 @@ SPEC CHECKSUMS:
   TextFieldEffects: bc4fd3bd557321bd61a0762f3f50965477a36f62
   ZendeskSDK: b08a24cdf036a61dc8c680c389b208be4d6dc5ae
 
-PODFILE CHECKSUM: 99220509ddce4107d14ee72082774dfb40ce2467
+PODFILE CHECKSUM: a2cbd0bc395f0124618dae362175b9d5e6c246c6
 
 COCOAPODS: 1.0.1
