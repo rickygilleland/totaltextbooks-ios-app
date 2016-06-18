@@ -13,6 +13,7 @@ import Alamofire
 import SwiftyJSON
 import Haneke
 import SafariServices
+import FBAudienceNetwork
 
 class customBuyTableViewCell: UITableViewCell {
     @IBOutlet weak var merchantLogo: UIImageView!
@@ -44,7 +45,7 @@ class customSellTableViewCell: UITableViewCell {
     
 }
 
-class SearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FBAdViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     weak var activityIndicatorView: UIActivityIndicatorView!
@@ -118,6 +119,16 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         imageView.image = image
         
         navigationItem.titleView = imageView
+        
+        //Facebook Ads
+        let adView: FBAdView = FBAdView(placementID:"1039337459485157_1065592693526300", adSize:kFBAdSizeHeight50Banner, rootViewController:self)
+        adView.loadAd()
+        
+        //move the add to the bottom of the screen
+        let screenSize: CGRect = UIScreen.mainScreen().bounds
+        adView.frame = CGRect(x: 0, y: self.view.frame.size.height - 50, width: screenSize.width, height: 50)
+        
+        self.view.addSubview(adView)
         
         //show the activity indicator on the tableview
         let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
@@ -397,6 +408,16 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
             return sellArrRes.count
         }
     }
+    
+    //Facebook ad loading functions
+    func adView(adView: FBAdView, didFailWithError error: NSError) {
+        adView.hidden = true
+    }
+    
+    func adViewDidLoad(adView: FBAdView) {
+        adView.hidden = false
+    }
+
 
 }
 

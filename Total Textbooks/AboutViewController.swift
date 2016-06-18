@@ -64,6 +64,7 @@ class AboutViewController: UIViewController {
         if let build = NSBundle.mainBundle().infoDictionary?["CFBundleVersion"] as? String {
             self.build.text = "(" + build + ")"
         }
+
     }
     
     @IBAction func getHelpBtn(sender: AnyObject) {

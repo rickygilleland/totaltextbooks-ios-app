@@ -21,7 +21,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>65</string>
+	<string>67</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>amazon</string>
@@ -62,5 +62,25 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>fb1039337459485157</string>
+            </array>
+        </dict>
+    </array>
+    <key>FacebookAppID</key>
+    <string>1039337459485157</string>
+    <key>FacebookDisplayName</key>
+    <string>Total Textbooks</string>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+       <string>fbapi</string>
+       <string>fb-messenger-api</string>
+       <string>fbauth2</string>
+       <string>fbshareextension</string>
+    </array>
 </dict>
 </plist>

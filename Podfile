@@ -15,6 +15,9 @@ target 'Total Textbooks' do
   pod 'TextFieldEffects'
   pod 'JSSAlertView'
   pod 'Google/Analytics'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKShareKit'
+  pod 'FBAudienceNetwork'
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
