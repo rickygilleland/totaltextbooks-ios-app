@@ -14,16 +14,10 @@ target 'Total Textbooks' do
   pod 'HanekeSwift'
   pod 'TextFieldEffects'
   pod 'JSSAlertView'
-  target 'Total TextbooksTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'Total TextbooksUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
+  pod 'Google/Analytics'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKShareKit'
+  pod 'FBAudienceNetwork'
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|

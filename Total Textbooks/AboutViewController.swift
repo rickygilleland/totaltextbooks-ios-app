@@ -7,25 +7,29 @@
 //
 
 import UIKit
-import WebKit
-import SwiftSpinner
 
-class AboutViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
-    
-    let baseUrl = NSURL(string: "https://ios.totaltextbooks.com")!
-    
-    @IBOutlet var containerView: UIView! = nil
-    var moreView: WKWebView?
+class AboutViewController: UIViewController {
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
+    @IBOutlet weak var getHelpBtn: UIButton!
+    
+    @IBOutlet weak var version: UILabel!
+    @IBOutlet weak var build: UILabel!
+    
+    func viewWillAppear() {
+        
+        let name = "About View"
+        
+        let tracker = GAI.sharedInstance().defaultTracker
+        tracker.set(kGAIScreenName, value: name)
+        
+        let builder = GAIDictionaryBuilder.createScreenView()
+        tracker.send(builder.build() as [NSObject : AnyObject])
+    }
+    
     override func loadView() {
         super.loadView()
-        
-        self.moreView = WKWebView()
-        self.view = self.moreView!
-        
-        
     }
     
     override func viewDidLoad() {
@@ -48,39 +52,26 @@ class AboutViewController: UIViewController, WKNavigationDelegate, WKUIDelegate 
         
         navigationItem.titleView = imageView
         
-        moreView!.navigationDelegate = self
-        moreView!.UIDelegate = self
+        //style the search and scan barcode buttons
+        getHelpBtn.layer.borderWidth = 1 // Set border width
+        getHelpBtn.layer.cornerRadius = 5 // Set border radius (Make it curved, increase this for a more rounded button
         
-        guard let url =  NSURL(string: "https://ios.totaltextbooks.com/about") else { return }
-        moreView!.navigationDelegate = self
-        
-        //var url = NSURL(string:"https://ios.dev.totaltextbooks.com")
-        var req = NSURLRequest(URL:url)
-        self.moreView!.loadRequest(req)
-    }
-    
-    func webView(webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-        SwiftSpinner.show("Loading...")
-        SwiftSpinner.showWithDelay(15.0, title: "Just a little longer...")
-        SwiftSpinner.showWithDelay(60.0, title: "Request failed. Please try again.", animated: false)
-    }
-    
-    
-    func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-        SwiftSpinner.hide()
-    }
-    
-    func webView(webView: WKWebView, decidePolicyForNavigationAction navigationAction: WKNavigationAction, decisionHandler: ((WKNavigationActionPolicy) -> Void)) {
-        if (navigationAction.navigationType == WKNavigationType.LinkActivated && !navigationAction.request.URL!.host!.lowercaseString.hasPrefix("ios.totaltextbooks.com")) {
-            UIApplication.sharedApplication().openURL(navigationAction.request.URL!)
-            decisionHandler(WKNavigationActionPolicy.Cancel)
-        } else {
-            decisionHandler(WKNavigationActionPolicy.Allow)
+        //set the version number label
+        if let version = NSBundle.mainBundle().infoDictionary?["CFBundleShortVersionString"] as? String {
+            self.version.text = version
         }
+        //set the build number label
+        if let build = NSBundle.mainBundle().infoDictionary?["CFBundleVersion"] as? String {
+            self.build.text = "(" + build + ")"
+        }
+
     }
     
+    @IBAction func getHelpBtn(sender: AnyObject) {
+        
+        self.performSegueWithIdentifier("showHelpView", sender: sender)
+        
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

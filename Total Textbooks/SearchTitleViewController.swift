@@ -12,6 +12,7 @@ import SwiftSpinner
 import Alamofire
 import Haneke
 import JSSAlertView
+import FBAudienceNetwork
 
 class customTitleTableViewCell: UITableViewCell {
     @IBOutlet weak var bookTitle: UILabel!
@@ -20,7 +21,7 @@ class customTitleTableViewCell: UITableViewCell {
     @IBOutlet weak var bookEdition: UILabel!
 }
 
-class SearchTitleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AmazonAdViewDelegate {
+class SearchTitleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FBAdViewDelegate {
     
     var searchPassed:String!
     
@@ -35,7 +36,16 @@ class SearchTitleViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var resultsFound: UILabel!
     
-    @IBOutlet var amazonAdView: AmazonAdView!
+    func viewWillAppear() {
+        
+        let name = "Search Results View - Title Search"
+        
+        let tracker = GAI.sharedInstance().defaultTracker
+        tracker.set(kGAIScreenName, value: name)
+        
+        let builder = GAIDictionaryBuilder.createScreenView()
+        tracker.send(builder.build() as [NSObject : AnyObject])
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,11 +65,15 @@ class SearchTitleViewController: UIViewController, UITableViewDataSource, UITabl
         
         navigationItem.titleView = imageView
         
-        //load the Amazon Ad
-        //let adFrame: CGRect = CGRectMake(0, self.view.bounds.size.height-50, UIScreen.mainScreen().bounds.size.width, 50);
-        amazonAdView = AmazonAdView.init(adSize: AmazonAdSize_320x50)
-        loadAmazonAd()
-        amazonAdView.delegate = self
+        //Facebook Ads
+        let adView: FBAdView = FBAdView(placementID:"1039337459485157_1065592693526300", adSize:kFBAdSizeHeight50Banner, rootViewController:self)
+        adView.loadAd()
+        
+        //move the add to the bottom of the screen
+        let screenSize: CGRect = UIScreen.mainScreen().bounds
+        adView.frame = CGRect(x: 0, y: self.view.frame.size.height - 50, width: screenSize.width, height: 50)
+        
+        self.view.addSubview(adView)
         
         let query = searchPassed.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
         
@@ -121,6 +135,7 @@ class SearchTitleViewController: UIViewController, UITableViewDataSource, UITabl
                     title: "Book Not Found",
                     text: "We couldn't find your book. Please enter another book title or ISBN, or try our barcode scanner."
                 )
+                self.performSegueWithIdentifier("searchTitleToSearchForm", sender: self)
             }
         }
 
@@ -166,70 +181,13 @@ class SearchTitleViewController: UIViewController, UITableViewDataSource, UITabl
         }
     }
     
-    func loadAmazonAdWithUserInterfaceIdiom(userInterfaceIdiom: UIUserInterfaceIdiom, interfaceOrientation: UIInterfaceOrientation) -> Void {
-        
-        var options = AmazonAdOptions()
-        options.isTestRequest = false
-        
-        var amazonAdCenterYOffsetFromBottom: Float = 0.0
-        
-        if (userInterfaceIdiom == UIUserInterfaceIdiom.Phone) {
-            amazonAdCenterYOffsetFromBottom = 25.0
-            
-            amazonAdView.autoresizingMask = (UIViewAutoresizing)(rawValue: UIViewAutoresizing.FlexibleLeftMargin.rawValue | UIViewAutoresizing.FlexibleRightMargin.rawValue | UIViewAutoresizing.FlexibleBottomMargin.rawValue | UIViewAutoresizing.FlexibleTopMargin.rawValue);
-        } else {
-            amazonAdView.removeFromSuperview()
-            
-            if (interfaceOrientation == UIInterfaceOrientation.Portrait) {
-                amazonAdCenterYOffsetFromBottom = 45.0
-                
-                amazonAdView = AmazonAdView(adSize: AmazonAdSize_728x90)
-                amazonAdView.center = CGPointMake(self.view.bounds.size.width / 2.0, self.view.bounds.size.height - 45.0)
-            } else {
-                amazonAdCenterYOffsetFromBottom = 45.0
-                
-                amazonAdView = AmazonAdView(adSize: AmazonAdSize_1024x50)
-                amazonAdView.center = CGPointMake(self.view.bounds.size.width / 2.0, self.view.bounds.size.height - 45.0)
-            }
-            self.view.addSubview(amazonAdView)
-            amazonAdView.delegate = self
-        }
-        
-        UIView.animateWithDuration(NSTimeInterval(0.6), animations: {
-            self.amazonAdView.center = CGPointMake(self.view.bounds.size.width/2.0, self.view.bounds.size.height - CGFloat(amazonAdCenterYOffsetFromBottom))
-        })
-        
-        amazonAdView.loadAd(options)
+    //Facebook ad loading functions
+    func adView(adView: FBAdView, didFailWithError error: NSError) {
+        adView.hidden = true
     }
     
-    func loadAmazonAd(){
-        loadAmazonAdWithUserInterfaceIdiom(UIDevice.currentDevice().userInterfaceIdiom, interfaceOrientation: UIApplication.sharedApplication().statusBarOrientation)
-    }
-    
-    // Mark: - AmazonAdViewDelegate
-    func viewControllerForPresentingModalView() -> UIViewController {
-        return self
-    }
-    
-    func adViewDidLoad(view: AmazonAdView!) -> Void {
-        self.view.addSubview(amazonAdView)
-        // Amazon Ad center Y offset from bottom.
-        // The value is based on the device and orientation, and it will be used for sliding in the floating ad.
-        var amazonAdCenterYOffsetFromBottom: Float = 0.0;
-        
-        if (UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Phone) {
-            amazonAdCenterYOffsetFromBottom = 25.0
-        } else {
-            if (UIApplication.sharedApplication().statusBarOrientation == UIInterfaceOrientation.Portrait) {
-                amazonAdCenterYOffsetFromBottom = 45.0
-            } else {
-                amazonAdCenterYOffsetFromBottom = 25.0
-            }
-        }
-        
-        UIView.animateWithDuration(NSTimeInterval(0.6), animations: {
-            self.amazonAdView.center = CGPointMake(self.view.bounds.size.width/2.0, self.view.bounds.size.height - CGFloat(amazonAdCenterYOffsetFromBottom))
-        })
+    func adViewDidLoad(adView: FBAdView) {
+        adView.hidden = false
     }
 
     /*

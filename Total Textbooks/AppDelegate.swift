@@ -8,6 +8,7 @@
 
 import UIKit
 import ZendeskSDK
+import FBSDKCoreKit
 
 @UIApplicationMain
 
@@ -40,8 +41,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let identity = ZDKAnonymousIdentity()
         ZDKConfig.instance().userIdentity = identity
         
-        //set the Amazon Ads API Key
-        AmazonAdRegistration.sharedRegistration().setAppKey("5f153858377a4bea96b9bb45da30ce3a")
+        //Google Analytics
+        // Configure tracker from GoogleService-Info.plist.
+        var configureError:NSError?
+        GGLContext.sharedInstance().configureWithError(&configureError)
+        assert(configureError == nil, "Error configuring Google services: \(configureError)")
+        
+        let gai = GAI.sharedInstance()
+        gai.trackUncaughtExceptions = true  // report uncaught exceptions
         
         return true
     }
@@ -63,6 +70,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
+        // Call the 'activateApp' method to log an app event for use
+        // in analytics and advertising reporting.
+        FBSDKAppEvents.activateApp()
     }
 
     func applicationWillTerminate(application: UIApplication) {

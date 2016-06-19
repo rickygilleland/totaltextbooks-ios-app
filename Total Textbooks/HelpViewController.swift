@@ -18,14 +18,20 @@ class HelpViewController: UIViewController {
     @IBOutlet weak var kbButton: UIButton!
     @IBOutlet weak var contactButton: UIButton!
     
-    @IBOutlet weak var versionNum: UILabel!
-    @IBOutlet weak var buildNum: UILabel!
+    func viewWillAppear() {
+        
+        let name = "Help View"
+        
+        let tracker = GAI.sharedInstance().defaultTracker
+        tracker.set(kGAIScreenName, value: name)
+        
+        let builder = GAIDictionaryBuilder.createScreenView()
+        tracker.send(builder.build() as [NSObject : AnyObject])
+    }
     
     override func loadView() {
         super.loadView()
-        
-        
-        
+
     }
     
     override func viewDidLoad() {
@@ -36,7 +42,6 @@ class HelpViewController: UIViewController {
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
-        
         
         let nav = self.navigationController?.navigationBar
         
@@ -54,15 +59,6 @@ class HelpViewController: UIViewController {
         
         contactButton.layer.borderWidth = 1 // Set border width
         contactButton.layer.cornerRadius = 5 // Set border radius (Make it curved, increase this for a more rounded button
-        
-        //set the version number label
-        if let version = NSBundle.mainBundle().infoDictionary?["CFBundleShortVersionString"] as? String {
-            self.versionNum.text = version
-        }
-        //set the build number label
-        if let build = NSBundle.mainBundle().infoDictionary?["CFBundleVersion"] as? String {
-            self.buildNum.text = build
-        }
         
     }
     

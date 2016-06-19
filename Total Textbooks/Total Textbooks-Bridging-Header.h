@@ -6,3 +6,4 @@
 #import <AmazonAd/AmazonAdView.h>
 #import <AmazonAd/AmazonAdError.h>
 #import <AmazonAd/AmazonAdOptions.h>
+#import <Google/Analytics.h>

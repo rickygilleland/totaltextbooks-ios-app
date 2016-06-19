@@ -13,6 +13,7 @@ import Alamofire
 import SwiftyJSON
 import Haneke
 import SafariServices
+import FBAudienceNetwork
 
 class customBuyTableViewCell: UITableViewCell {
     @IBOutlet weak var merchantLogo: UIImageView!
@@ -44,7 +45,7 @@ class customSellTableViewCell: UITableViewCell {
     
 }
 
-class SearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FBAdViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     weak var activityIndicatorView: UIActivityIndicatorView!
@@ -65,6 +66,14 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
     var searchPassed:String!
     
+    var bookTitlePassed:String!
+    var bookCoverPassed:NSURL!
+    var isbn10Passed:String!
+    var isbn13Passed:String!
+    var authorPassed:String!
+    var editionPassed:String!
+    var msrpPassed:String!
+    
     var condition:String!
     
     var buyArrRes = [[String:AnyObject]]()
@@ -75,6 +84,17 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     var merchantArray = [String]()
     
     var curTable:String!
+    
+    func viewWillAppear() {
+        
+        let name = "Search Results View"
+        
+        let tracker = GAI.sharedInstance().defaultTracker
+        tracker.set(kGAIScreenName, value: name)
+        
+        let builder = GAIDictionaryBuilder.createScreenView()
+        tracker.send(builder.build() as [NSObject : AnyObject])
+    }
     
     override func loadView() {
         super.loadView()
@@ -108,6 +128,16 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         
         navigationItem.titleView = imageView
         
+        //Facebook Ads
+        let adView: FBAdView = FBAdView(placementID:"1039337459485157_1065592693526300", adSize:kFBAdSizeHeight50Banner, rootViewController:self)
+        adView.loadAd()
+        
+        //move the add to the bottom of the screen
+        let screenSize: CGRect = UIScreen.mainScreen().bounds
+        adView.frame = CGRect(x: 0, y: self.view.frame.size.height - 50, width: screenSize.width, height: 50)
+        
+        self.view.addSubview(adView)
+        
         //show the activity indicator on the tableview
         let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
         tableView.backgroundView = activityIndicatorView
@@ -120,6 +150,8 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         SwiftSpinner.show("Loading").addTapHandler({
             SwiftSpinner.hide()
         })
+        
+        activityIndicatorView.startAnimating()
         
         //get the version number
         let version = NSBundle.mainBundle().infoDictionary?["CFBundleShortVersionString"] as? String
@@ -136,27 +168,55 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
             "build": build!
         ]
         
-        //Get the basic book info
-        Alamofire.request(.POST, "https://api.textbookpricefinder.com/search/bookInfo/\(String(query!))", parameters: parameters).responseJSON { (responseData) -> Void in
-            if((responseData.result.value) != nil) {
-                let swiftyJsonVar = JSON(responseData.result.value!)["vitalInfo"]
-                
-                if swiftyJsonVar["vitalInfo"] != nil {
-                    self.bookTitle.text = swiftyJsonVar["vitalInfo"]["title"].stringValue
-                    let coverUrl = NSURL(string: swiftyJsonVar["vitalInfo"]["cover"].stringValue)
-                    self.bookCover.hnk_setImageFromURL(coverUrl!)
-                    self.isbn10.text = swiftyJsonVar["vitalInfo"]["isbn10"].stringValue
-                    self.isbn13.text = swiftyJsonVar["vitalInfo"]["isbn13"].stringValue
-                    self.author.text = swiftyJsonVar["vitalInfo"]["author"].stringValue
-                    self.edition.text = swiftyJsonVar["vitalInfo"]["edition"].stringValue
-                    self.msrp.text = swiftyJsonVar["vitalInfo"]["msrp"].stringValue
-                }
-                
-                SwiftSpinner.hide()
+        //Do we already have the vital info? (Passed from the searchFormView)
+        if (bookTitlePassed != nil) {
+            
+            self.bookTitle.text = self.bookTitlePassed
+            
+            if (self.bookCoverPassed != nil) {
+                self.bookCover.hnk_setImageFromURL(self.bookCoverPassed)
             }
+            if (self.isbn10Passed != nil) {
+                self.isbn10.text = self.isbn10Passed
+            }
+            if (self.isbn13Passed != nil) {
+                self.isbn13.text = self.isbn13Passed
+            }
+            if (self.authorPassed != nil) {
+                self.author.text = self.authorPassed
+            }
+            if (self.editionPassed != nil) {
+                self.edition.text = self.editionPassed
+            }
+            if (self.msrpPassed != nil) {
+                self.msrp.text = self.msrpPassed
+            }
+            
+            SwiftSpinner.hide()
+            
+        } else {
+            
+            //Get the basic book info
+            Alamofire.request(.POST, "https://api.textbookpricefinder.com/search/bookInfo/\(String(query!))", parameters: parameters).responseJSON { (responseData) -> Void in
+                if((responseData.result.value) != nil) {
+                    let swiftyJsonVar = JSON(responseData.result.value!)["vitalInfo"]
+                    
+                    if swiftyJsonVar["vitalInfo"] != nil {
+                        self.bookTitle.text = swiftyJsonVar["vitalInfo"]["title"].stringValue
+                        let coverUrl = NSURL(string: swiftyJsonVar["vitalInfo"]["cover"].stringValue)
+                        self.bookCover.hnk_setImageFromURL(coverUrl!)
+                        self.isbn10.text = swiftyJsonVar["vitalInfo"]["isbn10"].stringValue
+                        self.isbn13.text = swiftyJsonVar["vitalInfo"]["isbn13"].stringValue
+                        self.author.text = swiftyJsonVar["vitalInfo"]["author"].stringValue
+                        self.edition.text = swiftyJsonVar["vitalInfo"]["edition"].stringValue
+                        self.msrp.text = swiftyJsonVar["vitalInfo"]["msrp"].stringValue
+                    }
+                    
+                    SwiftSpinner.hide()
+                }
+            }
+            
         }
-        
-        activityIndicatorView.startAnimating()
         
         Alamofire.request(.POST, "https://api.textbookpricefinder.com/search/all/\(String(query!))", parameters: parameters).responseJSON { (responseData) -> Void in
             if((responseData.result.value) != nil) {
@@ -198,6 +258,9 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
                 }
                 
             }
+            
+            //call .hide() again just in case the bookInfo call times out for some reason
+            SwiftSpinner.hide()
             
             self.activityIndicatorView.stopAnimating()
             self.tableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
@@ -386,6 +449,16 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
             return sellArrRes.count
         }
     }
+    
+    //Facebook ad loading functions
+    func adView(adView: FBAdView, didFailWithError error: NSError) {
+        adView.hidden = true
+    }
+    
+    func adViewDidLoad(adView: FBAdView) {
+        adView.hidden = false
+    }
+
 
 }
 
